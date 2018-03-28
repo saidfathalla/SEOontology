@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+<rdf:RDF xmlns="https://purl/eventsoo/"
+     xml:base="https://purl/eventsoo/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -8,8 +10,11 @@
      xmlns:eventsoo="http://purl.org/eventsoo/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:conference-ontology="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#">
-    <owl:Ontology rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#">
+    <owl:Ontology rdf:about="https://purl/eventsoo/">
         <owl:imports rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl"/>
+        <dc:description xml:lang="en">Said Fathalla</dc:description>
+        <dc:title xml:lang="en">EVENTSO, a scientific events ontology.</dc:title>
+        <terms:lastModified xml:lang="en">2018-03-28</terms:lastModified>
     </owl:Ontology>
     
 
