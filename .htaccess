@@ -1,3 +1,6 @@
 # Directive to ensure *.rdf files served as appropriate content type,
 # if not present in main apache config
 AddType application/rdf+xml .rdf
+
+# Rewrite rule to serve RDF/XML content from all partially redirected URIs
+RewriteRule ^eventsoo/ eventsoo.rdf
