@@ -1,8 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://vocab.cs.uni-bonn.de/EVENTS#"
-     xml:base="http://vocab.cs.uni-bonn.de/EVENTS"
-     xmlns:EVENTS="http://vocab.cs.uni-bonn.de/EVENTS#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
