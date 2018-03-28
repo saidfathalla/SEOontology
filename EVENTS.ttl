@@ -1,0 +1,139 @@
+@prefix : <http://vocab.cs.uni-bonn.de/EVENTS#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix eventsoo: <http://purl.org/eventsoo/> .
+@prefix conference-ontology: <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#> .
+@base <http://vocab.cs.uni-bonn.de/EVENTS#> .
+
+<http://vocab.cs.uni-bonn.de/EVENTS#> rdf:type owl:Ontology ;
+                                       owl:imports <https://w3id.org/scholarlydata/ontology/conference-ontology.owl> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/scholarlydata/ontology/conference-ontology.owl#acronym
+conference-ontology:acronym rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/scholarlydata/ontology/conference-ontology.owl#startDate
+conference-ontology:startDate rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/eventsoo/belongsToSeries
+eventsoo:belongsToSeries rdf:type owl:ObjectProperty ;
+                         rdfs:domain conference-ontology:AcademicEvent ;
+                         rdfs:range conference-ontology:EventSeries ;
+                         rdfs:comment "The series which an eveny belongs to"@en ;
+                         rdfs:label "belongsToSeries"@en .
+
+
+###  http://purl.org/eventsoo/colocatedWith
+eventsoo:colocatedWith rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/eventsoo/acceptanceRate
+eventsoo:acceptanceRate rdf:type owl:DatatypeProperty ;
+                        rdfs:domain conference-ontology:AcademicEvent ;
+                        rdfs:range xsd:decimal ;
+                        rdfs:comment "The acceptance rate of the event in a particular year."@en .
+
+
+###  http://purl.org/eventsoo/acceptedPapers
+eventsoo:acceptedPapers rdf:type owl:DatatypeProperty ;
+                        rdfs:domain conference-ontology:AcademicEvent ;
+                        rdfs:range xsd:unsignedInt ;
+                        rdfs:comment "The number of accepted papers in the event."@en .
+
+
+###  http://purl.org/eventsoo/city
+eventsoo:city rdf:type owl:DatatypeProperty ;
+              rdfs:domain conference-ontology:AcademicEvent ;
+              rdfs:range rdfs:Literal ;
+              rdfs:comment "The city in which the event takes place."@en .
+
+
+###  http://purl.org/eventsoo/country
+eventsoo:country rdf:type owl:DatatypeProperty ;
+                 rdfs:domain conference-ontology:AcademicEvent ;
+                 rdfs:range rdfs:Literal ;
+                 rdfs:comment "The country hosts the event."@en .
+
+
+###  http://purl.org/eventsoo/field
+eventsoo:field rdf:type owl:DatatypeProperty ;
+               rdfs:domain conference-ontology:AcademicEvent ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "The main research field of the event (e.g. Database systems)"@en .
+
+
+###  http://purl.org/eventsoo/homepage
+eventsoo:homepage rdf:type owl:DatatypeProperty ;
+                  rdfs:domain conference-ontology:AcademicEvent ;
+                  rdfs:range xsd:anyURI ;
+                  rdfs:comment "The home page of the event"@en .
+
+
+###  http://purl.org/eventsoo/state
+eventsoo:state rdf:type owl:DatatypeProperty ;
+               rdfs:comment "The state of the city in which the event takes place."@en .
+
+
+###  http://purl.org/eventsoo/submittedPapers
+eventsoo:submittedPapers rdf:type owl:DatatypeProperty ;
+                         rdfs:domain conference-ontology:AcademicEvent ;
+                         rdfs:range xsd:unsignedInt ;
+                         rdfs:comment "The number of submitted papers to the event."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/eventsoo/Symposium
+eventsoo:Symposium rdf:type owl:Class ;
+                   rdfs:subClassOf conference-ontology:AcademicEvent .
+
+
+###  http://purl.org/eventsoo/SymposiumSeries
+eventsoo:SymposiumSeries rdf:type owl:Class ;
+                         rdfs:subClassOf conference-ontology:EventSeries .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/eventsoo/ICDE
+eventsoo:ICDE rdf:type owl:NamedIndividual ,
+                       conference-ontology:ConferenceSeries ;
+              conference-ontology:acronym "ICDE" ;
+              conference-ontology:startDate "2017-04-19"^^xsd:dateTime .
+
+
+###  http://purl.org/eventsoo/ICDE2017
+eventsoo:ICDE2017 rdf:type owl:NamedIndividual ,
+                           conference-ontology:Conference ;
+                  eventsoo:belongsToSeries eventsoo:ICDE ;
+                  eventsoo:acceptanceRate 0.215 ;
+                  eventsoo:acceptedPapers "113"^^xsd:unsignedInt ;
+                  eventsoo:country "USA"^^rdfs:Literal ;
+                  eventsoo:field "Data engineering"^^rdfs:Literal ;
+                  eventsoo:homepage "http://icde2017.sdsc.edu/"^^xsd:anyURI ;
+                  eventsoo:submittedPapers "525"^^xsd:unsignedInt .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
