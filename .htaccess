@@ -3,4 +3,4 @@
 AddType application/rdf+xml .rdf
 
 # Rewrite rule to serve RDF/XML content from all partially redirected URIs
-RewriteRule ^eventsoo/ eventsoo.rdf
+RewriteRule ^eventsoo/ eventsoo.rdf [R=303]
