@@ -5,5 +5,12 @@ Options -MultiViews
 # if not present in main apache config
 AddType application/rdf+xml .rdf
 
-# Rewrite rule to serve RDF/XML content from all partially redirected URIs
-RewriteRule ^eventsoo/ events.rdf [R=303]
+# Rewrite engine setup
+RewriteEngine On
+RewriteBase /eventsoo
+
+# Rewrite rule to redirect 303 from any class or prop URI
+RewriteRule ^eventsoo/.+ eventsoo/ [R=303]
+
+# Rewrite rule to serve RDF/XML content from the vocabulary URI
+RewriteRule ^events/$ events.rdf
