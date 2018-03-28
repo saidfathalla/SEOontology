@@ -8,6 +8,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:eventsoo="http://purl.org/eventsoo/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:conference-ontology="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#">
     <owl:Ontology rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#">
@@ -27,14 +28,20 @@
     
 
 
-    <!-- http://vocab.cs.uni-bonn.de/EVENTS#belongsToSeries -->
+    <!-- http://purl.org/eventsoo/belongsToSeries -->
 
-    <owl:ObjectProperty rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#belongsToSeries">
+    <owl:ObjectProperty rdf:about="http://purl.org/eventsoo/belongsToSeries">
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries"/>
         <rdfs:comment xml:lang="en">The series which an eveny belongs to</rdfs:comment>
         <rdfs:label xml:lang="en">belongsToSeries</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/eventsoo/colocatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/eventsoo/colocatedWith"/>
     
 
 
@@ -49,9 +56,9 @@
     
 
 
-    <!-- http://vocab.cs.uni-bonn.de/EVENTS#acceptanceRate -->
+    <!-- http://purl.org/eventsoo/acceptanceRate -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#acceptanceRate">
+    <owl:DatatypeProperty rdf:about="http://purl.org/eventsoo/acceptanceRate">
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">The acceptance rate of the event in a particular year.</rdfs:comment>
@@ -59,9 +66,9 @@
     
 
 
-    <!-- http://vocab.cs.uni-bonn.de/EVENTS#acceptedPapers -->
+    <!-- http://purl.org/eventsoo/acceptedPapers -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#acceptedPapers">
+    <owl:DatatypeProperty rdf:about="http://purl.org/eventsoo/acceptedPapers">
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
         <rdfs:comment xml:lang="en">The number of accepted papers in the event.</rdfs:comment>
@@ -69,9 +76,9 @@
     
 
 
-    <!-- http://vocab.cs.uni-bonn.de/EVENTS#city -->
+    <!-- http://purl.org/eventsoo/city -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#city">
+    <owl:DatatypeProperty rdf:about="http://purl.org/eventsoo/city">
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The city in which the event takes place.</rdfs:comment>
@@ -79,9 +86,9 @@
     
 
 
-    <!-- http://vocab.cs.uni-bonn.de/EVENTS#country -->
+    <!-- http://purl.org/eventsoo/country -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#country">
+    <owl:DatatypeProperty rdf:about="http://purl.org/eventsoo/country">
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The country hosts the event.</rdfs:comment>
@@ -89,9 +96,9 @@
     
 
 
-    <!-- http://vocab.cs.uni-bonn.de/EVENTS#field -->
+    <!-- http://purl.org/eventsoo/field -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#field">
+    <owl:DatatypeProperty rdf:about="http://purl.org/eventsoo/field">
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The main research field of the event (e.g. Database systems)</rdfs:comment>
@@ -99,9 +106,9 @@
     
 
 
-    <!-- http://vocab.cs.uni-bonn.de/EVENTS#homepage -->
+    <!-- http://purl.org/eventsoo/homepage -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#homepage">
+    <owl:DatatypeProperty rdf:about="http://purl.org/eventsoo/homepage">
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment xml:lang="en">The home page of the event</rdfs:comment>
@@ -109,17 +116,17 @@
     
 
 
-    <!-- http://vocab.cs.uni-bonn.de/EVENTS#state -->
+    <!-- http://purl.org/eventsoo/state -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#state">
+    <owl:DatatypeProperty rdf:about="http://purl.org/eventsoo/state">
         <rdfs:comment xml:lang="en">The state of the city in which the event takes place.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://vocab.cs.uni-bonn.de/EVENTS#submittedPapers -->
+    <!-- http://purl.org/eventsoo/submittedPapers -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#submittedPapers">
+    <owl:DatatypeProperty rdf:about="http://purl.org/eventsoo/submittedPapers">
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
         <rdfs:comment xml:lang="en">The number of submitted papers to the event.</rdfs:comment>
@@ -138,10 +145,18 @@
     
 
 
-    <!-- http://vocab.cs.uni-bonn.de/EVENTS#Symposium -->
+    <!-- http://purl.org/eventsoo/Symposium -->
 
-    <owl:Class rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#Symposium">
+    <owl:Class rdf:about="http://purl.org/eventsoo/Symposium">
         <rdfs:subClassOf rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/eventsoo/SymposiumSeries -->
+
+    <owl:Class rdf:about="http://purl.org/eventsoo/SymposiumSeries">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries"/>
     </owl:Class>
     
 
@@ -157,9 +172,9 @@
     
 
 
-    <!-- http://vocab.cs.uni-bonn.de/EVENTS#ICDE -->
+    <!-- http://purl.org/eventsoo/ICDE -->
 
-    <owl:NamedIndividual rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#ICDE">
+    <owl:NamedIndividual rdf:about="http://purl.org/eventsoo/ICDE">
         <rdf:type rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#ConferenceSeries"/>
         <conference-ontology:acronym>ICDE</conference-ontology:acronym>
         <conference-ontology:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-19</conference-ontology:startDate>
@@ -167,17 +182,17 @@
     
 
 
-    <!-- http://vocab.cs.uni-bonn.de/EVENTS#ICDE2017 -->
+    <!-- http://purl.org/eventsoo/ICDE2017 -->
 
-    <owl:NamedIndividual rdf:about="http://vocab.cs.uni-bonn.de/EVENTS#ICDE2017">
+    <owl:NamedIndividual rdf:about="http://purl.org/eventsoo/ICDE2017">
         <rdf:type rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Conference"/>
-        <belongsToSeries rdf:resource="http://vocab.cs.uni-bonn.de/EVENTS#ICDE"/>
-        <acceptanceRate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.215</acceptanceRate>
-        <acceptedPapers rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">113</acceptedPapers>
-        <country rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">USA</country>
-        <field rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Data engineering</field>
-        <homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://icde2017.sdsc.edu/</homepage>
-        <submittedPapers rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">525</submittedPapers>
+        <eventsoo:belongsToSeries rdf:resource="http://purl.org/eventsoo/ICDE"/>
+        <eventsoo:acceptanceRate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.215</eventsoo:acceptanceRate>
+        <eventsoo:acceptedPapers rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">113</eventsoo:acceptedPapers>
+        <eventsoo:country rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">USA</eventsoo:country>
+        <eventsoo:field rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Data engineering</eventsoo:field>
+        <eventsoo:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://icde2017.sdsc.edu/</eventsoo:homepage>
+        <eventsoo:submittedPapers rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">525</eventsoo:submittedPapers>
     </owl:NamedIndividual>
 </rdf:RDF>
 
