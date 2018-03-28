@@ -164,6 +164,40 @@
     </owl:Class>
     
 
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/eventsoo/ICDE -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/eventsoo/ICDE">
+        <rdf:type rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#ConferenceSeries"/>
+        <conference-ontology:acronym>ICDE</conference-ontology:acronym>
+        <conference-ontology:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-19</conference-ontology:startDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/eventsoo/ICDE2017 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/eventsoo/ICDE2017">
+        <rdf:type rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Conference"/>
+        <eventsoo:belongsToSeries rdf:resource="http://purl.org/eventsoo/ICDE"/>
+        <eventsoo:acceptanceRate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.215</eventsoo:acceptanceRate>
+        <eventsoo:acceptedPapers rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">113</eventsoo:acceptedPapers>
+        <eventsoo:country rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">USA</eventsoo:country>
+        <eventsoo:field rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Data engineering</eventsoo:field>
+        <eventsoo:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://icde2017.sdsc.edu/</eventsoo:homepage>
+        <eventsoo:submittedPapers rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">525</eventsoo:submittedPapers>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
