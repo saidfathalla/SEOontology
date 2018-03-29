@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="import/conference-ontology.owl"/>
-    <uri id="Imports Wizard Entry" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="http://www.scholarlydata.org/ontology/conference-ontology.owl"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1522146351545" name="http://vocab.cs.uni-bonn.de/EVENTS" uri="EVENTS.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1522146351545" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="import/conference-ontology.owl"/>
-    </group>
-</catalog>
