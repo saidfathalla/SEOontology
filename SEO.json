@@ -1,0 +1,378 @@
+[ {
+  "@id" : "http://sda.tech/SEOontology/SEO/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Said Fathalla"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "en",
+    "@value" : "SEO, a Scientific Events Ontology."
+  } ],
+  "http://purl.org/dc/terms/lastModified" : [ {
+    "@language" : "en",
+    "@value" : "2018-03-28"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/Country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Country"
+  }, {
+    "@language" : "en",
+    "@value" : "The country hosts the event."
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/DemosTrack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Offer an opportunity for presenting late-breaking research results, on-going research projects, and speculative or innovative work in progress."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Track"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/DoctoralConsortium",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Provide PhD students an opportunity to share and develop their research ideas in a critical but supportive environment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Track"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/EventWebpage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The webpage of the event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/In-useTrack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In-Use track provides researchers to discuss novel research taken to the market."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Track"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/IndustryTrack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The industry track seeks to present research contributions in industrial settings."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Track"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/PanelsTrack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Present research contributions as panels."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Track"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/PostersTrack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Present research contributions as posters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Track"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/Publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The publisher of the event proceedings."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Publisher"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/ResearchTrack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The track for fundamental research, innovative technology, and applications concerning the research topic of the event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Track"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/ResourceTrack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Resources Track aims to promote the sharing of resources including: datasets, ontologies, vocabularies, ... etc"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Track"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/Sponsor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Sponsor of the event (i.e. company, university ... etc.)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sponsor"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/Symposium",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/SymposiumSeries",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A series of symposiums."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Symposiums series"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/Track",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A categorization of research contributions submitted to an academic event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Event Track"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/TutorialProposals",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Proposal on a research topic relevant to the event audience."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Track"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/WorkshopProposals",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Proposals for workshops on topics related to the general theme of the conference."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Track"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/abstractDeadline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The deadline of abstract submission."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/acceptanceRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The acceptance rate of the event in a particular year."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/acceptedPapers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The number of accepted papers in the event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/belongsToSeries",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property shows the series which an event belongs to."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "belongsToSeries"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/city",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The city in which the event takes place."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/colocatedWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This property links an event to another one which is co-located with."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/hasPublisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This propoerty shows the publisher of a proceedings."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Proceedings"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Publisher"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/hasSponsor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This propoerty shows the sponsor of an event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Sponsor"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/hasTrack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This propoerty shows the available tracks of an event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Track"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/hasTwitter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The twitter account of the event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/notificationDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/state",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The state of the city in which the event takes place."
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/submissionDeadline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The deadline of paper submission."
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/submissionWebPage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The webpage of the submission to event."
+  } ]
+}, {
+  "@id" : "http://sda.tech/SEOontology/SEO/submittedPapers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The number of submitted papers to the event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
+  } ]
+}, {
+  "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Proceedings",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation",
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://sda.tech/SEOontology/SEO/Country"
+  } ]
+} ]
