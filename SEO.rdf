@@ -148,6 +148,22 @@
     
 
 
+    <!-- http://purl.org/seo/country -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/seo/country">
+        <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/seo/field -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/seo/field">
+        <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.org/seo/hasTwitter -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/seo/hasTwitter">

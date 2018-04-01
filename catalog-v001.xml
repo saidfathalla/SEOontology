@@ -4,6 +4,6 @@
     <uri id="Imports Wizard Entry" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="https://w3id.org/scholarlydata/ontology/conference-ontology.owl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="https://w3id.org/scholarlydata/ontology/conference-ontology.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1522411366021" name="http://purl.org/seo/" uri="SEO.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1522576289472" name="http://purl.org/seo/" uri="SEO.rdf"/>
     </group>
 </catalog>
