@@ -10,9 +10,12 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.org/seo/">
         <owl:imports rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl"/>
-        <dc:description xml:lang="en">Said Fathalla</dc:description>
-        <dc:title xml:lang="en">SEO, a Scientific Events Ontology.</dc:title>
+        <owl:imports rdf:resource="http://data.semanticweb.org/ns/swc/ontology"/>
+        <dc:creator>Said Fathalla</dc:creator>
+        <dc:description xml:lang="en">SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops.</dc:description>
         <terms:lastModified xml:lang="en">2018-03-28</terms:lastModified>
+        <rdfs:seeAlso xml:lang="en">See also documentation at http://sda.tech/SEOontology/Documentation/SEO.html</rdfs:seeAlso>
+        <dc:title xml:lang="en">SEO, The Scientific Events Ontology.</dc:title>
     </owl:Ontology>
     
 
