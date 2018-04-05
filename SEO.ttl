@@ -1,245 +1,282 @@
-@prefix : <http://sda.tech/SEOontology/SEO/> .
+@prefix : <http://purl.org/seo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix seo: <http://purl.org/seo/> .
+@prefix swc: <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://sda.tech/SEOontology/SEO/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@base <http://purl.org/seo/> .
 
-<http://sda.tech/SEOontology/SEO/> rdf:type owl:Ontology ;
-                                    owl:imports <https://w3id.org/scholarlydata/ontology/conference-ontology.owl> ;
-                                    <http://purl.org/dc/elements/1.1/description> "Said Fathalla"@en ;
-                                    <http://purl.org/dc/elements/1.1/title> "SEO, a Scientific Events Ontology."@en ;
-                                    <http://purl.org/dc/terms/lastModified> "2018-03-28"@en .
+<http://purl.org/seo/> rdf:type owl:Ontology ;
+                        owl:imports <https://w3id.org/scholarlydata/ontology/conference-ontology.owl> ,
+                                    <http://data.semanticweb.org/ns/swc/ontology> ;
+                        dc:creator "Said Fathalla" ;
+                        dc:description "SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops."@en ;
+                        terms:lastModified "2018-03-28"@en ;
+                        rdfs:seeAlso "See also documentation at http://sda.tech/SEOontology/Documentation/SEO.html"@en ;
+                        dc:title "SEO, The Scientific Events Ontology."@en .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://sda.tech/SEOontology/SEO/belongsToSeries
-:belongsToSeries rdf:type owl:ObjectProperty ;
-                 rdfs:domain <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> ;
-                 rdfs:range <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries> ;
-                 rdfs:comment "This property shows the series which an event belongs to."@en ;
-                 rdfs:label "belongsToSeries"@en .
+###  http://purl.org/seo/belongsToSeries
+seo:belongsToSeries rdf:type owl:ObjectProperty ;
+                    rdfs:domain swc:AcademicEvent ;
+                    rdfs:range swc:EventSeries ;
+                    rdfs:comment "This property shows the series which an event belongs to."@en ;
+                    rdfs:label "belongsToSeries"@en .
 
 
-###  http://sda.tech/SEOontology/SEO/colocatedWith
-:colocatedWith rdf:type owl:ObjectProperty ;
-               rdfs:domain <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> ;
-               rdfs:range <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> ;
-               rdfs:comment "This property links an event to another one which is co-located with."^^xsd:string .
+###  http://purl.org/seo/colocatedWith
+seo:colocatedWith rdf:type owl:ObjectProperty ,
+                           owl:SymmetricProperty ;
+                  rdfs:domain swc:AcademicEvent ;
+                  rdfs:range swc:AcademicEvent ;
+                  rdfs:comment "This property links an event to another one which is co-located with."^^xsd:string .
 
 
-###  http://sda.tech/SEOontology/SEO/hasPublisher
-:hasPublisher rdf:type owl:ObjectProperty ;
-              rdfs:domain <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Proceedings> ;
-              rdfs:range :Publisher ;
-              rdfs:comment "This propoerty shows the publisher of a proceedings."^^xsd:string .
+###  http://purl.org/seo/hasPublisher
+seo:hasPublisher rdf:type owl:ObjectProperty ;
+                 owl:inverseOf seo:isPublisherOf ;
+                 rdfs:domain swc:Proceedings ;
+                 rdfs:range seo:Publisher ;
+                 rdfs:comment "This propoerty shows the publisher of a proceedings."^^xsd:string .
 
 
-###  http://sda.tech/SEOontology/SEO/hasSponsor
-:hasSponsor rdf:type owl:ObjectProperty ;
-            rdfs:domain <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries> ;
-            rdfs:range :Sponsor ;
-            rdfs:comment "This propoerty shows the sponsor of an event."^^xsd:string .
+###  http://purl.org/seo/hasSponsor
+seo:hasSponsor rdf:type owl:ObjectProperty ;
+               owl:inverseOf seo:isSponsorOf ;
+               rdfs:domain swc:EventSeries ;
+               rdfs:range seo:Sponsor ;
+               rdfs:comment "This propoerty shows the sponsor of an event."^^xsd:string .
 
 
-###  http://sda.tech/SEOontology/SEO/hasTrack
-:hasTrack rdf:type owl:ObjectProperty ;
-          rdfs:domain <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> ;
-          rdfs:range :Track ;
-          rdfs:comment "This propoerty shows the available tracks of an event."^^xsd:string .
+###  http://purl.org/seo/hasTrack
+seo:hasTrack rdf:type owl:ObjectProperty ;
+             owl:inverseOf seo:isTrackOf ;
+             rdfs:domain swc:AcademicEvent ;
+             rdfs:range seo:Track ;
+             rdfs:comment "This propoerty shows the available tracks of an event."^^xsd:string .
+
+
+###  http://purl.org/seo/isPublisherOf
+seo:isPublisherOf rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/seo/isSponsorOf
+seo:isSponsorOf rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/seo/isTrackOf
+seo:isTrackOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasAddress
+swc:hasAddress rdfs:range swc:Agent .
 
 
 ###  https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation
-<https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation> rdfs:range :Country .
+swc:hasLocation rdfs:range seo:Country .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://sda.tech/SEOontology/SEO/EventWebpage
-:EventWebpage rdf:type owl:DatatypeProperty ;
-              rdfs:domain <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> ;
-              rdfs:range xsd:anyURI ;
-              rdfs:comment "The webpage of the event."@en .
+###  http://purl.org/seo/EventWebpage
+seo:EventWebpage rdf:type owl:DatatypeProperty ;
+                 rdfs:domain swc:AcademicEvent ;
+                 rdfs:range xsd:anyURI ;
+                 rdfs:comment "The webpage of the event."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/abstractDeadline
-:abstractDeadline rdf:type owl:DatatypeProperty ;
-                  rdfs:domain <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> ;
-                  rdfs:range xsd:dateTime ;
-                  rdfs:comment "The deadline of abstract submission."^^xsd:string .
+###  http://purl.org/seo/abstractDeadline
+seo:abstractDeadline rdf:type owl:DatatypeProperty ;
+                     rdfs:domain swc:AcademicEvent ;
+                     rdfs:range xsd:dateTime ;
+                     rdfs:comment "The deadline of abstract submission."^^xsd:string .
 
 
-###  http://sda.tech/SEOontology/SEO/acceptanceRate
-:acceptanceRate rdf:type owl:DatatypeProperty ;
-                rdfs:domain <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> ;
-                rdfs:range xsd:decimal ;
-                rdfs:comment "The acceptance rate of the event in a particular year."@en .
+###  http://purl.org/seo/acceptanceRate
+seo:acceptanceRate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain swc:AcademicEvent ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:comment "The acceptance rate of the event in a particular year."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/acceptedPapers
-:acceptedPapers rdf:type owl:DatatypeProperty ;
-                rdfs:domain <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> ;
-                rdfs:range xsd:unsignedInt ;
-                rdfs:comment "The number of accepted papers in the event."@en .
+###  http://purl.org/seo/acceptedPapers
+seo:acceptedPapers rdf:type owl:DatatypeProperty ;
+                   rdfs:domain swc:AcademicEvent ;
+                   rdfs:range xsd:unsignedInt ;
+                   rdfs:comment "The number of accepted papers in the event."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/city
-:city rdf:type owl:DatatypeProperty ;
-      rdfs:domain <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> ;
-      rdfs:range rdfs:Literal ;
-      rdfs:comment "The city in which the event takes place."@en .
+###  http://purl.org/seo/city
+seo:city rdf:type owl:DatatypeProperty ;
+         rdfs:domain swc:AcademicEvent ;
+         rdfs:range rdfs:Literal ;
+         rdfs:comment "The city in which the event takes place."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/hasTwitter
-:hasTwitter rdf:type owl:DatatypeProperty ;
-            rdfs:domain <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries> ;
-            rdfs:range xsd:anyURI ;
-            rdfs:comment "The twitter account of the event."^^xsd:string .
+###  http://purl.org/seo/country
+seo:country rdf:type owl:DatatypeProperty ;
+            rdfs:domain swc:OrganisedEvent .
 
 
-###  http://sda.tech/SEOontology/SEO/notificationDate
-:notificationDate rdf:type owl:DatatypeProperty ;
-                  rdfs:domain <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> ;
-                  rdfs:range xsd:dateTime .
+###  http://purl.org/seo/field
+seo:field rdf:type owl:DatatypeProperty ;
+          rdfs:domain swc:OrganisedEvent .
 
 
-###  http://sda.tech/SEOontology/SEO/state
-:state rdf:type owl:DatatypeProperty ;
-       rdfs:comment "The state of the city in which the event takes place."@en .
+###  http://purl.org/seo/hasTwitter
+seo:hasTwitter rdf:type owl:DatatypeProperty ;
+               rdfs:domain swc:EventSeries ;
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "The twitter account of the event."^^xsd:string .
 
 
-###  http://sda.tech/SEOontology/SEO/submissionDeadline
-:submissionDeadline rdf:type owl:DatatypeProperty ;
-                    rdfs:comment "The deadline of paper submission."^^xsd:string .
+###  http://purl.org/seo/notificationDate
+seo:notificationDate rdf:type owl:DatatypeProperty ;
+                     rdfs:domain swc:AcademicEvent ;
+                     rdfs:range xsd:dateTime .
 
 
-###  http://sda.tech/SEOontology/SEO/submissionWebPage
-:submissionWebPage rdf:type owl:DatatypeProperty ;
-                   rdfs:comment "The webpage of the submission to event."^^xsd:string .
+###  http://purl.org/seo/state
+seo:state rdf:type owl:DatatypeProperty ;
+          rdfs:comment "The state of the city in which the event takes place."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/submittedPapers
-:submittedPapers rdf:type owl:DatatypeProperty ;
-                 rdfs:domain <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> ;
-                 rdfs:range xsd:unsignedInt ;
-                 rdfs:comment "The number of submitted papers to the event."@en .
+###  http://purl.org/seo/submissionDeadline
+seo:submissionDeadline rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "The deadline of paper submission."^^xsd:string .
+
+
+###  http://purl.org/seo/submissionWebPage
+seo:submissionWebPage rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "The webpage of the submission to event."^^xsd:string .
+
+
+###  http://purl.org/seo/submittedPapers
+seo:submittedPapers rdf:type owl:DatatypeProperty ;
+                    rdfs:domain swc:AcademicEvent ;
+                    rdfs:range xsd:unsignedInt ;
+                    rdfs:comment "The number of submitted papers to the event."@en .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://sda.tech/SEOontology/SEO/Country
-:Country rdf:type owl:Class ;
-         rdfs:comment "Country"@en ,
-                      "The country hosts the event."@en .
+###  http://purl.org/seo/Country
+seo:Country rdf:type owl:Class ;
+            rdfs:comment "Country"@en ,
+                         "The country hosts the event."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/DemosTrack
-:DemosTrack rdf:type owl:Class ;
-            rdfs:subClassOf :Track ;
-            rdfs:comment "Offer an opportunity for presenting late-breaking research results, on-going research projects, and speculative or innovative work in progress."@en .
+###  http://purl.org/seo/DemosTrack
+seo:DemosTrack rdf:type owl:Class ;
+               rdfs:subClassOf seo:Track ;
+               rdfs:comment "Offer an opportunity for presenting late-breaking research results, on-going research projects, and speculative or innovative work in progress."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/DoctoralConsortium
-:DoctoralConsortium rdf:type owl:Class ;
-                    rdfs:subClassOf :Track ;
-                    rdfs:comment "Provide PhD students an opportunity to share and develop their research ideas in a critical but supportive environment."@en .
+###  http://purl.org/seo/DoctoralConsortium
+seo:DoctoralConsortium rdf:type owl:Class ;
+                       rdfs:subClassOf seo:Track ;
+                       rdfs:comment "Provide PhD students an opportunity to share and develop their research ideas in a critical but supportive environment."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/In-useTrack
-:In-useTrack rdf:type owl:Class ;
-             rdfs:subClassOf :Track ;
-             rdfs:comment "In-Use track provides researchers to discuss novel research taken to the market."@en .
+###  http://purl.org/seo/In-useTrack
+seo:In-useTrack rdf:type owl:Class ;
+                rdfs:subClassOf seo:Track ;
+                rdfs:comment "In-Use track provides researchers to discuss novel research taken to the market."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/IndustryTrack
-:IndustryTrack rdf:type owl:Class ;
-               rdfs:subClassOf :Track ;
-               rdfs:comment "The industry track seeks to present research contributions in industrial settings."@en .
+###  http://purl.org/seo/IndustryTrack
+seo:IndustryTrack rdf:type owl:Class ;
+                  rdfs:subClassOf seo:Track ;
+                  rdfs:comment "The industry track seeks to present research contributions in industrial settings."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/PanelsTrack
-:PanelsTrack rdf:type owl:Class ;
-             rdfs:subClassOf :Track ;
-             rdfs:comment "Present research contributions as panels."@en .
+###  http://purl.org/seo/PanelsTrack
+seo:PanelsTrack rdf:type owl:Class ;
+                rdfs:subClassOf seo:Track ;
+                rdfs:comment "Present research contributions as panels."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/PostersTrack
-:PostersTrack rdf:type owl:Class ;
-              rdfs:subClassOf :Track ;
-              rdfs:comment "Present research contributions as posters."@en .
+###  http://purl.org/seo/PostersTrack
+seo:PostersTrack rdf:type owl:Class ;
+                 rdfs:subClassOf seo:Track ;
+                 rdfs:comment "Present research contributions as posters."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/Publisher
-:Publisher rdf:type owl:Class ;
-           rdfs:comment "The publisher of the event proceedings."@en ;
-           rdfs:label "Publisher"@en .
+###  http://purl.org/seo/Publisher
+seo:Publisher rdf:type owl:Class ;
+              rdfs:comment "The publisher of the event proceedings."@en ;
+              rdfs:label "Publisher"@en .
 
 
-###  http://sda.tech/SEOontology/SEO/ResearchTrack
-:ResearchTrack rdf:type owl:Class ;
-               rdfs:subClassOf :Track ;
-               rdfs:comment "The track for fundamental research, innovative technology, and applications concerning the research topic of the event."@en .
+###  http://purl.org/seo/ResearchTrack
+seo:ResearchTrack rdf:type owl:Class ;
+                  rdfs:subClassOf seo:Track ;
+                  rdfs:comment "The track for fundamental research, innovative technology, and applications concerning the research topic of the event."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/ResourceTrack
-:ResourceTrack rdf:type owl:Class ;
-               rdfs:subClassOf :Track ;
-               rdfs:comment "The Resources Track aims to promote the sharing of resources including: datasets, ontologies, vocabularies, ... etc"@en .
+###  http://purl.org/seo/ResourceTrack
+seo:ResourceTrack rdf:type owl:Class ;
+                  rdfs:subClassOf seo:Track ;
+                  rdfs:comment "The Resources Track aims to promote the sharing of resources including: datasets, ontologies, vocabularies, ... etc"@en .
 
 
-###  http://sda.tech/SEOontology/SEO/Sponsor
-:Sponsor rdf:type owl:Class ;
-         rdfs:comment "The Sponsor of the event (i.e. company, university ... etc.)."@en ;
-         rdfs:label "Sponsor"@en .
+###  http://purl.org/seo/Sponsor
+seo:Sponsor rdf:type owl:Class ;
+            rdfs:comment "The Sponsor of the event (i.e. company, university ... etc.)."@en ;
+            rdfs:label "Sponsor"@en .
 
 
-###  http://sda.tech/SEOontology/SEO/Symposium
-:Symposium rdf:type owl:Class ;
-           rdfs:subClassOf <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> .
+###  http://purl.org/seo/Symposium
+seo:Symposium rdf:type owl:Class ;
+              rdfs:subClassOf swc:AcademicEvent .
 
 
-###  http://sda.tech/SEOontology/SEO/SymposiumSeries
-:SymposiumSeries rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries> ;
-                 rdfs:comment "A series of symposiums."@en ;
-                 rdfs:label "Symposiums series"@en .
+###  http://purl.org/seo/SymposiumSeries
+seo:SymposiumSeries rdf:type owl:Class ;
+                    rdfs:subClassOf swc:EventSeries ;
+                    rdfs:comment "A series of symposiums."@en ;
+                    rdfs:label "Symposiums series"@en .
 
 
-###  http://sda.tech/SEOontology/SEO/Track
-:Track rdf:type owl:Class ;
-       rdfs:comment "A categorization of research contributions submitted to an academic event."@en ;
-       rdfs:label "Event Track"@en .
+###  http://purl.org/seo/Track
+seo:Track rdf:type owl:Class ;
+          rdfs:comment "A categorization of research contributions submitted to an academic event."@en ;
+          rdfs:label "Event Track"@en .
 
 
-###  http://sda.tech/SEOontology/SEO/TutorialProposals
-:TutorialProposals rdf:type owl:Class ;
-                   rdfs:subClassOf :Track ;
-                   rdfs:comment "Proposal on a research topic relevant to the event audience."@en .
+###  http://purl.org/seo/TutorialProposals
+seo:TutorialProposals rdf:type owl:Class ;
+                      rdfs:subClassOf seo:Track ;
+                      rdfs:comment "Proposal on a research topic relevant to the event audience."@en .
 
 
-###  http://sda.tech/SEOontology/SEO/WorkshopProposals
-:WorkshopProposals rdf:type owl:Class ;
-                   rdfs:subClassOf :Track ;
-                   rdfs:comment "Proposals for workshops on topics related to the general theme of the conference."@en .
+###  http://purl.org/seo/WorkshopProposals
+seo:WorkshopProposals rdf:type owl:Class ;
+                      rdfs:subClassOf seo:Track ;
+                      rdfs:comment "Proposals for workshops on topics related to the general theme of the conference."@en .
 
 
 ###  https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent
-<https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> rdf:type owl:Class .
+swc:AcademicEvent rdf:type owl:Class .
 
 
 ###  https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries
-<https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries> rdf:type owl:Class .
+swc:EventSeries rdf:type owl:Class .
 
 
 ###  https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Proceedings
-<https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Proceedings> rdf:type owl:Class .
+swc:Proceedings rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
