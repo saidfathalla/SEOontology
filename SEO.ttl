@@ -50,7 +50,7 @@ seo:hasPublisher rdf:type owl:ObjectProperty ;
 ###  http://purl.org/seo/hasSponsor
 seo:hasSponsor rdf:type owl:ObjectProperty ;
                owl:inverseOf seo:isSponsorOf ;
-               rdfs:domain swc:EventSeries ;
+               rdfs:domain swc:OrganisedEvent ;
                rdfs:range seo:Sponsor ;
                rdfs:comment "This propoerty shows the sponsor of an event."^^xsd:string .
 
@@ -81,6 +81,10 @@ swc:hasAddress rdfs:range swc:Agent .
 
 ###  https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation
 swc:hasLocation rdfs:range seo:Country .
+
+
+###  https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasProceedings
+swc:hasProceedings rdfs:domain swc:AcademicEvent .
 
 
 #################################################################
@@ -124,12 +128,14 @@ seo:city rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/seo/country
 seo:country rdf:type owl:DatatypeProperty ;
-            rdfs:domain swc:OrganisedEvent .
+            rdfs:domain swc:OrganisedEvent ;
+            rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/seo/field
 seo:field rdf:type owl:DatatypeProperty ;
-          rdfs:domain swc:OrganisedEvent .
+          rdfs:domain swc:OrganisedEvent ;
+          rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/seo/hasTwitter
@@ -147,16 +153,22 @@ seo:notificationDate rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/seo/state
 seo:state rdf:type owl:DatatypeProperty ;
+          rdfs:domain swc:OrganisedEvent ;
+          rdfs:range rdfs:Literal ;
           rdfs:comment "The state of the city in which the event takes place."@en .
 
 
 ###  http://purl.org/seo/submissionDeadline
 seo:submissionDeadline rdf:type owl:DatatypeProperty ;
+                       rdfs:domain swc:AcademicEvent ;
+                       rdfs:range xsd:dateTime ;
                        rdfs:comment "The deadline of paper submission."^^xsd:string .
 
 
 ###  http://purl.org/seo/submissionWebPage
 seo:submissionWebPage rdf:type owl:DatatypeProperty ;
+                      rdfs:domain swc:OrganisedEvent ;
+                      rdfs:range xsd:anyURI ;
                       rdfs:comment "The webpage of the submission to event."^^xsd:string .
 
 
