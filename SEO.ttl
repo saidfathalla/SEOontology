@@ -25,6 +25,7 @@
 
 ###  http://purl.org/seo/belongsToSeries
 seo:belongsToSeries rdf:type owl:ObjectProperty ;
+                    owl:inverseOf seo:hasEvent ;
                     rdfs:domain swc:AcademicEvent ;
                     rdfs:range swc:EventSeries ;
                     rdfs:comment "This property shows the series which an event belongs to."@en ;
@@ -37,6 +38,10 @@ seo:colocatedWith rdf:type owl:ObjectProperty ,
                   rdfs:domain swc:AcademicEvent ;
                   rdfs:range swc:AcademicEvent ;
                   rdfs:comment "This property links an event to another one which is co-located with."^^xsd:string .
+
+
+###  http://purl.org/seo/hasEvent
+seo:hasEvent rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.org/seo/hasPublisher
