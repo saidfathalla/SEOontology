@@ -106,7 +106,7 @@ seo:EventWebpage rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/seo/abstractDeadline
 seo:abstractDeadline rdf:type owl:DatatypeProperty ;
                      rdfs:domain swc:AcademicEvent ;
-                     rdfs:range xsd:dateTime ;
+                     rdfs:range xsd:date ;
                      rdfs:comment "The deadline of abstract submission."^^xsd:string .
 
 
@@ -153,7 +153,7 @@ seo:hasTwitter rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/seo/notificationDate
 seo:notificationDate rdf:type owl:DatatypeProperty ;
                      rdfs:domain swc:AcademicEvent ;
-                     rdfs:range xsd:dateTime .
+                     rdfs:range xsd:date .
 
 
 ###  http://purl.org/seo/state
@@ -166,7 +166,7 @@ seo:state rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/seo/submissionDeadline
 seo:submissionDeadline rdf:type owl:DatatypeProperty ;
                        rdfs:domain swc:AcademicEvent ;
-                       rdfs:range xsd:dateTime ;
+                       rdfs:range xsd:date ;
                        rdfs:comment "The deadline of paper submission."^^xsd:string .
 
 
