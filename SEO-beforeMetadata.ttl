@@ -1,4 +1,4 @@
-@prefix : <http://data.semanticweb.org/ns/swc/ontology/> .
+@prefix : <http://purl.org/seo/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -8,25 +8,18 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix terms: <http://purl.org/dc/terms/> .
-@base <http://data.semanticweb.org/ns/swc/ontology> .
+@base <http://purl.org/seo/> .
 
-<http://data.semanticweb.org/ns/swc/ontology> rdf:type owl:Ontology ;
-                                               owl:imports <https://w3id.org/scholarlydata/ontology/conference-ontology.owl> ,
-                                                           <http://data.semanticweb.org/ns/swc/ontology> ;
-                                               owl:versionInfo 1.1 ;
-                                               dc:creator "Sahar Vahdati"@en ,
-                                                          "Said Fathalla" ;
-                                               owl:priorVersion seo: ;
-                                               vann:preferredNamespacePrefix "seo" ;
-                                               dc:description "SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops."@en ;
-                                               terms:lastModified "2018-03-28"@en ;
-                                               rdfs:seeAlso "See also documentation at http://sda.tech/SEOontology/Documentation/SEO.html"@en ;
-                                               vann:preferredNamespaceUri "http://purl.org/seo/"^^terms:URI ;
-                                               terms:created "2018-02-01"@en ;
-                                               terms:license <http://creativecommons.org/licenses/by/3.0/> ;
-                                               dc:title "SEO, The Scientific Events Ontology."@en .
+<http://purl.org/seo/> rdf:type owl:Ontology ;
+                        owl:imports <https://w3id.org/scholarlydata/ontology/conference-ontology.owl> ,
+                                    <http://data.semanticweb.org/ns/swc/ontology> ;
+                        dc:creator "Said Fathalla" ;
+                        dc:description "SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops."@en ;
+                        terms:lastModified "2018-03-28"@en ;
+                        rdfs:seeAlso "See also documentation at http://sda.tech/SEOontology/Documentation/SEO.html"@en ;
+                        terms:license <http://creativecommons.org/licenses/by/3.0/> ;
+                        dc:title "SEO, The Scientific Events Ontology."@en .
 
 #################################################################
 #    Datatypes
