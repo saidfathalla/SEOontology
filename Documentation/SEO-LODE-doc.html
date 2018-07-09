@@ -11,74 +11,126 @@
                         	$.scrollTo(element);
                         }
                     });
-        </script></head><body data-gr-c-s-loaded="true"><div class="head"><h1>SEO, The Scientific Events Ontology.</h1><dl><dt>IRI:</dt><dd>http://purl.org/seo/</dd></dl><dl><dt>Authors:</dt><dd>Said Fathalla</dd></dl><dl><dt>Imported Ontologies:</dt><dd><a href="http://data.semanticweb.org/ns/swc/ontology">http://data.semanticweb.org/ns/swc/ontology</a> (<a href="http://www.essepuntato.it/lode/owlapi/http://data.semanticweb.org/ns/swc/ontology">visualise it with LODE</a>)</dd><dd><a href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl">https://w3id.org/scholarlydata/ontology/conference-ontology.owl</a> (<a href="http://www.essepuntato.it/lode/owlapi/https://w3id.org/scholarlydata/ontology/conference-ontology.owl">visualise it with LODE</a>)</dd></dl><dl><dt>Other visualisation:</dt><dd><a href="http://eelst.cs.unibo.it/apps/LODE/source?url=http://www.essepuntato.it/static/tmp/0">Ontology source</a></dd></dl></div><hr><div id="toc"><h2><a name="toc"></a>Table of Content</h2>
-        <ol><li><a href="http://www.essepuntato.it/lode#introduction">Introduction</a></li><li><a href="#classtoc">Classes</a></li><li><a href="#objtoc">Object Properties</a></li><li><a href="#datatoc">Data Properties</a></li><li><a href="http://www.essepuntato.it/lode#namespacedeclarations">Namespace Declarations</a></li></ol></div><h2 id="introduction">Introduction</h2><p>SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops.</p>
+        </script></head><body data-gr-c-s-loaded="true"><div class="head"><h1>SEO, The Scientific Events Ontology.</h1>
+          <dl>
+            <dt>IRI:</dt>
+            <dd>http://rdfs.org/sioc/ns#</dd>
+            <dt>Version IRI:</dt>
+            <dd>http://purl.org/seo/</dd>
+          </dl>
+          <dl>
+            <dt>Current version:</dt>
+            <dd>1.1</dd>
+            <dt>Previous version:</dt>
+            <dd><a href="http://purl.org/seo/">http://purl.org/seo/</a> (<a href="http://www.essepuntato.it/lode/owlapi/http://purl.org/seo/">visualise it with LODE</a>)</dd>
+          </dl>
+          <dl>
+            <dt>Authors:</dt>
+            <dd>Christoph Lange</dd>
+            <dd>Sahar Vahdati</dd>
+            <dd>Said Fathalla</dd>
+            <dd>Sören Auer</dd>
+          </dl>
+          <dl>
+            <dt>Imported Ontologies:</dt>
+            <dd><a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a> (<a href="http://www.essepuntato.it/lode/owlapi/http://dbpedia.org/ontology/">visualise it with LODE</a>)</dd>
+            <dd><a href="http://rdfs.org/sioc/ns#">http://rdfs.org/sioc/ns#</a> (<a href="http://www.essepuntato.it/lode/owlapi/http://rdfs.org/sioc/ns#">visualise it with LODE</a>)</dd>
+            <dd><a href="http://www.essepuntato.it/2012/04/tvc">http://www.essepuntato.it/2012/04/tvc</a> (<a href="http://www.essepuntato.it/lode/owlapi/http://www.essepuntato.it/2012/04/tvc">visualise it with LODE</a>)</dd>
+            <dd><a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a> (<a href="http://www.essepuntato.it/lode/owlapi/http://xmlns.com/foaf/0.1/">visualise it with LODE</a>)</dd>
+            <dd><a href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl">https://w3id.org/scholarlydata/ontology/conference-ontology.owl</a> (<a href="http://www.essepuntato.it/lode/owlapi/https://w3id.org/scholarlydata/ontology/conference-ontology.owl">visualise it with LODE</a>)</dd>
+          </dl>
+          <dl>
+            <dt>Other visualisation:</dt>
+            <dd><a href="http://eelst.cs.unibo.it/apps/LODE/source?url=http://www.essepuntato.it/static/tmp/0">Ontology source</a></dd>
+          </dl>
+          </div><hr><div id="toc"><h2><a name="toc"></a>Table of Content</h2>
+        <ol><li><a href="#introduction">Introduction</a></li>
+		<li><a href="#classtoc">Classes</a></li>
+		<li><a href="#objtoc">Object Properties</a></li>
+		<li><a href="#datatoc">Data Properties</a></li>
+		<li><a href="#namespacedeclarations">Namespace Declarations</a></li>
+		<li><a href="#swrlrules">SWRL Rules</a></li>
+        </ol>
+          </div><h2 id="introduction">Introduction</h2><p>SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops.</p>
 <div id="classes"><h2><a name="classtoc"></a>Classes</h2>
-<ul class="hlist"><li><a href="#country" title="http://purl.org/seo/Country"><span>country</span></a></li>
-<li><a href="#DemosTrack" title="http://purl.org/seo/DemosTrack"><span>demos track</span></a></li>
-<li><a href="#DoctoralConsortium"><span>doctoral consortium</span></a></li>
-<li><a href="#Track" title="http://purl.org/seo/Track">Event Track</a></li>
-<li><a href="#In-useTrack" title="http://purl.org/seo/In-useTrack"><span>in use track</span></a></li>
-<li><a href="#IndustryTrack" title="http://purl.org/seo/IndustryTrack"><span>industry track</span></a></li>
-<li><a href="#PanelsTrack" title="http://purl.org/seo/PanelsTrack"><span>panels track</span></a></li>
-<li><a href="#PostersTrack" title="http://purl.org/seo/PostersTrack"><span>posters track</span></a></li>
+<ul class="hlist">
+  <li><a href="#country" title="http://purl.org/seo/Country"><span>Country</span></a></li>
+  <li><a href="#DemosTrack" title="http://purl.org/seo/DemosTrack"><span>Demos track</span></a></li>
+  <li><a href="#DoctoralConsortium"><span>Doctoral consortium</span></a></li>
+  <li><a href="#Track" title="http://purl.org/seo/Track">Event Track</a></li>
+<li><a href="#In-useTrack" title="http://purl.org/seo/In-useTrack"><span>In use track</span></a></li>
+<li><a href="#IndustryTrack" title="http://purl.org/seo/IndustryTrack"><span>Industry track</span></a></li>
+<li><a href="#PanelsTrack" title="http://purl.org/seo/PanelsTrack"><span>Panels track</span></a></li>
+<li><a href="#PostersTrack" title="http://purl.org/seo/PostersTrack"><span>Posters track</span></a></li>
 <li><a href="#Publisher" title="http://purl.org/seo/Publisher">Publisher</a></li>
-<li><a href="#ResearchTrack" title="http://purl.org/seo/ResearchTrack"><span>research track</span></a></li>
-<li><a href="#ResourceTrack" title="http://purl.org/seo/ResourceTrack"><span>resource track</span></a></li>
+<li><a href="#ResearchTrack" title="http://purl.org/seo/ResearchTrack"><span>Research track</span></a></li>
+<li><a href="#ResourceTrack" title="http://purl.org/seo/ResourceTrack"><span>Resource track</span></a></li>
 <li><a href="#Sponsor" title="http://purl.org/seo/Sponsor">Sponsor</a></li>
-<li><a href="#Symposium" title="http://purl.org/seo/Symposium"><span>symposium</span></a></li>
+<li><a href="#Symposium" title="http://purl.org/seo/Symposium"><span>Symposium</span></a></li>
 <li><a href="#SymposiumSeries" title="http://purl.org/seo/SymposiumSeries">Symposiums series</a></li>
-<li><a href="#TutorialProposals" title="http://purl.org/seo/TutorialProposals"><span>tutorial proposals</span></a></li>
-<li><a href="#WorkshopProposals" title="http://purl.org/seo/WorkshopProposals"><span>workshop proposals</span></a></li>
-</ul><div id="d4e300" class="entity"><a name="http://purl.org/seo/Country"></a><h3><a name="country"></a>country<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3>
+<li><a href="#TutorialProposals" title="http://purl.org/seo/TutorialProposals"><span>Tutorial proposals</span></a></li>
+<li><a href="#WorkshopProposals" title="http://purl.org/seo/WorkshopProposals"><span>Workshop proposals</span></a></li>
+</ul><div id="d4e300" class="entity"><a name="http://purl.org/seo/Country"></a>
+<h3><a name="country"></a>Country<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3>
 <p><strong>IRI:</strong> http://purl.org/seo/Country</p><div class="comment">
   <p>Country hosts the events. </p>
 </div></div><div id="d4e311" class="entity"><a name="DemosTrack" id="DemosTrack"></a>
-  <h3>demos track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/DemosTrack</p><div class="comment"><p>Offer an opportunity for presenting late-breaking research results, on-going research projects, and speculative or innovative work in progress.</p>
+  <h3>Demos track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3>
+  <p><strong>IRI:</strong> http://purl.org/seo/DemosTrack</p><div class="comment"><p>Offer an opportunity for presenting late-breaking research results, on-going research projects, and speculative or innovative work in progress.</p>
 </div><dl class="description"><dt>has super-classes</dt><dd><a href="#Track" title="http://purl.org/seo/Track">Event Track</a><sup title="class" class="type-c">c</sup></dd>
 </dl></div><div id="d4e321" class="entity"><a name="DoctoralConsortium" id="DoctoralConsortium"></a>
-  <h3>doctoral consortium<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/DoctoralConsortium</p><div class="comment"><p>Provide PhD students an opportunity to share and develop their research ideas in a critical but supportive environment.</p>
+  <h3>Doctoral consortium<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3>
+  <p><strong>IRI:</strong> http://purl.org/seo/DoctoralConsortium</p><div class="comment"><p>Provide PhD students an opportunity to share and develop their research ideas in a critical but supportive environment.</p>
 </div><dl class="description"><dt>has super-classes</dt><dd><a href="#Track" title="http://purl.org/seo/Track">Event Track</a><sup title="class" class="type-c">c</sup></dd>
 </dl></div><div id="d4e437" class="entity"><a name="Track" id="Track"></a>
   <h3>Event Track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/Track</p><div class="comment"><p>A categorization of research contributions submitted to an academic event.</p>
 </div><dl class="description"><dt>has sub-classes</dt><dd><a href="#DemosTrack" title="http://purl.org/seo/DemosTrack">demos track</a><sup title="class" class="type-c">c</sup>, <a href="#DoctoralConsortium" title="http://purl.org/seo/DoctoralConsortium">doctoral consortium</a><sup title="class" class="type-c">c</sup>, <a href="#In-useTrack" title="http://purl.org/seo/In-useTrack">in use track</a><sup title="class" class="type-c">c</sup>, <a href="#IndustryTrack" title="http://purl.org/seo/IndustryTrack">industry track</a><sup title="class" class="type-c">c</sup>, <a href="#PanelsTrack" title="http://purl.org/seo/PanelsTrack">panels track</a><sup title="class" class="type-c">c</sup>, <a href="#PostersTrack" title="http://purl.org/seo/PostersTrack">posters track</a><sup title="class" class="type-c">c</sup>, <a href="#ResearchTrack" title="http://purl.org/seo/ResearchTrack">research track</a><sup title="class" class="type-c">c</sup>, <a href="#ResourceTrack" title="http://purl.org/seo/ResourceTrack">resource track</a><sup title="class" class="type-c">c</sup>, <a href="#TutorialProposals" title="http://purl.org/seo/TutorialProposals">tutorial proposals</a><sup title="class" class="type-c">c</sup>, <a href="#WorkshopProposals" title="http://purl.org/seo/WorkshopProposals">workshop proposals</a><sup title="class" class="type-c">c</sup></dd>
 <dt>is in range of</dt><dd><a href="#hasTrack" title="http://purl.org/seo/hasTrack">has track</a><sup title="object property" class="type-op">op</sup></dd>
 </dl></div><div id="d4e332" class="entity"><a name="In-useTrack" id="In-useTrack"></a>
-  <h3>in use track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/In-useTrack</p><div class="comment"><p>In-Use track provides researchers to discuss novel research taken to the market.</p>
+  <h3>In use track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3>
+  <p><strong>IRI:</strong> http://purl.org/seo/In-useTrack</p><div class="comment"><p>In-Use track provides researchers to discuss novel research taken to the market.</p>
 </div><dl class="description"><dt>has super-classes</dt><dd><a href="#Track" title="http://purl.org/seo/Track">Event Track</a><sup title="class" class="type-c">c</sup></dd>
 </dl></div><div id="d4e342" class="entity"><a name="IndustryTrack" id="IndustryTrack"></a>
-  <h3>industry track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/IndustryTrack</p><div class="comment"><p>The industry track seeks to present research contributions in industrial settings.</p>
+  <h3>Industry track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3>
+  <p><strong>IRI:</strong> http://purl.org/seo/IndustryTrack</p><div class="comment"><p>The industry track seeks to present research contributions in industrial settings.</p>
 </div><dl class="description"><dt>has super-classes</dt><dd><a href="#Track" title="http://purl.org/seo/Track">Event Track</a><sup title="class" class="type-c">c</sup></dd>
 </dl></div><div id="d4e352" class="entity"><a name="PanelsTrack" id="PanelsTrack"></a>
-  <h3>panels track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/PanelsTrack</p><div class="comment"><p>Present research contributions as panels.</p>
+  <h3>Panels track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3>
+  <p><strong>IRI:</strong> http://purl.org/seo/PanelsTrack</p><div class="comment"><p>Present research contributions as panels.</p>
 </div><dl class="description"><dt>has super-classes</dt><dd><a href="#Track" title="http://purl.org/seo/Track">Event Track</a><sup title="class" class="type-c">c</sup></dd>
 </dl></div><div id="d4e363" class="entity"><a name="PostersTrack" id="PostersTrack"></a>
-  <h3>posters track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/PostersTrack</p><div class="comment"><p>Present research contributions as posters.</p>
+  <h3>Posters track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3>
+  <p><strong>IRI:</strong> http://purl.org/seo/PostersTrack</p><div class="comment"><p>Present research contributions as posters.</p>
 </div><dl class="description"><dt>has super-classes</dt><dd><a href="#Track" title="http://purl.org/seo/Track">Event Track</a><sup title="class" class="type-c">c</sup></dd>
 </dl></div><div id="d4e373" class="entity"><a name="Publisher" id="Publisher"></a>
   <h3>Publisher<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/Publisher</p><div class="comment"><p>The publisher of the event proceedings.</p>
 </div><dl class="description"><dt>is in range of</dt><dd><a href="#hasPublisher" title="http://purl.org/seo/hasPublisher">has publisher</a><sup title="object property" class="type-op">op</sup></dd>
 </dl></div><div id="d4e384" class="entity"><a name="ResearchTrack" id="ResearchTrack"></a>
-  <h3>research track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/ResearchTrack</p><div class="comment"><p>The track for fundamental research, innovative technology, and applications concerning the research topic of the event.</p>
+  <h3>Research track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3>
+  <p><strong>IRI:</strong> http://purl.org/seo/ResearchTrack</p><div class="comment"><p>The track for fundamental research, innovative technology, and applications concerning the research topic of the event.</p>
 </div><dl class="description"><dt>has super-classes</dt>
 <dd><a href="#Track" title="http://purl.org/seo/Track">Event Track</a><sup title="class" class="type-c">c</sup></dd>
 </dl></div><div id="d4e395" class="entity"><a name="ResourceTrack" id="ResourceTrack"></a>
-  <h3>resource track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/ResourceTrack</p><div class="comment"><p>The Resources Track aims to promote the sharing of resources including: datasets, ontologies, vocabularies, ... etc</p>
+  <h3>Resource track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3>
+  <p><strong>IRI:</strong> http://purl.org/seo/ResourceTrack</p><div class="comment"><p>The Resources Track aims to promote the sharing of resources including: datasets, ontologies, vocabularies, ... etc</p>
 </div><dl class="description"><dt>has super-classes</dt><dd><a href="#Track" title="http://purl.org/seo/Track">Event Track</a><sup title="class" class="type-c">c</sup></dd>
 </dl></div><div id="d4e405" class="entity"><a name="Sponsor" id="Sponsor"></a>
   <h3>Sponsor<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/Sponsor</p><div class="comment"><p>The Sponsor of the event (i.e. company, university ... etc.).</p>
 </div><dl class="description"><dt>is in range of</dt><dd><a href="#hasSponsor" title="http://purl.org/seo/hasSponsor">has sponsor</a><sup title="object property" class="type-op">op</sup></dd>
 </dl></div><div id="d4e416" class="entity"><a name="Symposium" id="Symposium"></a>
-  <h3>symposium<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/Symposium</p><dl class="description"><dt>has super-classes</dt><dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"><a href="http://data.semanticweb.org/ns/swc/">academic event</a></span><sup title="class" class="type-c">c</sup></dd>
+  <h3>Symposium<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3>
+  <p><strong>IRI:</strong> http://purl.org/seo/Symposium</p><dl class="description"><dt>has super-classes</dt><dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"><a href="http://data.semanticweb.org/ns/swc/">academic event</a></span><sup title="class" class="type-c">c</sup></dd>
   </dl></div><div id="d4e424" class="entity"><a name="SymposiumSeries" id="SymposiumSeries"></a>
     <h3>Symposiums series<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/SymposiumSeries</p><div class="comment"><p>A series of symposiums.</p>
 </div><dl class="description"><dt>has super-classes</dt>
 <dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries"><a href="http://data.semanticweb.org/ns/swc/">Event series</a></span><sup title="class" class="type-c">c</sup></dd>
 </dl></div><div id="d4e448" class="entity"><a name="TutorialProposals" id="TutorialProposals"></a>
-  <h3>tutorial proposals<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/TutorialProposals</p><div class="comment"><p>Proposal on a research topic relevant to the event audience.</p>
+  <h3>Tutorial proposals<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3>
+  <p><strong>IRI:</strong> http://purl.org/seo/TutorialProposals</p><div class="comment"><p>Proposal on a research topic relevant to the event audience.</p>
 </div><dl class="description"><dt>has super-classes</dt><dd><a href="#Track" title="http://purl.org/seo/Track">Event Track</a><sup title="class" class="type-c">c</sup></dd>
 </dl></div><div id="d4e459" class="entity"><a name="WorkshopProposals" id="WorkshopProposals"></a>
-  <h3>workshop proposals<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/WorkshopProposals</p><div class="comment"><p>Proposals for workshops on topics related to the general theme of the conference.</p>
+  <h3>Workshop proposals<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classtoc">Class ToC</a></span></h3>
+  <p><strong>IRI:</strong> http://purl.org/seo/WorkshopProposals</p><div class="comment"><p>Proposals for workshops on topics related to the general theme of the conference.</p>
 </div><dl class="description"><dt>has super-classes</dt><dd><a href="#Track" title="http://purl.org/seo/Track">Event Track</a><sup title="class" class="type-c">c</sup></dd>
 </dl></div></div><div id="objectproperties"><h2><a name="objtoc"></a>Object Properties</h2>
 <ul class="hlist"><li><a href="#belongsToSeries" title="http://purl.org/seo/belongsToSeries">belongsToSeries</a></li>
@@ -89,7 +141,9 @@
 <li><a href="#isSponsor" title="http://purl.org/seo/hasPublisher">isSponsorOf</a></li>
 <li><a href="#hasTrack" title="http://purl.org/seo/hasTrack"><span>has track</span></a></li>
 <li><a href="#isTrack" title="http://purl.org/seo/hasPublisher">isTrackOf</a></li>
-</ul><div id="d4e30" class="entity"><a name="belongsToSeries" id="belongsToSeries"></a>
+<li><a href="#hasProceedings" title="http://purl.org/seo/hasProceedings">hasProceedings</a></li>
+</ul>
+<div id="d4e30" class="entity"><a name="belongsToSeries" id="belongsToSeries"></a>
     <h3>belongsToSeries<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objtoc">Object Property ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/belongsToSeries</p><div class="comment"><p>This property shows the series which an event belongs to.</p>
 </div><div class="description"><dl><dt>has domain</dt><dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"><a href="http://data.semanticweb.org/ns/swc/">academic event</a></span><sup title="class" class="type-c">c</sup></dd>
 <dt>has range</dt><dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries"><a href="http://data.semanticweb.org/ns/swc/">event series</a></span><sup title="class" class="type-c">c</sup></dd>
@@ -163,7 +217,24 @@
       <dt>has range</dt>
       <dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"><a href="http://data.semanticweb.org/ns/swc/">academic event</a></span><sup title="class" class="type-c">c</sup></dd>
       <dt>is inverse of</dt>
-      <dd><span class="dotted" title="http://purl.org/seo/isTrackOf">has track</span><sup title="object property" class="type-op">op</sup></dd>
+      <dd><span class="dotted" title="http://purl.org/seo/hasTrack">has track</span><sup title="object property" class="type-op">op</sup></dd>
+    </dl>
+  </div>
+</div>
+<div id="div3" class="entity"><a name="hasProceedings" id="hasProceedings"></a>
+    <h3>is track of <sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objtoc">Object Property ToC</a></span></h3>
+    <p><strong>IRI:</strong> http://purl.org/seo/hasProceedings</p>
+    <div class="comment">
+    <p>This propoerty shows the Proceedings of an event.</p>
+  </div>
+  <div class="description">
+    <dl>
+      <dt>has domain</dt>
+      <dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"><a href="#AcademicEvent" title="http://purl.org/seo/AcademicEvent">Academic Event</a><sup title="class" class="type-c">c</sup></span></dd>
+      <dt>has range</dt>
+      <dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Proceedings"><a href="http://data.semanticweb.org/ns/swc/">Proceedings</a></span><sup title="class" class="type-c">c</sup></dd>
+      <dt>is inverse of</dt>
+      <dd><span class="dotted" title="http://purl.org/seo/isProceedingsOf">isProceedingsOf</span><sup title="object property" class="type-op">op</sup></dd>
     </dl>
   </div>
 </div>
@@ -237,5 +308,10 @@
   <h3>submitted papers<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#datatoc">Data Property ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/seo/submittedPapers</p><div class="comment"><p>The number of submitted papers to the event.</p>
 </div><div class="description"><dl><dt>has domain</dt><dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"><a href="http://data.semanticweb.org/ns/swc/">academic event</a></span><sup title="class" class="type-c">c</sup></dd>
 <dt>has range</dt><dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#unsignedInt"><a href="http://www.w3.org/2001/XMLSchema#unsignedInt">unsigned int</a></span></dd>
-</dl></div></div></div><div id="namespacedeclarations"><h2>Namespace Declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2><dl><dt><em>default namespace</em></dt><dd>http://purl.org/seo/</dd><dt>conference-ontology-owl</dt><dd>https://w3id.org/scholarlydata/ontology/conference-ontology.owl#</dd><dt>dc</dt><dd>http://purl.org/dc/elements/1.1/</dd><dt>ontology</dt><dd>https://w3id.org/scholarlydata/ontology/</dd><dt>owl</dt><dd>http://www.w3.org/2002/07/owl#</dd><dt>rdf</dt><dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd><dt>rdfs</dt><dd>http://www.w3.org/2000/01/rdf-schema#</dd><dt>swc</dt><dd>http://data.semanticweb.org/ns/swc/</dd><dt>terms</dt><dd>http://purl.org/dc/terms/</dd><dt>xsd</dt><dd>http://www.w3.org/2001/XMLSchema#</dd></dl></div><p class="endnote">This HTML document was obtained by processing the OWL ontology source code through <a href="http://www.essepuntato.it/lode">LODE</a>, <em>Live OWL Documentation Environment</em>, developed by <a href="http://www.essepuntato.it/">Silvio Peroni</a>.</p>
+</dl></div></div></div>
+
+<div id="swrlrules"><h2>SWRL rules</h2><div id="d4e30407" class="entity"><h3>Rule #1<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><a href="#d4e2490" title="http://purl.org/seo/colocatedWith">colocated with</a><sup title="object property" class="type-op">op</sup>(?e1,?e2) , <a href="#d4e3714" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</a><sup title="object property" class="type-op">op</sup>(?e1,?l1) -&gt; <a href="#d4e3714" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</a><sup title="object property" class="type-op">op</sup>(?e2,?l1)</p></div><div id="d4e30492" class="entity"><h3>Rule #2<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><a href="#d4e6515" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Agent">Agent</a><sup title="class" class="type-c">c</sup>(?sioc:a) , <a href="#d4e3832" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#holdsRole">holds role</a><sup title="object property" class="type-op">op</sup>(?sioc:a,?sioc:e) -&gt; <a href="#d4e2565" title="http://purl.org/seo/participateIn">participate in</a><sup title="object property" class="type-op">op</sup>(?sioc:a,?sioc:e)</p></div><div id="d4e30574" class="entity"><h3>Rule #3<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><a href="http://www.essepuntato.it/lode#d4e6061" title="http://www.essepuntato.it/2012/04/tvc/ValueInTime">value in time</a><sup title="class" class="type-c">c</sup>(?x) , <span class="dotted" title="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime">at time</span>(?x,?t) -&gt; <a href="http://www.essepuntato.it/lode#d4e2580" title="http://www.essepuntato.it/2012/04/tvc/atTime">at time</a><sup title="object property" class="type-op">op</sup>(?x,?t)</p></div><div id="d4e30647" class="entity"><h3>Rule #4<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><span class="dotted" title="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval">time interval</span>(?t) , <a href="http://www.essepuntato.it/lode#d4e2580" title="http://www.essepuntato.it/2012/04/tvc/atTime">at time</a><sup title="object property" class="type-op">op</sup>(?x,?t) -&gt; <span class="dotted" title="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime">at time</span>(?x,?t)</p></div><div id="d4e30720" class="entity"><h3>Rule #5<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><a href="http://www.essepuntato.it/lode#d4e3714" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</a><sup title="object property" class="type-op">op</sup>(?e1,?l1) , <a href="http://www.essepuntato.it/lode#d4e3714" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</a><sup title="object property" class="type-op">op</sup>(?e2,?l2) , <a href="http://www.essepuntato.it/lode#d4e5290" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#endDate">end date</a><sup title="data property" class="type-dp">dp</sup>(?e1,?ed1) , <a href="http://www.essepuntato.it/lode#d4e5290" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#endDate">end date</a><sup title="data property" class="type-dp">dp</sup>(?e2,?ed2) , <a href="http://www.essepuntato.it/lode#d4e5368" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#startDate">start date</a><sup title="data property" class="type-dp">dp</sup>(?e1,?sd1) , <a href="http://www.essepuntato.it/lode#d4e5368" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#startDate">start date</a><sup title="data property" class="type-dp">dp</sup>(?e2,?sd2) , equal(?ed1,?ed2) , equal(?l1,?l2) , equal(?sd1,?sd2) -&gt; <a href="http://www.essepuntato.it/lode#d4e2490" title="http://purl.org/seo/colocatedWith">colocated with</a><sup title="object property" class="type-op">op</sup>(?e1,?e2)</p></div><div id="d4e30967" class="entity"><h3>Rule #6<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><a href="http://www.essepuntato.it/lode#d4e2490" title="http://purl.org/seo/colocatedWith">colocated with</a><sup title="object property" class="type-op">op</sup>(?e1,?e2) , <a href="http://www.essepuntato.it/lode#d4e3714" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</a><sup title="object property" class="type-op">op</sup>(?e2,?l) -&gt; <a href="http://www.essepuntato.it/lode#d4e3714" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</a><sup title="object property" class="type-op">op</sup>(?e1,?l)</p></div></div>
+
+
+<div id="namespacedeclarations"><h2>Namespace Declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2><dl><dt><em>default namespace</em></dt><dd>http://purl.org/seo/</dd><dt>conference-ontology-owl</dt><dd>https://w3id.org/scholarlydata/ontology/conference-ontology.owl#</dd><dt>dc</dt><dd>http://purl.org/dc/elements/1.1/</dd><dt>ontology</dt><dd>https://w3id.org/scholarlydata/ontology/</dd><dt>owl</dt><dd>http://www.w3.org/2002/07/owl#</dd><dt>rdf</dt><dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd><dt>rdfs</dt><dd>http://www.w3.org/2000/01/rdf-schema#</dd><dt>swc</dt><dd>http://data.semanticweb.org/ns/swc/</dd><dt>terms</dt><dd>http://purl.org/dc/terms/</dd><dt>xsd</dt><dd>http://www.w3.org/2001/XMLSchema#</dd></dl></div><p class="endnote">This HTML document was obtained by processing the OWL ontology source code through <a href="http://www.essepuntato.it/lode">LODE</a>, <em>Live OWL Documentation Environment</em>, developed by <a href="http://www.essepuntato.it/">Silvio Peroni</a>.</p>
 </body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
