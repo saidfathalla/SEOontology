@@ -29,6 +29,14 @@
                                                dc:title "SEO, The Scientific Events Ontology."@en .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+#################################################################
 #    Datatypes
 #################################################################
 
@@ -39,6 +47,21 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://data.semanticweb.org/ns/swc/ontology/hasChair
+:hasChair rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isChairOf ;
+          dc:creator "Saeed Fathalla"^^xsd:string ;
+          dc:date "2018-07-06T06:42:12Z"^^xsd:dateTime .
+
+
+###  http://data.semanticweb.org/ns/swc/ontology/isChairOf
+:isChairOf rdf:type owl:ObjectProperty ;
+           rdfs:domain swc:Person ;
+           rdfs:range seo:Track ;
+           dc:creator "Saeed Fathalla"^^xsd:string ;
+           dc:date "2018-07-06T06:41:37Z"^^xsd:dateTime .
+
 
 ###  http://purl.org/seo/belongsToSeries
 seo:belongsToSeries rdf:type owl:ObjectProperty ;
@@ -204,6 +227,13 @@ seo:submittedPapers rdf:type owl:DatatypeProperty ;
 #################################################################
 #    Classes
 #################################################################
+
+###  http://data.semanticweb.org/ns/swc/ontology/ChairRoleDuringEvent
+:ChairRoleDuringEvent rdf:type owl:Class ;
+                      rdfs:subClassOf swc:RoleDuringEvent ;
+                      dc:creator "Saeed Fathalla"^^xsd:string ;
+                      dc:date "2018-07-06T06:40:31Z"^^xsd:dateTime .
+
 
 ###  http://purl.org/seo/Country
 seo:Country rdf:type owl:Class ;
