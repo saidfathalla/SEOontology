@@ -11,25 +11,31 @@
                         	$.scrollTo(element);
                         }
                     });
-        </script></head><body data-gr-c-s-loaded="true"><div class="head"><h1>SEO, The Scientific Events Ontology.</h1>
+        </script>
+<style type="text/css">
+<!--
+.style1 {font-family: "Courier New", Courier, monospace}
+-->
+</style>
+</head><body data-gr-c-s-loaded="true"><div class="head">
+          <h1>OR-SEO, The Scientific Events Ontology of OpenResearch.org</h1>
           <dl>
             <dt>IRI:</dt>
-            <dd>http://rdfs.org/sioc/ns#</dd>
-            <dt>Version IRI:</dt>
             <dd>http://purl.org/seo/</dd>
           </dl>
           <dl>
             <dt>Current version:</dt>
-            <dd>1.1</dd>
+            <dd>1.0</dd>
             <dt>Previous version:</dt>
             <dd><a href="http://purl.org/seo/">http://purl.org/seo/</a> (<a href="http://www.essepuntato.it/lode/owlapi/http://purl.org/seo/">visualise it with LODE</a>)</dd>
           </dl>
           <dl>
             <dt>Authors:</dt>
-            <dd>Christoph Lange</dd>
-            <dd>Sahar Vahdati</dd>
             <dd>Said Fathalla</dd>
+            <dd>Sahar Vahdati</dd>
             <dd>Sören Auer</dd>
+			<dd>Christoph Lange</dd>
+
           </dl>
           <dl>
             <dt>Imported Ontologies:</dt>
@@ -51,8 +57,12 @@
 		<li><a href="#namespacedeclarations">Namespace Declarations</a></li>
 		<li><a href="#swrlrules">SWRL Rules</a></li>
         </ol>
-          </div><h2 id="introduction">Introduction</h2><p>SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops.</p>
-<div id="classes"><h2><a name="classtoc"></a>Classes</h2>
+</div><h2 id="introduction">Introduction</h2>
+          <p>The Scientific Events Ontology (OR-SEO), with a new namespace <span class="style1">seo</span>, is engineered to represent metadata of scientific events. 
+            The real-world implementation of the presented ontology is <a href="http://OpenResearch.org">OpenResearch.org</a>. 
+            It is a systematic redesign of the vocabulary used as the schema of event pages on \textit{OpenResearch.org}, reusing well-known vocabularies and following standard methodologies.</p>
+          <p>OR-SEO has been developed from scratch using <a href="http://essepuntato.github.io/samod/">SAMOD</a>, an iterative process that aims at building the final model through a series of small steps.</p>
+          <div id="classes"><h2><a name="classtoc"></a>Classes</h2>
 <ul class="hlist">
   <li><a href="#country" title="http://purl.org/seo/Country"><span>Country</span></a></li>
   <li><a href="#DemosTrack" title="http://purl.org/seo/DemosTrack"><span>Demos track</span></a></li>
@@ -313,5 +323,23 @@
 <div id="swrlrules"><h2>SWRL rules</h2><div id="d4e30407" class="entity"><h3>Rule #1<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><a href="#d4e2490" title="http://purl.org/seo/colocatedWith">colocated with</a><sup title="object property" class="type-op">op</sup>(?e1,?e2) , <a href="#d4e3714" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</a><sup title="object property" class="type-op">op</sup>(?e1,?l1) -&gt; <a href="#d4e3714" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</a><sup title="object property" class="type-op">op</sup>(?e2,?l1)</p></div><div id="d4e30492" class="entity"><h3>Rule #2<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><a href="#d4e6515" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Agent">Agent</a><sup title="class" class="type-c">c</sup>(?sioc:a) , <a href="#d4e3832" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#holdsRole">holds role</a><sup title="object property" class="type-op">op</sup>(?sioc:a,?sioc:e) -&gt; <a href="#d4e2565" title="http://purl.org/seo/participateIn">participate in</a><sup title="object property" class="type-op">op</sup>(?sioc:a,?sioc:e)</p></div><div id="d4e30574" class="entity"><h3>Rule #3<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><a href="http://www.essepuntato.it/lode#d4e6061" title="http://www.essepuntato.it/2012/04/tvc/ValueInTime">value in time</a><sup title="class" class="type-c">c</sup>(?x) , <span class="dotted" title="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime">at time</span>(?x,?t) -&gt; <a href="http://www.essepuntato.it/lode#d4e2580" title="http://www.essepuntato.it/2012/04/tvc/atTime">at time</a><sup title="object property" class="type-op">op</sup>(?x,?t)</p></div><div id="d4e30647" class="entity"><h3>Rule #4<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><span class="dotted" title="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval">time interval</span>(?t) , <a href="http://www.essepuntato.it/lode#d4e2580" title="http://www.essepuntato.it/2012/04/tvc/atTime">at time</a><sup title="object property" class="type-op">op</sup>(?x,?t) -&gt; <span class="dotted" title="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime">at time</span>(?x,?t)</p></div><div id="d4e30720" class="entity"><h3>Rule #5<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><a href="http://www.essepuntato.it/lode#d4e3714" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</a><sup title="object property" class="type-op">op</sup>(?e1,?l1) , <a href="http://www.essepuntato.it/lode#d4e3714" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</a><sup title="object property" class="type-op">op</sup>(?e2,?l2) , <a href="http://www.essepuntato.it/lode#d4e5290" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#endDate">end date</a><sup title="data property" class="type-dp">dp</sup>(?e1,?ed1) , <a href="http://www.essepuntato.it/lode#d4e5290" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#endDate">end date</a><sup title="data property" class="type-dp">dp</sup>(?e2,?ed2) , <a href="http://www.essepuntato.it/lode#d4e5368" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#startDate">start date</a><sup title="data property" class="type-dp">dp</sup>(?e1,?sd1) , <a href="http://www.essepuntato.it/lode#d4e5368" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#startDate">start date</a><sup title="data property" class="type-dp">dp</sup>(?e2,?sd2) , equal(?ed1,?ed2) , equal(?l1,?l2) , equal(?sd1,?sd2) -&gt; <a href="http://www.essepuntato.it/lode#d4e2490" title="http://purl.org/seo/colocatedWith">colocated with</a><sup title="object property" class="type-op">op</sup>(?e1,?e2)</p></div><div id="d4e30967" class="entity"><h3>Rule #6<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><a href="http://www.essepuntato.it/lode#d4e2490" title="http://purl.org/seo/colocatedWith">colocated with</a><sup title="object property" class="type-op">op</sup>(?e1,?e2) , <a href="http://www.essepuntato.it/lode#d4e3714" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</a><sup title="object property" class="type-op">op</sup>(?e2,?l) -&gt; <a href="http://www.essepuntato.it/lode#d4e3714" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</a><sup title="object property" class="type-op">op</sup>(?e1,?l)</p></div></div>
 
 
-<div id="namespacedeclarations"><h2>Namespace Declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2><dl><dt><em>default namespace</em></dt><dd>http://purl.org/seo/</dd><dt>conference-ontology-owl</dt><dd>https://w3id.org/scholarlydata/ontology/conference-ontology.owl#</dd><dt>dc</dt><dd>http://purl.org/dc/elements/1.1/</dd><dt>ontology</dt><dd>https://w3id.org/scholarlydata/ontology/</dd><dt>owl</dt><dd>http://www.w3.org/2002/07/owl#</dd><dt>rdf</dt><dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd><dt>rdfs</dt><dd>http://www.w3.org/2000/01/rdf-schema#</dd><dt>swc</dt><dd>http://data.semanticweb.org/ns/swc/</dd><dt>terms</dt><dd>http://purl.org/dc/terms/</dd><dt>xsd</dt><dd>http://www.w3.org/2001/XMLSchema#</dd></dl></div><p class="endnote">This HTML document was obtained by processing the OWL ontology source code through <a href="http://www.essepuntato.it/lode">LODE</a>, <em>Live OWL Documentation Environment</em>, developed by <a href="http://www.essepuntato.it/">Silvio Peroni</a>.</p>
+<div id="namespacedeclarations"><h2>Namespace Declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2><dl><dt><em>default namespace</em></dt><dd>http://purl.org/seo/</dd><dt>conference-ontology-owl</dt><dd>https://w3id.org/scholarlydata/ontology/conference-ontology.owl#</dd><dt>dc</dt><dd>http://purl.org/dc/elements/1.1/</dd>
+    <dt>foaf</dt>
+    <dd>http://xmlns.com/foaf/0.1/</dd>
+    <dt>ontology</dt>
+  <dd>https://w3id.org/scholarlydata/ontology/</dd><dt>owl</dt><dd>http://www.w3.org/2002/07/owl#</dd><dt>rdf</dt><dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd><dt>rdfs</dt><dd>http://www.w3.org/2000/01/rdf-schema#</dd><dt>swc</dt><dd>http://data.semanticweb.org/ns/swc/</dd>
+    <dt>swrl</dt>
+    <dd>http://www.w3.org/2003/11/swrl#</dd>
+    <dt>swrla</dt>
+    <dd>http://swrl.stanford.edu/ontologies/3.3/swrla.owl#</dd>
+    <dt>swrlb</dt>
+  <dd>http://www.w3.org/2003/11/swrlb#</dd>
+    <dt>terms</dt>
+    <dd>http://purl.org/dc/terms/</dd>
+    <dt>tvc</dt>
+    <dd>http://www.essepuntato.it/2012/04/tvc/</dd>
+    <dt></dt>
+    <dt>xsd</dt>
+    <dd>http://www.w3.org/2001/XMLSchema#</dd></dl>
+</div><p class="endnote">This HTML document was obtained by processing the OWL ontology source code through <a href="http://www.essepuntato.it/lode">LODE</a>, <em>Live OWL Documentation Environment</em>, developed by <a href="http://www.essepuntato.it/">Silvio Peroni</a>.</p>
 </body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

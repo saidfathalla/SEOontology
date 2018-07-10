@@ -16,8 +16,7 @@
 
 <http://rdfs.org/sioc/ns#> rdf:type owl:Ontology ;
                             owl:versionIRI seo: ;
-                            owl:imports <http://dbpedia.org/ontology/> ,
-                                        <http://www.essepuntato.it/2012/04/tvc> ,
+                            owl:imports <http://www.essepuntato.it/2012/04/tvc> ,
                                         <https://w3id.org/scholarlydata/ontology/conference-ontology.owl> ,
                                         <http://rdfs.org/sioc/ns#> ,
                                         <http://xmlns.com/foaf/0.1/> ;
