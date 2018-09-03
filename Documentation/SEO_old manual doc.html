@@ -1,0 +1,1677 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <title>SEO Ontology</title>
+    <style type="text/css">
+    body {
+        background: #FFF;
+        color: #000;
+        font-family: Verdana, Arial, "Arial Unicode MS", Helvetica, sans-serif;
+        margin: 1%;
+        padding: 1%;
+        text-align: left;
+    }
+
+    table {
+        display: table;
+        border-collapse: separate;
+        border-spacing: 0px;
+        border-color: grey;
+        width: 99%;
+    }
+
+    table.border {
+        border-top: 1px solid #CCC;
+        border-left: 1px solid #CCC;
+        margin-bottom: 10px;
+    }
+
+    table.border th {
+        background: #EEE;
+        font-family: Verdana, Arial, "Arial Unicode MS", Helvetica, sans-serif;
+    }
+
+    table.border td,
+    table.border th {
+        border-right: 1px solid #CCC;
+        border-bottom: 1px solid #CCC;
+        padding: .5em;
+    }
+
+    table.noborder {
+        margin-bottom: 10px;
+    }
+
+    table.noborder th {
+        background: #EEE;
+        font-family: Verdana, Arial, "Arial Unicode MS", Helvetica, sans-serif;
+    }
+
+    table.noborder td,
+    table.noborder th {
+        padding: .5em;
+    }
+
+    tr.attribute th {
+        background-color: #fff;
+    }
+
+    table.border.index td,
+    table.border.index th {
+        border-spacing: 0;
+    }
+
+    table.index th {
+        border-right: 1px solid #CCC;
+        border-bottom: 1px solid #CCC;
+        padding: .5em;
+    }
+
+    th,
+    td {
+        vertical-align: top;
+    }
+
+    html>body,
+    html>body div,
+    html>body p,
+    html>body th,
+    html>body td,
+    html>body li,
+    html>body dd {
+        font-size: small;
+    }
+
+    h1 {
+        color: #28288C;
+        font: bold 130% Verdana, Arial, "Arial Unicode MS", Helvetica, sans-serif;
+    }
+
+    h2 {
+        color: #000;
+        font: bold 125% Verdana, Arial, "Arial Unicode MS", Helvetica, sans-serif;
+    }
+
+    h3 {
+        color: #000;
+        font: bold 115% Verdana, Arial, "Arial Unicode MS", Helvetica, sans-serif;
+    }
+
+    h4 {
+        color: #666;
+        font: bold 100% Verdana, Arial, "Arial Unicode MS", Helvetica, sans-serif;
+        font-style: italic;
+    }
+
+    h5 {
+        color: #777;
+        font: bold 80% Tahoma, Geneva, "Arial Unicode MS", Arial, Helvetica, sans-serif;
+    }
+
+    h6 {
+        color: #000;
+        font: normal 100% Verdana, Arial, "Arial Unicode MS", Helvetica, sans-serif;
+    }
+
+    div.footer {
+        clear: both;
+        margin-top: 1em;
+    }
+    .style1 {font-size: x-large}
+    </style>
+</head>
+
+<body>
+	<a name="top"></a> 
+	<h1 class="style1"> The Scientific Events   Ontology (SEO) </h1>
+    <table>
+        <tbody>
+            <tr>
+              <th><div >Title:</div></th>
+                <td property="dcterms:Title">SEO, the scientific events ontology, is a  reference ontology for modelling
+                data about scientific events such as conferences, symposioums and workshops.</td>
+            </tr>
+            <tr>
+                <th scope="row"><div>Creator:</div></th>
+                <td property="dcterms:creator" >Said Fathalla, Sahar Vahdati, Christoph Lange and Sören Auer</td>
+            </tr>
+            <tr>
+                <th scope="row"><div>Release:</div></th>
+                <td>
+                    <time property="dcterms:issued">2018-04-01</time>                </td>
+            </tr>
+			<tr>
+                <th scope="row"><div>Contact:</div></th>
+                <td>
+                    fathalla (at) cs.uni-bonn.de               </td>
+            </tr>
+            <tr>
+              <th scope="row">License and use: </th>
+              <td property="dcterms:description">Found <a href="http://sda.tech/SEOontology/Documentation/SEO_Licence.html">here</a> </td>
+            </tr>
+            <tr>
+              <th scope="row"><div>Last update:</div></th>
+              <td property="dcterms:description"><time property="dcterms:issued">2018-04-01</time></td>
+            </tr>
+            <tr>
+                <th scope="row"><div>Description:</div></th>
+                <td property="dcterms:description">This document is a 
+specification of all metadata terms reused or defined in
+SEO including properties, vocabulary encoding schemes,
+ syntax encoding schemes, and classes. (<a href="http://sda.tech/SEOontology/SEO.rdf">RDF/XML</a>, <a href="http://sda.tech/SEOontology/SEO.ttl">Turtle</a>, <a href="http://sda.tech/SEOontology/SEO.json">JSON-LD</a>)              export</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="contents">
+        <h2>Table of Contents</h2>
+        <ol>
+            <li>
+                <a href="#H1">Introduction</a>            </li>
+            <li>
+                <a href="#H2">Classes</a>
+            </li>
+            <li>
+                <a href="#H3">Properties</a>
+            </li>
+        </ol>
+    </div>
+    <h2>Index of Terms</h2>
+    <table class="border index">
+        <tbody>
+            <tr>
+                <th scope="row">Classes</th>
+                <td>
+                    <a href="#Symposium" class="term">Symposium</a> ,
+                    <a href="#SymposiumSeries" class="term">SymposiumSeries</a>,
+					<a href="#Country" class="term">Country</a>,
+					<a href="#Publisher" class="term">Publisher</a>,
+<a href="#Sponsor" class="term">Sponsor</a>,
+<a href="#Track" class="term">Track</a>,
+<a href="#DemosTrack" class="term">DemosTrack</a>,
+<a href="#DoctoralConsortium" class="term">DoctoralConsortium</a>,
+<a href="#In-useTrack" class="term">In-useTrack</a>,
+<a href="#IndustryTrack" class="term">IndustryTrack</a>,
+<a href="#PanelsTrack" class="term">PanelsTrack</a>,
+<a href="#PostersTrack" class="term">PostersTrack</a>,
+<a href="#ResearchTrack" class="term">ResearchTrack</a>,
+<a href="#ResourceTrack" class="term">ResourceTrack</a>,
+<a href="#TutorialProposals" class="term">TutorialProposals</a>,
+<a href="#WorkshopProposals" class="term">WorkshopProposals</a>.
+            </tr>
+            <tr>
+                <th scope="row">Properties</th>
+                <td>
+                    <a href="#belongsToSeries" class="term">belongsToSeries</a> ,
+                    <a href="#colocatedWith" class="term">colocatedWith</a> ,
+                    <a href="#hasPublisher" class="term">hasPublisher</a> ,
+                    <a href="#hasSponsor" class="term">hasSponsor</a> ,
+                    <a href="#hasTrack" class="term">hasTrack</a> ,
+                    <a href="#abstractDeadline" class="term">abstractDeadline</a> ,
+                    <a href="#acceptanceRate" class="term">acceptanceRate</a> ,
+                    <a href="#acceptedPapers" class="term">acceptedPapers</a> ,
+                    <a href="#submittedPapers" class="term">submittedPapers</a> ,
+                    <a href="#city" class="term">city</a> ,
+                    <a href="#hasTwitter" class="term">hasTwitter</a> ,
+                    <a href="#EventWebpage" class="term">EventWebpage</a> ,
+                    <a href="#notificationDate" class="term">notificationDate</a> ,
+                    <a href="#submissionDeadline" class="term">submissionDeadline</a> ,
+                    <a href="#submissionWebpage" class="term">submissionWebpage</a>.
+                   
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="H1">
+        <h2>Section 1: Introduction and Definitions of the SEO LOD Ontology</h2>
+        <div id="introduction">
+            <p>This document is an up-to-date, authoritative specification of all metadata terms maintained by the SEO LOD services.</p>
+            <p>Each term is specified with the following minimal set of attributes:</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <b>Name:</b>
+                        </td>
+                        <td>
+                            A token appended to the URI of a DCMI namespace to create the URI of the term.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Label:</b>
+                        </td>
+                        <td>
+                            The human-readable label assigned to the term.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>URI:</b>
+                        </td>
+                        <td>
+                            The Uniform Resource Identifier used to uniquely identify a term.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Definition:</b>
+                        </td>
+                        <td>
+                            A statement that represents the concept and essential nature of the term.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Where applicable, the following attributes provide additional information about a term:</p>
+            <p>
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <b>Comment:</b>
+                        </td>
+                        <td>
+                            Additional information about the term or its application.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>See:</b>
+                        </td>
+                        <td>
+                            Authoritative documentation related to the term.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Has Domain:</b>
+                        </td>
+                        <td>
+                            A Class of which a resource described by the term is an Instance.
+                        </td>
+                    </tr>
+                                   <tr>
+                        <td>
+                            <b>Has Range:</b>
+                        </td>
+                        <td>
+                            A Class of which a value described by the term is an Instance.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+      </div>
+                 <div>
+                <p>Re-used prefixes are as follows:</p>
+                <pre style="word-wrap: break-word; white-space: pre-wrap;">
+@prefix swrc: &lt;http://swrc.ontoware.org/ontology#&gt; .
+@prefix dcmi: &lt;http://purl.org/dc/terms/&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix doap: &lt;http://usefulinc.com/ns/doap#&gt; .
+@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+@prefix xsd: &lt;https://www.w3.org/2001/XMLSchema/&gt;</pre>
+                 </div>
+    </div>
+    <!-- ******************* SECTION 2: CLASSES ******************* -->
+    <div id="H2">
+        <h2>Section 2: Classes</h2>
+        <table class="border">
+		    <!-- ******************* Publication entity ******************* -->
+            <tbody id="Symposium" class="term" resource="http://sda.tech/SEOontology/SEO/Symposium">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>Symposium</span>                        
+							</div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th  scope="row"><div>URI:                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/Symposium">http://purl.org/seo/Symposium</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>Symposium</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>A symposium is a small scale conference as the number of participants is smaller</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+            </tbody>
+		    <!-- ******************* Project entity ******************* -->
+            <tbody id="SymposiumSeries" class="term" resource="http://sda.tech/SEOontology/SEO/SymposiumSeries">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>SymposiumSeries</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://swrc.ontoware.org/ontology#Publication">http://purl.org/seo/</a><a href="http://swrc.ontoware.org/ontology#Project">SymposiumSeries</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>Symposium Series</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>A series of symposiums. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			
+			<!-- ******************* country entity ******************* -->
+            <tbody id="country" class="term" resource="http://sda.tech/SEOontology/SEO/Country">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>Country</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/Country">http://purl.org/seo/Country</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>Country</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The country hosts the event. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			
+			<!-- ******************* Publisher entity ******************* -->
+            <tbody id="Publisher" class="term" resource="http://sda.tech/SEOontology/SEO/Publisher">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>Publisher</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/Publisher">http://purl.org/seo/Publisher</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>Publisher</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The publisher of the event proceedings. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			
+			<!-- ******************* Sponsor entity ******************* -->
+            <tbody id="Sponsor" class="term" resource="http://sda.tech/SEOontology/SEO/Sponsor">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>Sponsor</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/Sponsor">http://purl.org/seo/Sponsor</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>Sponsor</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The Sponsor of the event (i.e. company, university ... etc.). </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			
+					
+			<!-- ******************* Track entity ******************* -->
+            <tbody id="Track" class="term" resource="http://sda.tech/SEOontology/SEO/Track">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>Track</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/Track">http://purl.org/seo/Track</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>
+					event Track</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>A categorization of research contributions submitted to an academic event. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			
+			<!-- ******************* DemosTrack entity ******************* -->
+            <tbody id="DemosTrack" class="term" resource="http://sda.tech/SEOontology/SEO/DemosTrack">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>DemosTrack</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/DemosTrack">http://purl.org/seo/DemosTrack</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td> Demos Track</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>Offer an opportunity for presenting late-breaking research results, on-going research projects, and speculative or innovative work in progress. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			<!-- ******************* DoctoralConsortium entity ******************* -->
+            <tbody id="DoctoralConsortium" class="term" resource="http://sda.tech/SEOontology/SEO/DoctoralConsortium">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>DoctoralConsortium</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/DoctoralConsortium">http://purl.org/seo/DoctoralConsortium</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>
+					Doctoral Consortium</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>Provide PhD students an opportunity to share and develop their research ideas in a critical but supportive environment. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			<!-- ******************* In-useTrack entity ******************* -->
+            <tbody id="In-useTrack" class="term" resource="http://sda.tech/SEOontology/SEO/In-useTrack">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>In-useTrack</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/In-useTrack">http://purl.org/seo/In-useTrack</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>
+					In-use Track</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>In-Use track provides researchers to discuss novel research taken to the market. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			<!-- ******************* IndustryTrack entity ******************* -->
+            <tbody id="IndustryTrack" class="term" resource="http://sda.tech/SEOontology/SEO/IndustryTrack">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>IndustryTrack</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/IndustryTrack">http://purl.org/seo/IndustryTrack</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>
+					Industry Track</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The industry track seeks to present research contributions in industrial settings. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			<!-- ******************* PanelsTrack entity ******************* -->
+            <tbody id="PanelsTrack" class="term" resource="http://sda.tech/SEOontology/SEO/PanelsTrack">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>PanelsTrack</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/PanelsTrack">http://purl.org/seo/PanelsTrack</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>
+					Panels Track</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>Present research contributions as panels. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			<!-- ******************* PostersTrack entity ******************* -->
+            <tbody id="PostersTrack" class="term" resource="http://sda.tech/SEOontology/SEO/PostersTrack">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>PostersTrack</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/PostersTrack">http://purl.org/seo/PostersTrack</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>
+					Posters Track</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>Present research contributions as posters. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			<!-- ******************* ResearchTrack entity ******************* -->
+            <tbody id="ResearchTrack" class="term" resource="http://sda.tech/SEOontology/SEO/ResearchTrack">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>ResearchTrack</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/ResearchTrack">http://purl.org/seo/ResearchTrack</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>
+					ResearchTrack</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The track for fundamental research, innovative technology, and applications concerning the research topic of the event. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			
+			
+			<!-- ******************* ResourceTrack entity ******************* -->
+            <tbody id="ResourceTrack" class="term" resource="http://sda.tech/SEOontology/SEO/ResourceTrack">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>ResourceTrack</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/ResourceTrack">http://purl.org/seo/ResourceTrack</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>
+					Resource Track</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The Resources Track aims to promote the sharing of resources including: datasets, ontologies, vocabularies, ... etc </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			<!-- ******************* TutorialProposals entity ******************* -->
+            <tbody id="TutorialProposals" class="term" resource="http://sda.tech/SEOontology/SEO/TutorialProposals">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>TutorialProposals</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/TutorialProposals">http://purl.org/seo/TutorialProposals</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>
+					Tutorial Proposals</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>Proposal on a research topic relevant to the event audience. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			<!-- ******************* WorkshopProposals entity ******************* -->
+            <tbody id="WorkshopProposals" class="term" resource="http://sda.tech/SEOontology/SEO/WorkshopProposals">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>WorkshopProposals</span>                        </div>
+                      </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="http://sda.tech/SEOontology/SEO/WorkshopProposals">http://purl.org/seo/WorkshopProposals</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>
+					Workshop Proposals</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>Proposals for workshops on topics related to the general theme of the conference. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>                    </td>
+                </tr>
+			</tbody>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+        </table>
+    </div>
+    <!-- ******************* SECTION 3: PROPERTIES ******************* -->
+    <div id="H3">
+        <h2>Section 3: Properties</h2>
+        <table class="border">
+            <tbody id="belongsToSeries" class="term" >
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>belongsToSeries</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th  scope="row"><div>URI:                    </div></th>
+                    <td>
+                        <a href="#top">belongsToSeries</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>belongs To Series</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>This property shows the series which an event belongs to.</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries</a>                    </td>
+                </tr>
+            </tbody>
+			    <!-- ******************* colocatedWith ******************* -->
+            <tbody id="colocatedWith" class="term">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>colocatedWith</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/colocatedWith</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>co-located With</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>This property links an event to another one which is co-located with.</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td></td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent</a>                    </td>
+                </tr>
+            </tbody>
+    
+            <!-- ******************* haspublisher ******************* -->
+            <tbody id="terms-hasPublisher" class="term" >
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>hasPublisher</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/hasPublisher</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>has Publisher</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>This propoerty shows the publisher of a proceedings. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td></td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Proceedings">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Proceedings</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="http://sda.tech/SEOontology/SEO/Publisher">http://purl.org/seo/Publisher</a>                    </td>
+                </tr>
+            </tbody>
+			<!-- ******************* hasSponsor ******************* -->
+            <tbody id="hasSponsor" class="term">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>hasSponsor</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/hasSponsor</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>has Sponsor</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>This propoerty shows the sponsor of an event. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td></td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="http://sda.tech/SEOontology/SEO/Sponsor">http://purl.org/seo/Sponsor</a>                    </td>
+                </tr>
+            </tbody>
+			
+            <!-- ******************* http://sda.tech/SEOontology/SEO/hasTrack ******************* -->
+            <tbody id="hasTrack" class="term">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>hasTrack</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/hasTrack</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>has Track</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>This propoerty shows the available tracks of an event.</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td></td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="http://sda.tech/SEOontology/SEO/Track">http://purl.org/seo/Track</a>                    </td>
+                </tr>
+            </tbody>
+		
+            <!-- ******************* http://sda.tech/SEOontology/SEO/abstractDeadline ******************* -->
+            <tbody id="abstractDeadline" class="term">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>abstractDeadline</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/abstractDeadline</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>abstract Deadline</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The deadline of abstract submission. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td></td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a>                    </td>
+                </tr>
+            </tbody>
+
+            <!-- ******************* acceptanceRate ******************* -->
+            <tbody id="acceptanceRate" class="term" >
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>acceptanceRate</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/acceptanceRate</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>acceptance Rate</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>http://purl.org/seo/acceptanceRate</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td></td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"> https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent
+</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a>                    </td>
+                </tr>
+            </tbody>
+			
+            <!-- ******************* acceptedPapers ******************* -->
+            <tbody id="acceptedPapers" class="term">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>acceptedPapers</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/acceptedPapers</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>accepted Papers</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The number of accepted papers in the event.</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td></td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#unsignedInt">http://www.w3.org/2001/XMLSchema#unsignedInt</a>                    </td>
+                </tr>
+            </tbody>
+			
+            <!-- ******************* submittedPapers ******************* -->
+            <tbody id="submittedPapers" class="term">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>submittedPapers</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/submittedPapers</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>submitted Papers</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The number of submitted papers to the event.</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td></td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#unsignedInt">http://www.w3.org/2001/XMLSchema#unsignedInt</a>                    </td>
+                </tr>
+            </tbody>		
+				
+            <!-- ******************* http://sda.tech/SEOontology/SEO/city ******************* -->
+            <tbody id="city" class="term" >
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>city</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/city</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>city</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The city in which the event takes place.</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a>                    </td>
+                </tr>
+            </tbody>
+			
+            <!-- ******************* http://sda.tech/SEOontology/SEO/hasTwitter ******************* -->
+            <tbody id="hasTwitter" class="term">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>hasTwitter</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/hasTwitter</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td> has Twitter account</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The twitter account of the event.</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#anyURI"> http://www.w3.org/2001/XMLSchema#anyURI</a>                    </td>
+                </tr>
+            </tbody>
+			
+            <!-- ******************* http://sda.tech/SEOontology/SEO/homepage ******************* -->
+            <tbody id="EventWebpage" class="term" >
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>EventWebpage</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/EventWebpage</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>Event Webpage</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The webpage of the event.</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td></td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2001/XMLSchema#anyURI</a>                    </td>
+                </tr>
+            </tbody>
+			
+            <!-- ******************* http://sda.tech/SEOontology/SEO/notificationDate ******************* -->
+            <tbody id="notificationDate" class="term">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>notificationDate</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/notificationDate</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>notification date</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="http://swrc.ontoware.org/ontology#Publication">http://swrc.ontoware.org/ontology#Publication</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="http://swrc.ontoware.org/ontology#Publication">http://swrc.ontoware.org/ontology#Publication</a>                    </td>
+                </tr>
+            </tbody>
+			
+			 <!-- ******************* http://sda.tech/SEOontology/SEO/submissionDeadline ******************* -->
+            <tbody id="submissionDeadline" class="term">
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>submissionDeadline</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/submissionDeadline</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>submission Deadline</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The deadline of paper submission. </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td></td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a>                    </td>
+                </tr>
+            </tbody>
+			
+			  <!-- ******************* http://sda.tech/SEOontology/SEO/submissionhomepage ******************* -->
+            <tbody id="submissionWebpage" class="term" >
+                <tr>
+                    <th colspan="2" scope="rowgroup">
+                        <div>Term Name: &nbsp;&nbsp;
+                            <span>submissionWebpage</span>                        </div>
+                        <link property="rdfs:isDefinedBy" href="#top">                    </th>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>URI:
+                    </div></th>
+                    <td>
+                        <a href="#top">http://purl.org/seo/submissionWebpage</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Label:
+                    </div></th>
+                    <td>submission Webpage</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Definition:
+                    </div></th>
+                    <td>The webpage of the submission.</td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Comment:
+                    </div></th>
+                    <td></td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Type of Term:
+                    </div></th>
+                    <td>
+                        <a property="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Domain:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:domain" href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent</a>                    </td>
+                </tr>
+                <tr class="attribute">
+                    <th scope="row"><div>Has Range:
+                    </div></th>
+                    <td>
+                        <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2001/XMLSchema#anyURI</a>                    </td>
+                </tr>
+            </tbody>
+          
+        </table>
+    </div>
+<div class="footer">
+        <p>
+            <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img src="..//Documentation/cc.png" alt="Creative Commons License" width="88" height="31" border="0" style="border-width:0"> </a>        </p>
+    <a href="http://sda.tech/SEOontology/Documentation/SEO_Licence.html">Copyright</a>&copy; 2018. All Rights Reserved.    </div>
+</body></html>
