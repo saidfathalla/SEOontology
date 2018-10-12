@@ -369,7 +369,8 @@ terms:valid rdf:type owl:AnnotationProperty ;
 
 
 ###  http://purl.org/seo/participatesIn
-seo:participatesIn rdf:type owl:AnnotationProperty .
+seo:participatesIn rdf:type owl:AnnotationProperty ;
+                   rdfs:range swc:AcademicEvent .
 
 
 ###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
@@ -378,6 +379,11 @@ seo:participatesIn rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2004/02/skos/core#note
 skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/time#hasTemporalDuration
+<http://www.w3.org/2006/time#hasTemporalDuration> rdf:type owl:AnnotationProperty ;
+                                                  rdfs:domain swc:OrganisedEvent .
 
 
 ###  https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasProceedings
@@ -580,7 +586,8 @@ seo:colocatedWith rdf:type owl:ObjectProperty ,
 
 
 ###  http://purl.org/seo/hasEvent
-seo:hasEvent rdf:type owl:ObjectProperty .
+seo:hasEvent rdf:type owl:ObjectProperty ;
+             rdfs:comment "an event series has an event edition" .
 
 
 ###  http://purl.org/seo/hasPublisher
@@ -622,10 +629,6 @@ seo:isTrackOf rdf:type owl:ObjectProperty .
 ###  http://purl.org/seo/participatesIn
 seo:participatesIn rdf:type owl:ObjectProperty ;
                    rdfs:domain <http://xmlns.com/foaf/0.1/Agent> .
-
-
-###  http://www.w3.org/2006/time#hasTemporalDuration
-<http://www.w3.org/2006/time#hasTemporalDuration> rdfs:domain swc:OrganisedEvent .
 
 
 ###  https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasAddress
@@ -741,7 +744,9 @@ seo:country rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/seo/field
 seo:field rdf:type owl:DatatypeProperty ;
           rdfs:domain swc:OrganisedEvent ;
-          rdfs:range rdfs:Literal .
+          rdfs:range rdfs:Literal ;
+          rdfs:comment "The research field which the event belongs to." ;
+          rdfs:label "Research field" .
 
 
 ###  http://purl.org/seo/hasTwitter
@@ -754,7 +759,9 @@ seo:hasTwitter rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/seo/notificationDate
 seo:notificationDate rdf:type owl:DatatypeProperty ;
                      rdfs:domain swc:AcademicEvent ;
-                     rdfs:range xsd:date .
+                     rdfs:range xsd:date ;
+                     rdfs:comment "The date of the paper acceptance notification." ;
+                     rdfs:label "Paper Acceptance Notification" .
 
 
 ###  http://purl.org/seo/state
@@ -901,6 +908,7 @@ seo:ChallengeTrack rdf:type owl:Class ;
 
 ###  http://purl.org/seo/Country
 seo:Country rdf:type owl:Class ;
+            rdfs:subClassOf swc:Site ;
             rdfs:comment "Country"@en ,
                          "The country hosts the event."@en .
 
@@ -935,7 +943,9 @@ seo:IndustryTrack rdf:type owl:Class ;
 
 
 ###  http://purl.org/seo/Keynote
-seo:Keynote rdf:type owl:Class .
+seo:Keynote rdf:type owl:Class ;
+            rdfs:comment "A talk that establishes a main underlying the theme of the event." ;
+            rdfs:label "Keynote speech" .
 
 
 ###  http://purl.org/seo/KeynoteSpeaker
@@ -957,7 +967,7 @@ seo:PostersTrack rdf:type owl:Class ;
 
 ###  http://purl.org/seo/Publisher
 seo:Publisher rdf:type owl:Class ;
-              rdfs:subClassOf swc:Organisation ;
+              rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
               rdfs:comment "The publisher of the event proceedings."@en ;
               rdfs:label "Publisher"@en .
 
@@ -976,7 +986,7 @@ seo:ResourceTrack rdf:type owl:Class ;
 
 ###  http://purl.org/seo/Sponsor
 seo:Sponsor rdf:type owl:Class ;
-            rdfs:subClassOf swc:Organisation ;
+            rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
             rdfs:comment "The Sponsor of the event (i.e. company, university ... etc.)."@en ;
             rdfs:label "Sponsor"@en .
 
