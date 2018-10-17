@@ -1,4 +1,4 @@
-@prefix : <http://rdfs.org/sioc/ns#> .
+@prefix : <http://purl.org/seo/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -2289,23 +2289,23 @@ terms:valid rdfs:comment "Date (often a range) of validity of a resource."@en ;
 
 <urn:swrl#e> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:e1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://rdfs.org/sioc/ns#e1> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:e2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://rdfs.org/sioc/ns#e2> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:l1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://rdfs.org/sioc/ns#l1> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:l rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://rdfs.org/sioc/ns#l> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:l2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://rdfs.org/sioc/ns#l2> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:sd1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://rdfs.org/sioc/ns#sd1> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:ed1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://rdfs.org/sioc/ns#ed1> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:sd2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://rdfs.org/sioc/ns#sd2> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:ed2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://rdfs.org/sioc/ns#ed2> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment ""^^xsd:string ;
@@ -2342,14 +2342,14 @@ terms:valid rdfs:comment "Date (often a range) of validity of a resource."@en ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> seo:colocatedWith ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :e1 ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :e2
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://rdfs.org/sioc/ns#e1> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://rdfs.org/sioc/ns#e2>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> swc:hasLocation ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :e2 ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :l
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://rdfs.org/sioc/ns#e2> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://rdfs.org/sioc/ns#l>
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
@@ -2357,8 +2357,8 @@ terms:valid rdfs:comment "Date (often a range) of validity of a resource."@en ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> swc:hasLocation ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :e1 ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :l
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://rdfs.org/sioc/ns#e1> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://rdfs.org/sioc/ns#l>
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
@@ -2371,58 +2371,58 @@ terms:valid rdfs:comment "Date (often a range) of validity of a resource."@en ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> swc:hasLocation ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :e1 ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :l1
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://rdfs.org/sioc/ns#e1> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://rdfs.org/sioc/ns#l1>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> swc:hasLocation ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :e2 ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :l2
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://rdfs.org/sioc/ns#e2> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://rdfs.org/sioc/ns#l2>
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> swc:startDate ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> :e1 ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> :sd1
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://rdfs.org/sioc/ns#e1> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://rdfs.org/sioc/ns#sd1>
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> swc:endDate ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :e1 ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :ed1
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://rdfs.org/sioc/ns#e1> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://rdfs.org/sioc/ns#ed1>
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> swc:startDate ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :e2 ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :sd2
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <http://rdfs.org/sioc/ns#e2> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <http://rdfs.org/sioc/ns#sd2>
                                                                                                  ] ;
                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> swc:endDate ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :e2 ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :ed2
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <http://rdfs.org/sioc/ns#e2> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <http://rdfs.org/sioc/ns#ed2>
                                                                                                             ] ;
                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
                                                                                                                          <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> ( :l1
-                                                                                                                                                                      :l2
+                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> ( <http://rdfs.org/sioc/ns#l1>
+                                                                                                                                                                      <http://rdfs.org/sioc/ns#l2>
                                                                                                                                                                     )
                                                                                                                        ] ;
                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
                                                                                                                                     <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#arguments> ( :sd1
-                                                                                                                                                                                 :sd2
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#arguments> ( <http://rdfs.org/sioc/ns#sd1>
+                                                                                                                                                                                 <http://rdfs.org/sioc/ns#sd2>
                                                                                                                                                                                )
                                                                                                                                   ] ;
                                                                                                                         rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                                                    rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
                                                                                                                                                <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
-                                                                                                                                               <http://www.w3.org/2003/11/swrl#arguments> ( :ed1
-                                                                                                                                                                                            :ed2
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#arguments> ( <http://rdfs.org/sioc/ns#ed1>
+                                                                                                                                                                                            <http://rdfs.org/sioc/ns#ed2>
                                                                                                                                                                                           )
                                                                                                                                              ] ;
                                                                                                                                    rdf:rest rdf:nil
@@ -2438,8 +2438,8 @@ terms:valid rdfs:comment "Date (often a range) of validity of a resource."@en ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> seo:colocatedWith ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :e1 ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :e2
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://rdfs.org/sioc/ns#e1> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://rdfs.org/sioc/ns#e2>
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
@@ -2452,14 +2452,14 @@ terms:valid rdfs:comment "Date (often a range) of validity of a resource."@en ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> seo:colocatedWith ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :e1 ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :e2
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://rdfs.org/sioc/ns#e1> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://rdfs.org/sioc/ns#e2>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> swc:hasLocation ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :e1 ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :l1
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://rdfs.org/sioc/ns#e1> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://rdfs.org/sioc/ns#l1>
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
@@ -2467,8 +2467,8 @@ terms:valid rdfs:comment "Date (often a range) of validity of a resource."@en ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> swc:hasLocation ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :e2 ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :l1
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://rdfs.org/sioc/ns#e2> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://rdfs.org/sioc/ns#l1>
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
