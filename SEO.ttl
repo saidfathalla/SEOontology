@@ -612,6 +612,13 @@ seo:hasTrack rdf:type owl:ObjectProperty ;
              rdfs:comment "This propoerty shows the available tracks of an event."^^xsd:string .
 
 
+###  http://purl.org/seo/holdsInCountry
+seo:holdsInCountry rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf swc:hasLocation ;
+                   rdfs:domain swc:OrganisedEvent ;
+                   rdfs:range seo:Country .
+
+
 ###  http://purl.org/seo/isPublisherOf
 seo:isPublisherOf rdf:type owl:ObjectProperty .
 
@@ -953,6 +960,11 @@ seo:Keynote rdf:type owl:Class ;
 ###  http://purl.org/seo/KeynoteSpeaker
 seo:KeynoteSpeaker rdf:type owl:Class ;
                    rdfs:subClassOf swc:Person .
+
+
+###  http://purl.org/seo/PHDSymposium
+seo:PHDSymposium rdf:type owl:Class ;
+                 rdfs:subClassOf seo:Track .
 
 
 ###  http://purl.org/seo/PanelsTrack

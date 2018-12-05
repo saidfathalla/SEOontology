@@ -7,9 +7,9 @@
     <uri id="Imports Wizard Entry" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="https://w3id.org/scholarlydata/ontology/conference-ontology.owl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="https://w3id.org/scholarlydata/ontology/conference-ontology.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1531129331441" name="http://data.semanticweb.org/ns/swc/ontology/" uri="SEO-new.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1531129331441" name="duplicate:http://purl.org/seo/" uri="SEO%20-%20Copy.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1531129331441" name="duplicate:http://purl.org/seo/" uri="SEO.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1531129331441" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="conference-ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1544002694570" name="http://data.semanticweb.org/ns/swc/ontology/" uri="SEO-new.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1544002694570" name="duplicate:http://purl.org/seo/" uri="SEO%20-%20Copy.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1544002694570" name="duplicate:http://purl.org/seo/" uri="SEO.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1544002694570" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="conference-ontology.owl"/>
     </group>
 </catalog>
