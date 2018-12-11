@@ -1,4 +1,4 @@
-@prefix : <http://purl.org/seo#> .
+@prefix : <http://purl.org/seo> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -590,6 +590,12 @@ seo:colocatedWith rdf:type owl:ObjectProperty ,
                   rdfs:comment "This property links an event to another one which is co-located with."^^xsd:string .
 
 
+###  http://purl.org/seo#field
+seo:field rdf:type owl:ObjectProperty ;
+          rdfs:domain swc:AcademicEvent ;
+          rdfs:range seo:ResearchField .
+
+
 ###  http://purl.org/seo#hasChair
 seo:hasChair rdf:type owl:ObjectProperty .
 
@@ -817,13 +823,6 @@ terms:tableOfContents rdf:type owl:DatatypeProperty .
 terms:valid rdf:type owl:DatatypeProperty .
 
 
-###  http://purl.org/seo#EventWebpage
-seo:EventWebpage rdf:type owl:DatatypeProperty ;
-                 rdfs:domain swc:AcademicEvent ;
-                 rdfs:range xsd:anyURI ;
-                 rdfs:comment "The webpage of the event."@en .
-
-
 ###  http://purl.org/seo#abstractDeadline
 seo:abstractDeadline rdf:type owl:DatatypeProperty ;
                      rdfs:domain swc:AcademicEvent ;
@@ -845,12 +844,17 @@ seo:acceptedPapers rdf:type owl:DatatypeProperty ;
                    rdfs:comment "The number of accepted papers in the event."@en .
 
 
+###  http://purl.org/seo#eventWebsite
+seo:eventWebsite rdf:type owl:DatatypeProperty ;
+                 rdfs:domain swc:AcademicEvent ;
+                 rdfs:range xsd:anyURI ;
+                 rdfs:comment "The webpage of the event."@en .
+
+
 ###  http://purl.org/seo#field
 seo:field rdf:type owl:DatatypeProperty ;
           rdfs:domain swc:OrganisedEvent ;
-          rdfs:range rdfs:Literal ;
-          rdfs:comment "The research field which the event belongs to." ;
-          rdfs:label "Research field" .
+          rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/seo#hasTwitter
@@ -1191,6 +1195,10 @@ seo:Publisher rdf:type owl:Class ;
 seo:RegularRegistration rdf:type owl:Class ;
                         rdfs:subClassOf seo:AuthorRegistration ;
                         owl:disjointWith seo:StudentRegistration .
+
+
+###  http://purl.org/seo#ResearchField
+seo:ResearchField rdf:type owl:Class .
 
 
 ###  http://purl.org/seo#ResearchTrack
@@ -1774,6 +1782,46 @@ terms:type rdf:type owl:NamedIndividual .
 
 ###  http://purl.org/dc/terms/valid
 terms:valid rdf:type owl:NamedIndividual .
+
+
+###  http://purl.org/seo#ArtificialIntelligence
+seo:ArtificialIntelligence rdf:type owl:NamedIndividual ,
+                                    seo:ResearchField .
+
+
+###  http://purl.org/seo#ComputerSystemsOrganization
+seo:ComputerSystemsOrganization rdf:type owl:NamedIndividual ,
+                                         seo:ResearchField .
+
+
+###  http://purl.org/seo#HumanCenteredComputing
+seo:HumanCenteredComputing rdf:type owl:NamedIndividual ,
+                                    seo:ResearchField .
+
+
+###  http://purl.org/seo#InformationSystems
+seo:InformationSystems rdf:type owl:NamedIndividual ,
+                                seo:ResearchField .
+
+
+###  http://purl.org/seo#SecurityAndPrivacy
+seo:SecurityAndPrivacy rdf:type owl:NamedIndividual ,
+                                seo:ResearchField .
+
+
+###  http://purl.org/seo#SoftwareEngineering
+seo:SoftwareEngineering rdf:type owl:NamedIndividual ,
+                                 seo:ResearchField .
+
+
+###  http://purl.org/seo#TheoryOfComputations
+seo:TheoryOfComputations rdf:type owl:NamedIndividual ,
+                                  seo:ResearchField .
+
+
+###  http://purl.org/seo#WorldWideWeb
+seo:WorldWideWeb rdf:type owl:NamedIndividual ,
+                          seo:ResearchField .
 
 
 ###  http://purl.org/seo#/
@@ -2529,6 +2577,10 @@ terms:valid rdfs:comment "Date (often a range) of validity of a resource."@en ;
             rdfs:label "Date Valid"@en ;
             terms:hasVersion <http://dublincore.org/usage/terms/history/#valid-003> ;
             rdfs:isDefinedBy terms: .
+
+
+seo:field rdfs:comment "The research field which the event belongs to." ;
+          rdfs:label "Research field" .
 
 
 #################################################################
