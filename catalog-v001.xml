@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://dbpedia.org/ontology/" uri="http://downloads.dbpedia.org/2016-10/dbpedia_2016-10.owl"/>
+    <uri id="Imports Wizard Entry" name="http://xmlns.com/foaf/0.1/" uri="http://xmlns.com/foaf/0.1/"/>
     <uri id="Imports Wizard Entry" name="http://cmt" uri="http://oaei.ontologymatching.org/2018/conference/data/cmt.owl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="file:/D:/Bonn%20Research/ICCCI%202018/SEO%20ontology/conference-ontology.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.essepuntato.it/2012/04/tvc" uri="http://www.essepuntato.it/2012/04/tvc/"/>
