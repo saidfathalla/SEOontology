@@ -1558,6 +1558,10 @@
         <ObjectProperty IRI="http://www.w3.org/2006/time#hasDuration"/>
         <Class abbreviatedIRI="swc:OrganisedEvent"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasTime"/>
+        <Class abbreviatedIRI="swc:OrganisedEvent"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="terms:audience"/>
         <Class abbreviatedIRI="terms:AgentClass"/>
