@@ -378,8 +378,7 @@ skos:note rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2006/time#hasDuration
-<http://www.w3.org/2006/time#hasDuration> rdf:type owl:AnnotationProperty ;
-                                          rdfs:domain swc:OrganisedEvent .
+<http://www.w3.org/2006/time#hasDuration> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2006/time#hasTemporalDuration
@@ -985,6 +984,10 @@ seo:takesAward rdf:type owl:ObjectProperty ;
 
 ###  http://www.essepuntato.it/2008/12/pattern#isContainedBy
 <http://www.essepuntato.it/2008/12/pattern#isContainedBy> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2006/time#hasDuration
+<http://www.w3.org/2006/time#hasDuration> rdfs:domain swc:OrganisedEvent .
 
 
 ###  https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasAddress
