@@ -933,10 +933,10 @@ seo:providesTravelInformation rdf:type owl:ObjectProperty ;
                               rdfs:range seo:TravelInformation .
 
 
-###  http://purl.org/seo/registerAs
-seo:registerAs rdf:type owl:ObjectProperty ;
-               rdfs:domain seo:Author ;
-               rdfs:range seo:AuthorRegistration .
+###  http://purl.org/seo/registeredAs
+seo:registeredAs rdf:type owl:ObjectProperty ;
+                 rdfs:domain seo:Author ;
+                 rdfs:range seo:AuthorRegistration .
 
 
 ###  http://purl.org/seo/sponsorshipType
