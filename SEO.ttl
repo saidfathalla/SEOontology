@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/seo/> .
+@prefix : <https://w3id.org/seo#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix seo: <http://purl.org/seo/> .
+@prefix seo: <https://w3id.org/seo#> .
 @prefix swc: <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -13,10 +13,11 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix cpannotationschema: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
-@base <http://purl.org/seo/> .
+@base <https://w3id.org/seo#> .
 
-<http://purl.org/seo/> rdf:type owl:Ontology ;
-                        owl:versionIRI <http://purl.org/seo#> ;
+<https://w3id.org/seo#> rdf:type owl:Ontology ;
+						rdfs:label "OR-SEO Ontology"@en;
+                        owl:versionIRI <https://w3id.org/seo#> ;
                         owl:imports dbo: ,
                                     <http://www.essepuntato.it/2012/04/tvc> ,
                                     <https://w3id.org/scholarlydata/ontology/conference-ontology.owl> ,
@@ -29,7 +30,7 @@
                         dc:description "SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops."@en ;
                         dc:creator "Sahar Vahdati" ;
                         rdfs:seeAlso "See also documentation at http://kddste.sda.tech/SEOontology/Documentation/SEO.html"@en ;
-                        vann:preferredNamespaceUri "http://purl.org/seo/"^^terms:URI ;
+                        vann:preferredNamespaceUri "https://w3id.org/seo#"^^terms:URI ;
                         terms:created "2018-02-01"@en ;
                         dc:creator "Christoph Lange" ;
                         terms:license <http://creativecommons.org/licenses/by/3.0/> ;
@@ -731,7 +732,7 @@ terms:type rdf:type owl:ObjectProperty .
                                                 ] .
 
 
-###  http://purl.org/seo/belongsToSeries
+###  https://w3id.org/seo#belongsToSeries
 seo:belongsToSeries rdf:type owl:ObjectProperty ;
                     owl:inverseOf seo:hasEvent ;
                     rdfs:domain swc:OrganisedEvent ;
@@ -740,7 +741,7 @@ seo:belongsToSeries rdf:type owl:ObjectProperty ;
                     rdfs:label "belongsToSeries"@en .
 
 
-###  http://purl.org/seo/colocatedWith
+###  https://w3id.org/seo#colocatedWith
 seo:colocatedWith rdf:type owl:ObjectProperty ,
                            owl:SymmetricProperty ;
                   rdfs:domain swc:OrganisedEvent ;
@@ -748,57 +749,57 @@ seo:colocatedWith rdf:type owl:ObjectProperty ,
                   rdfs:comment "This property links an event to another one which is co-located with."^^xsd:string .
 
 
-###  http://purl.org/seo/hasAffiliation
+###  https://w3id.org/seo#hasAffiliation
 seo:hasAffiliation rdf:type owl:ObjectProperty ;
                    rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
                    rdfs:range <http://xmlns.com/foaf/0.1/Organization> .
 
 
-###  http://purl.org/seo/hasChair
+###  https://w3id.org/seo#hasChair
 seo:hasChair rdf:type owl:ObjectProperty ;
              rdfs:domain swc:Track ;
              rdfs:range seo:Chair .
 
 
-###  http://purl.org/seo/hasEvent
+###  https://w3id.org/seo#hasEvent
 seo:hasEvent rdf:type owl:ObjectProperty ;
              rdfs:domain swc:EventSeries ;
              rdfs:range swc:OrganisedEvent ;
              rdfs:comment "an event series has an event edition" .
 
 
-###  http://purl.org/seo/hasFlyer
+###  https://w3id.org/seo#hasFlyer
 seo:hasFlyer rdf:type owl:ObjectProperty ;
              rdfs:domain swc:OrganisedEvent ;
              rdfs:range seo:Flyer .
 
 
-###  http://purl.org/seo/hasImportantDates
+###  https://w3id.org/seo#hasImportantDates
 seo:hasImportantDates rdf:type owl:ObjectProperty ;
                       rdfs:domain swc:AcademicEvent ;
                       rdfs:range seo:ImportantDates .
 
 
-###  http://purl.org/seo/hasKeynote
+###  https://w3id.org/seo#hasKeynote
 seo:hasKeynote rdf:type owl:ObjectProperty ;
                owl:inverseOf seo:keynoteIn ;
                rdfs:domain swc:OrganisedEvent ;
                rdfs:range seo:Keynote .
 
 
-###  http://purl.org/seo/hasProgramCommitteeMember
+###  https://w3id.org/seo#hasProgramCommitteeMember
 seo:hasProgramCommitteeMember rdf:type owl:ObjectProperty ;
                               rdfs:domain swc:AcademicEvent ;
                               rdfs:range swc:Person .
 
 
-###  http://purl.org/seo/hasProgramSchedual
+###  https://w3id.org/seo#hasProgramSchedual
 seo:hasProgramSchedual rdf:type owl:ObjectProperty ;
                        rdfs:domain swc:OrganisedEvent ;
                        rdfs:range seo:ProgramSchedual .
 
 
-###  http://purl.org/seo/hasPublisher
+###  https://w3id.org/seo#hasPublisher
 seo:hasPublisher rdf:type owl:ObjectProperty ;
                  owl:inverseOf seo:isPublisherOf ;
                  rdfs:domain [ rdf:type owl:Class ;
@@ -810,13 +811,13 @@ seo:hasPublisher rdf:type owl:ObjectProperty ;
                  rdfs:comment "This propoerty shows the publisher of a proceedings."^^xsd:string .
 
 
-###  http://purl.org/seo/hasRegistration
+###  https://w3id.org/seo#hasRegistration
 seo:hasRegistration rdf:type owl:ObjectProperty ;
                     rdfs:domain swc:OrganisedEvent ;
                     rdfs:range seo:Registration .
 
 
-###  http://purl.org/seo/hasRegistrationType
+###  https://w3id.org/seo#hasRegistrationType
 seo:hasRegistrationType rdf:type owl:ObjectProperty ;
                         rdfs:domain seo:Author ;
                         rdfs:range [ rdf:type owl:Class ;
@@ -826,13 +827,13 @@ seo:hasRegistrationType rdf:type owl:ObjectProperty ;
                                    ] .
 
 
-###  http://purl.org/seo/hasSocialEvent
+###  https://w3id.org/seo#hasSocialEvent
 seo:hasSocialEvent rdf:type owl:ObjectProperty ;
                    rdfs:domain swc:AcademicEvent ;
                    rdfs:range swc:SocialEvent .
 
 
-###  http://purl.org/seo/hasSponsor
+###  https://w3id.org/seo#hasSponsor
 seo:hasSponsor rdf:type owl:ObjectProperty ;
                owl:inverseOf seo:isSponsorOf ;
                rdfs:domain swc:OrganisedEvent ;
@@ -840,13 +841,13 @@ seo:hasSponsor rdf:type owl:ObjectProperty ;
                rdfs:comment "This propoerty shows the sponsor of an event."^^xsd:string .
 
 
-###  http://purl.org/seo/hasSubmissionGuidelines
+###  https://w3id.org/seo#hasSubmissionGuidelines
 seo:hasSubmissionGuidelines rdf:type owl:ObjectProperty ;
                             rdfs:domain swc:AcademicEvent ;
                             rdfs:range seo:SubmissionGuidelines .
 
 
-###  http://purl.org/seo/hasTrack
+###  https://w3id.org/seo#hasTrack
 seo:hasTrack rdf:type owl:ObjectProperty ;
              owl:inverseOf seo:isTrackOf ;
              rdfs:domain swc:AcademicEvent ;
@@ -854,21 +855,21 @@ seo:hasTrack rdf:type owl:ObjectProperty ;
              rdfs:comment "This propoerty shows the available tracks of an event."^^xsd:string .
 
 
-###  http://purl.org/seo/heldInCity
+###  https://w3id.org/seo#heldInCity
 seo:heldInCity rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf swc:hasLocation ;
                rdfs:domain swc:OrganisedEvent ;
                rdfs:range dbo:City .
 
 
-###  http://purl.org/seo/heldInCountry
+###  https://w3id.org/seo#heldInCountry
 seo:heldInCountry rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf swc:hasLocation ;
                   rdfs:domain swc:OrganisedEvent ;
                   rdfs:range dbo:Country .
 
 
-###  http://purl.org/seo/isPublisherOf
+###  https://w3id.org/seo#isPublisherOf
 seo:isPublisherOf rdf:type owl:ObjectProperty ;
                   rdfs:domain seo:Publisher ;
                   rdfs:range [ rdf:type owl:Class ;
@@ -878,38 +879,38 @@ seo:isPublisherOf rdf:type owl:ObjectProperty ;
                              ] .
 
 
-###  http://purl.org/seo/isSponsorOf
+###  https://w3id.org/seo#isSponsorOf
 seo:isSponsorOf rdf:type owl:ObjectProperty ;
                 rdfs:domain seo:Sponsor ;
                 rdfs:range swc:OrganisedEvent .
 
 
-###  http://purl.org/seo/isTrackOf
+###  https://w3id.org/seo#isTrackOf
 seo:isTrackOf rdf:type owl:ObjectProperty ;
               rdfs:domain swc:Track ;
               rdfs:range swc:AcademicEvent .
 
 
-###  http://purl.org/seo/keynoteIn
+###  https://w3id.org/seo#keynoteIn
 seo:keynoteIn rdf:type owl:ObjectProperty ;
               rdfs:domain seo:Keynote ;
               rdfs:range swc:OrganisedEvent .
 
 
-###  http://purl.org/seo/offersAward
+###  https://w3id.org/seo#offersAward
 seo:offersAward rdf:type owl:ObjectProperty ;
                 rdfs:domain swc:OrganisedEvent ;
                 rdfs:range seo:Award .
 
 
-###  http://purl.org/seo/offersBestPaperAward
+###  https://w3id.org/seo#offersBestPaperAward
 seo:offersBestPaperAward rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf seo:offersAward ;
                          rdfs:domain swc:AcademicEvent ;
                          rdfs:range seo:BestPaperAward .
 
 
-###  http://purl.org/seo/participatesAs
+###  https://w3id.org/seo#participatesAs
 seo:participatesAs rdf:type owl:ObjectProperty ;
                    rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
                    rdfs:range [ rdf:type owl:Class ;
@@ -920,31 +921,31 @@ seo:participatesAs rdf:type owl:ObjectProperty ;
                               ] .
 
 
-###  http://purl.org/seo/participatesIn
+###  https://w3id.org/seo#participatesIn
 seo:participatesIn rdf:type owl:ObjectProperty ;
                    rdfs:domain <http://xmlns.com/foaf/0.1/Agent> ;
                    rdfs:range swc:OrganisedEvent .
 
 
-###  http://purl.org/seo/providesTravelInformation
+###  https://w3id.org/seo#providesTravelInformation
 seo:providesTravelInformation rdf:type owl:ObjectProperty ;
                               rdfs:domain swc:OrganisedEvent ;
                               rdfs:range seo:TravelInformation .
 
 
-###  http://purl.org/seo/registeredAs
+###  https://w3id.org/seo#registeredAs
 seo:registeredAs rdf:type owl:ObjectProperty ;
                  rdfs:domain seo:Author ;
                  rdfs:range seo:AuthorRegistration .
 
 
-###  http://purl.org/seo/sponsorshipType
+###  https://w3id.org/seo#sponsorshipType
 seo:sponsorshipType rdf:type owl:ObjectProperty ;
                     rdfs:domain seo:Sponsor ;
                     rdfs:range seo:Sponsorship .
 
 
-###  http://purl.org/seo/takesAward
+###  https://w3id.org/seo#takesAward
 seo:takesAward rdf:type owl:ObjectProperty ;
                rdfs:domain seo:Author ;
                rdfs:range seo:Award .
@@ -1055,42 +1056,42 @@ terms:tableOfContents rdf:type owl:DatatypeProperty .
 terms:valid rdf:type owl:DatatypeProperty .
 
 
-###  http://purl.org/seo/abstractDeadline
+###  https://w3id.org/seo#abstractDeadline
 seo:abstractDeadline rdf:type owl:DatatypeProperty ;
                      rdfs:domain swc:AcademicEvent ;
                      rdfs:range xsd:date ;
                      rdfs:comment "The deadline of abstract submission."^^xsd:string .
 
 
-###  http://purl.org/seo/acceptanceRate
+###  https://w3id.org/seo#acceptanceRate
 seo:acceptanceRate rdf:type owl:DatatypeProperty ;
                    rdfs:domain swc:AcademicEvent ;
                    rdfs:range xsd:decimal ;
                    rdfs:comment "The acceptance rate of the event in a particular year."@en .
 
 
-###  http://purl.org/seo/acceptedPapers
+###  https://w3id.org/seo#acceptedPapers
 seo:acceptedPapers rdf:type owl:DatatypeProperty ;
                    rdfs:domain swc:AcademicEvent ;
                    rdfs:range xsd:unsignedInt ;
                    rdfs:comment "The number of accepted papers in the event."@en .
 
 
-###  http://purl.org/seo/eventWebsite
+###  https://w3id.org/seo#eventWebsite
 seo:eventWebsite rdf:type owl:DatatypeProperty ;
                  rdfs:domain swc:AcademicEvent ;
                  rdfs:range xsd:anyURI ;
                  rdfs:comment "The webpage of the event."@en .
 
 
-###  http://purl.org/seo/hasTwitter
+###  https://w3id.org/seo#hasTwitter
 seo:hasTwitter rdf:type owl:DatatypeProperty ;
                rdfs:domain swc:EventSeries ;
                rdfs:range xsd:anyURI ;
                rdfs:comment "The twitter account of the event."^^xsd:string .
 
 
-###  http://purl.org/seo/notificationDate
+###  https://w3id.org/seo#notificationDate
 seo:notificationDate rdf:type owl:DatatypeProperty ;
                      rdfs:domain swc:AcademicEvent ;
                      rdfs:range xsd:date ;
@@ -1098,21 +1099,21 @@ seo:notificationDate rdf:type owl:DatatypeProperty ;
                      rdfs:label "Paper Acceptance Notification" .
 
 
-###  http://purl.org/seo/submissionDeadline
+###  https://w3id.org/seo#submissionDeadline
 seo:submissionDeadline rdf:type owl:DatatypeProperty ;
                        rdfs:domain swc:AcademicEvent ;
                        rdfs:range xsd:date ;
                        rdfs:comment "The deadline of paper submission."^^xsd:string .
 
 
-###  http://purl.org/seo/submissionWebPage
+###  https://w3id.org/seo#submissionWebPage
 seo:submissionWebPage rdf:type owl:DatatypeProperty ;
                       rdfs:domain swc:OrganisedEvent ;
                       rdfs:range xsd:anyURI ;
                       rdfs:comment "The webpage of the submission to event."^^xsd:string .
 
 
-###  http://purl.org/seo/submittedPapers
+###  https://w3id.org/seo#submittedPapers
 seo:submittedPapers rdf:type owl:DatatypeProperty ;
                     rdfs:domain swc:AcademicEvent ;
                     rdfs:range xsd:unsignedInt ;
@@ -1196,302 +1197,302 @@ terms:PhysicalMedium rdf:type owl:Class ;
                      rdfs:subClassOf terms:MediaType .
 
 
-###  http://purl.org/seo/Author
+###  https://w3id.org/seo#Author
 seo:Author rdf:type owl:Class ;
            rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
 
 
-###  http://purl.org/seo/AuthorRegistration
+###  https://w3id.org/seo#AuthorRegistration
 seo:AuthorRegistration rdf:type owl:Class .
 
 
-###  http://purl.org/seo/Award
+###  https://w3id.org/seo#Award
 seo:Award rdf:type owl:Class .
 
 
-###  http://purl.org/seo/BestApplicationsPaperAward
+###  https://w3id.org/seo#BestApplicationsPaperAward
 seo:BestApplicationsPaperAward rdf:type owl:Class ;
                                rdfs:subClassOf seo:BestPaperAward .
 
 
-###  http://purl.org/seo/BestPaperAward
+###  https://w3id.org/seo#BestPaperAward
 seo:BestPaperAward rdf:type owl:Class ;
                    rdfs:subClassOf seo:Award .
 
 
-###  http://purl.org/seo/BestPosterAward
+###  https://w3id.org/seo#BestPosterAward
 seo:BestPosterAward rdf:type owl:Class ;
                     rdfs:subClassOf seo:Award .
 
 
-###  http://purl.org/seo/BestStudentPaperAward
+###  https://w3id.org/seo#BestStudentPaperAward
 seo:BestStudentPaperAward rdf:type owl:Class ;
                           rdfs:subClassOf seo:BestPaperAward .
 
 
-###  http://purl.org/seo/BronzeSponsorship
+###  https://w3id.org/seo#BronzeSponsorship
 seo:BronzeSponsorship rdf:type owl:Class ;
                       rdfs:subClassOf seo:Sponsorship .
 
 
-###  http://purl.org/seo/Chair
+###  https://w3id.org/seo#Chair
 seo:Chair rdf:type owl:Class ;
           rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
 
 
-###  http://purl.org/seo/ChallengeTrack
+###  https://w3id.org/seo#ChallengeTrack
 seo:ChallengeTrack rdf:type owl:Class ;
                    rdfs:subClassOf swc:Track .
 
 
-###  http://purl.org/seo/DemoChair
+###  https://w3id.org/seo#DemoChair
 seo:DemoChair rdf:type owl:Class ;
               rdfs:subClassOf seo:Chair .
 
 
-###  http://purl.org/seo/DemosTrack
+###  https://w3id.org/seo#DemosTrack
 seo:DemosTrack rdf:type owl:Class ;
                rdfs:subClassOf swc:Track ;
                rdfs:comment "Offer an opportunity for presenting late-breaking research results, on-going research projects, and speculative or innovative work in progress."@en .
 
 
-###  http://purl.org/seo/DoctoralConsortium
+###  https://w3id.org/seo#DoctoralConsortium
 seo:DoctoralConsortium rdf:type owl:Class ;
                        rdfs:subClassOf swc:AcademicEvent ;
                        rdfs:comment "Provide PhD students an opportunity to share and develop their research ideas in a critical but supportive environment."@en .
 
 
-###  http://purl.org/seo/DoctoralConsortiumChair
+###  https://w3id.org/seo#DoctoralConsortiumChair
 seo:DoctoralConsortiumChair rdf:type owl:Class ;
                             rdfs:subClassOf seo:Chair .
 
 
-###  http://purl.org/seo/EarlyBirdRegistration
+###  https://w3id.org/seo#EarlyBirdRegistration
 seo:EarlyBirdRegistration rdf:type owl:Class ;
                           rdfs:subClassOf seo:Registration ;
                           owl:disjointWith seo:LateRegistration .
 
 
-###  http://purl.org/seo/EventReception
+###  https://w3id.org/seo#EventReception
 seo:EventReception rdf:type owl:Class ;
                    rdfs:subClassOf swc:SocialEvent .
 
 
-###  http://purl.org/seo/Flyer
+###  https://w3id.org/seo#Flyer
 seo:Flyer rdf:type owl:Class .
 
 
-###  http://purl.org/seo/GeneralChair
+###  https://w3id.org/seo#GeneralChair
 seo:GeneralChair rdf:type owl:Class ;
                  rdfs:subClassOf seo:Chair .
 
 
-###  http://purl.org/seo/GetTogetherEvent
+###  https://w3id.org/seo#GetTogetherEvent
 seo:GetTogetherEvent rdf:type owl:Class ;
                      rdfs:subClassOf swc:SocialEvent .
 
 
-###  http://purl.org/seo/GoldSponsorship
+###  https://w3id.org/seo#GoldSponsorship
 seo:GoldSponsorship rdf:type owl:Class ;
                     rdfs:subClassOf seo:Sponsorship .
 
 
-###  http://purl.org/seo/HonorChair
+###  https://w3id.org/seo#HonorChair
 seo:HonorChair rdf:type owl:Class ;
                rdfs:subClassOf seo:Chair .
 
 
-###  http://purl.org/seo/ImportantDates
+###  https://w3id.org/seo#ImportantDates
 seo:ImportantDates rdf:type owl:Class .
 
 
-###  http://purl.org/seo/In-useTrack
+###  https://w3id.org/seo#In-useTrack
 seo:In-useTrack rdf:type owl:Class ;
                 rdfs:subClassOf swc:Track ;
                 rdfs:comment "In-Use track provides researchers to discuss novel research taken to the market."@en .
 
 
-###  http://purl.org/seo/IndustrialConference
+###  https://w3id.org/seo#IndustrialConference
 seo:IndustrialConference rdf:type owl:Class ;
                          rdfs:subClassOf swc:NonAcademicEvent .
 
 
-###  http://purl.org/seo/IndustryTrack
+###  https://w3id.org/seo#IndustryTrack
 seo:IndustryTrack rdf:type owl:Class ;
                   rdfs:subClassOf swc:Track ;
                   rdfs:comment "The industry track seeks to present research contributions in industrial settings."@en .
 
 
-###  http://purl.org/seo/InvitedSpeakers
+###  https://w3id.org/seo#InvitedSpeakers
 seo:InvitedSpeakers rdf:type owl:Class ;
                     rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
 
 
-###  http://purl.org/seo/Keynote
+###  https://w3id.org/seo#Keynote
 seo:Keynote rdf:type owl:Class ;
             rdfs:comment "A talk that establishes a main underlying the theme of the event." ;
             rdfs:label "Keynote speech" .
 
 
-###  http://purl.org/seo/KeynoteSpeaker
+###  https://w3id.org/seo#KeynoteSpeaker
 seo:KeynoteSpeaker rdf:type owl:Class ;
                    rdfs:subClassOf seo:InvitedSpeakers .
 
 
-###  http://purl.org/seo/LateRegistration
+###  https://w3id.org/seo#LateRegistration
 seo:LateRegistration rdf:type owl:Class ;
                      rdfs:subClassOf seo:Registration .
 
 
-###  http://purl.org/seo/LocalOrganisationChair
+###  https://w3id.org/seo#LocalOrganisationChair
 seo:LocalOrganisationChair rdf:type owl:Class ;
                            rdfs:subClassOf seo:Chair .
 
 
-###  http://purl.org/seo/OnSiteRegistration
+###  https://w3id.org/seo#OnSiteRegistration
 seo:OnSiteRegistration rdf:type owl:Class ;
                        rdfs:subClassOf seo:Registration .
 
 
-###  http://purl.org/seo/Organizer
+###  https://w3id.org/seo#Organizer
 seo:Organizer rdf:type owl:Class ;
               rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
 
 
-###  http://purl.org/seo/PHDSymposium
+###  https://w3id.org/seo#PHDSymposium
 seo:PHDSymposium rdf:type owl:Class ;
                  rdfs:subClassOf seo:Symposium .
 
 
-###  http://purl.org/seo/PastEvents
+###  https://w3id.org/seo#PastEvents
 seo:PastEvents rdf:type owl:Class .
 
 
-###  http://purl.org/seo/PlatinumSponsorship
+###  https://w3id.org/seo#PlatinumSponsorship
 seo:PlatinumSponsorship rdf:type owl:Class ;
                         rdfs:subClassOf seo:Sponsorship .
 
 
-###  http://purl.org/seo/PosterChair
+###  https://w3id.org/seo#PosterChair
 seo:PosterChair rdf:type owl:Class ;
                 rdfs:subClassOf seo:Chair .
 
 
-###  http://purl.org/seo/PostersTrack
+###  https://w3id.org/seo#PostersTrack
 seo:PostersTrack rdf:type owl:Class ;
                  rdfs:subClassOf swc:Track ;
                  rdfs:comment "Present research contributions as posters."@en .
 
 
-###  http://purl.org/seo/ProgramChair
+###  https://w3id.org/seo#ProgramChair
 seo:ProgramChair rdf:type owl:Class ;
                  rdfs:subClassOf seo:Chair .
 
 
-###  http://purl.org/seo/ProgramCommitteeMember
+###  https://w3id.org/seo#ProgramCommitteeMember
 seo:ProgramCommitteeMember rdf:type owl:Class ;
                            rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
 
 
-###  http://purl.org/seo/ProgramSchedual
+###  https://w3id.org/seo#ProgramSchedual
 seo:ProgramSchedual rdf:type owl:Class .
 
 
-###  http://purl.org/seo/Publisher
+###  https://w3id.org/seo#Publisher
 seo:Publisher rdf:type owl:Class ;
               rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> ;
               rdfs:comment "The publisher of the event proceedings."@en ;
               rdfs:label "Publisher"@en .
 
 
-###  http://purl.org/seo/Registration
+###  https://w3id.org/seo#Registration
 seo:Registration rdf:type owl:Class .
 
 
-###  http://purl.org/seo/RegularRegistration
+###  https://w3id.org/seo#RegularRegistration
 seo:RegularRegistration rdf:type owl:Class ;
                         rdfs:subClassOf seo:AuthorRegistration ;
                         owl:disjointWith seo:StudentRegistration .
 
 
-###  http://purl.org/seo/ResearchField
+###  https://w3id.org/seo#ResearchField
 seo:ResearchField rdf:type owl:Class .
 
 
-###  http://purl.org/seo/ResearchTrack
+###  https://w3id.org/seo#ResearchTrack
 seo:ResearchTrack rdf:type owl:Class ;
                   rdfs:subClassOf swc:Track ;
                   rdfs:comment "The track for fundamental research, innovative technology, and applications concerning the research topic of the event."@en .
 
 
-###  http://purl.org/seo/ResourceTrack
+###  https://w3id.org/seo#ResourceTrack
 seo:ResourceTrack rdf:type owl:Class ;
                   rdfs:subClassOf swc:Track ;
                   rdfs:comment "The Resources Track aims to promote the sharing of resources including: datasets, ontologies, vocabularies, ... etc"@en .
 
 
-###  http://purl.org/seo/Reviewer
+###  https://w3id.org/seo#Reviewer
 seo:Reviewer rdf:type owl:Class ;
              rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
 
 
-###  http://purl.org/seo/SilverSponsorship
+###  https://w3id.org/seo#SilverSponsorship
 seo:SilverSponsorship rdf:type owl:Class ;
                       rdfs:subClassOf seo:Sponsorship .
 
 
-###  http://purl.org/seo/Sponsor
+###  https://w3id.org/seo#Sponsor
 seo:Sponsor rdf:type owl:Class ;
             rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> ;
             rdfs:comment "The Sponsor of the event (i.e. company, university ... etc.)."@en ;
             rdfs:label "Sponsor"@en .
 
 
-###  http://purl.org/seo/Sponsorship
+###  https://w3id.org/seo#Sponsorship
 seo:Sponsorship rdf:type owl:Class .
 
 
-###  http://purl.org/seo/SponsorshipChair
+###  https://w3id.org/seo#SponsorshipChair
 seo:SponsorshipChair rdf:type owl:Class ;
                      rdfs:subClassOf seo:Chair .
 
 
-###  http://purl.org/seo/Student
+###  https://w3id.org/seo#Student
 seo:Student rdf:type owl:Class ;
             rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
 
 
-###  http://purl.org/seo/StudentRegistration
+###  https://w3id.org/seo#StudentRegistration
 seo:StudentRegistration rdf:type owl:Class ;
                         rdfs:subClassOf seo:AuthorRegistration .
 
 
-###  http://purl.org/seo/SubmissionGuidelines
+###  https://w3id.org/seo#SubmissionGuidelines
 seo:SubmissionGuidelines rdf:type owl:Class .
 
 
-###  http://purl.org/seo/Symposium
+###  https://w3id.org/seo#Symposium
 seo:Symposium rdf:type owl:Class ;
               rdfs:subClassOf swc:AcademicEvent .
 
 
-###  http://purl.org/seo/SymposiumSeries
+###  https://w3id.org/seo#SymposiumSeries
 seo:SymposiumSeries rdf:type owl:Class ;
                     rdfs:subClassOf swc:EventSeries ;
                     rdfs:comment "A series of symposiums."@en ;
                     rdfs:label "Symposiums series"@en .
 
 
-###  http://purl.org/seo/TravelInformation
+###  https://w3id.org/seo#TravelInformation
 seo:TravelInformation rdf:type owl:Class .
 
 
-###  http://purl.org/seo/TutorialChair
+###  https://w3id.org/seo#TutorialChair
 seo:TutorialChair rdf:type owl:Class ;
                   rdfs:subClassOf seo:Chair .
 
 
-###  http://purl.org/seo/WorkshopChair
+###  https://w3id.org/seo#WorkshopChair
 seo:WorkshopChair rdf:type owl:Class ;
                   rdfs:subClassOf seo:Chair .
 
@@ -2377,48 +2378,48 @@ terms:type rdf:type owl:NamedIndividual .
 terms:valid rdf:type owl:NamedIndividual .
 
 
-###  http://purl.org/seo/ArtificialIntelligence
+###  https://w3id.org/seo#ArtificialIntelligence
 seo:ArtificialIntelligence rdf:type owl:NamedIndividual ,
                                     seo:ResearchField .
 
 
-###  http://purl.org/seo/ComputerSystemsOrganization
+###  https://w3id.org/seo#ComputerSystemsOrganization
 seo:ComputerSystemsOrganization rdf:type owl:NamedIndividual ,
                                          seo:ResearchField .
 
 
-###  http://purl.org/seo/HumanCenteredComputing
+###  https://w3id.org/seo#HumanCenteredComputing
 seo:HumanCenteredComputing rdf:type owl:NamedIndividual ,
                                     seo:ResearchField .
 
 
-###  http://purl.org/seo/InformationSystems
+###  https://w3id.org/seo#InformationSystems
 seo:InformationSystems rdf:type owl:NamedIndividual ,
                                 seo:ResearchField .
 
 
-###  http://purl.org/seo/SecurityAndPrivacy
+###  https://w3id.org/seo#SecurityAndPrivacy
 seo:SecurityAndPrivacy rdf:type owl:NamedIndividual ,
                                 seo:ResearchField .
 
 
-###  http://purl.org/seo/SoftwareEngineering
+###  https://w3id.org/seo#SoftwareEngineering
 seo:SoftwareEngineering rdf:type owl:NamedIndividual ,
                                  seo:ResearchField .
 
 
-###  http://purl.org/seo/TheoryOfComputations
+###  https://w3id.org/seo#TheoryOfComputations
 seo:TheoryOfComputations rdf:type owl:NamedIndividual ,
                                   seo:ResearchField .
 
 
-###  http://purl.org/seo/WorldWideWeb
+###  https://w3id.org/seo#WorldWideWeb
 seo:WorldWideWeb rdf:type owl:NamedIndividual ,
                           seo:ResearchField .
 
 
-###  http://purl.org/seo//
-<http://purl.org/seo//> rdf:type owl:NamedIndividual .
+###  https://w3id.org/seo#/
+<https://w3id.org/seo#/> rdf:type owl:NamedIndividual .
 
 
 #################################################################
