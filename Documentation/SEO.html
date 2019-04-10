@@ -1,23 +1,5 @@
 
- <!DOCTYPE html>
-
-<html prefix="dc: http://purl.org/dc/terms/ schema: http://schema.org/ prov: http://www.w3.org/ns/prov# foaf: http://xmlns.com/foaf/0.1/ owl: http://www.w3.org/2002/07/owl#">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>SEO, The Scientific Events Ontology.</title><title>SEO, The Scientific Events Ontology.</title>
-<link href="./SEO_files/owl.css" rel="stylesheet" type="text/css">
-<link href="./SEO_files/Primer.css" rel="stylesheet" type="text/css">
-<link href="./SEO_files/rec.css" rel="stylesheet" type="text/css">
-<link href="./SEO_files/extra.css" rel="stylesheet" type="text/css">
-<link rel="shortcut icon" href="http://eelst.cs.unibo.it/apps/LODE/favicon.ico">
-<script src="./SEO_files/jquery.js.download">
-</script>
-<script src="./SEO_files/jquery.scrollTo.js.download">
-</script>
-<script src="./SEO_files/marked.min.js.download">
-</script>
-<script src="./SEO_files/jquery.js"></script> 
-<script>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>SEO, The Scientific Events Ontology.</title><title>SEO, The Scientific Events Ontology.</title><link href="./SEO_files/owl.css" rel="stylesheet" type="text/css"><link href="./SEO_files/Primer.css" rel="stylesheet" type="text/css"><link href="./SEO_files/rec.css" rel="stylesheet" type="text/css"><link href="./SEO_files/extra.css" rel="stylesheet" type="text/css"><link rel="shortcut icon" href="http://eelst.cs.unibo.it/apps/LODE/favicon.ico"><script src="./SEO_files/jquery.js.download"></script><script src="./SEO_files/jquery.scrollTo.js.download"></script><script src="./SEO_files/marked.min.js.download"></script><script>
                 $(document).ready(
                     function () {
                     	jQuery(".markdown").each(function(el){
@@ -28,32 +10,20 @@
                         	$.scrollTo(element);
                         }
                     });
-        
-		
-			function loadHash() {
-		var hash = location.hash;
-		if($(hash).offset()!=null){
-			$('html, body').animate({scrollTop: $(hash).offset().top}, 0);
-		}
-	}    
-</script>
-<!--$(function(){
-      $("#introduction").load("sections/introduction.html"); 
-      $("#overview").load("sections/overview.html"); 
-      $("#description").load("sections/description.html"); 
-      $("#crossref").load("sections/crossref.html", null, loadHash); 
-    });-->
-    </script> 
-		
-		</head>
-		<body resource="https://w3id.org/seo#" typeOf="owl:Ontology schema:TechArticle">
-		<div class="head"><h1>SEO, The Scientific Events Ontology.</h1><dl><dt>IRI:</dt><dd>https://w3id.org/seo#</dd><dt>Version IRI:</dt><dd>https://w3id.org/seo#</dd></dl><dl><dt>Current version:</dt><dd>1.1</dd>
+        </script></head><body><div class="head"><h1>SEO, The Scientific Events Ontology.</h1><dl><dt>IRI:</dt><dd>https://w3id.org/seo#</dd><dt>Version IRI:</dt><dd>https://w3id.org/seo#</dd></dl><dl><dt>Current version:</dt><dd>1.1</dd>
           <dt>Sparql endpoint: </dt>
           <dd><a href="http://kddste.sda.tech/SEOontology/sparql">http://kddste.sda.tech/SEOontology/sparql</a> </dd>
         </dl>
-        <dl><dt>Authors:</dt><dd>Said Fathalla</dd><dd>Sahar Vahdati</dd><dd>S&ouml;ren Auer</dd><dd>Christoph Lange</dd></dl><dl><dt>Imported Ontologies:</dt><dd><a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a> (<a href="/owlapi/http://dbpedia.org/ontology/">visualise it with LODE</a>)</dd><dd><a href="http://www.essepuntato.it/2012/04/tvc">http://www.essepuntato.it/2012/04/tvc</a> (<a href="/owlapi/http://www.essepuntato.it/2012/04/tvc">visualise it with LODE</a>)</dd><dd><a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a> (<a href="/owlapi/http://xmlns.com/foaf/0.1/">visualise it with LODE</a>)</dd><dd><a href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl">https://w3id.org/scholarlydata/ontology/conference-ontology.owl</a> (<a href="/owlapi/https://w3id.org/scholarlydata/ontology/conference-ontology.owl">visualise it with LODE</a>)</dd></dl><dl><dt>Other visualisation:</dt><dd><a href="http://eelst.cs.unibo.it/apps/LODE/source?url=http://www.essepuntato.it/static/tmp/0">Ontology source</a></dd></dl></div><hr><div id="toc"><h2>Table of Content</h2><ol><li><a href="#introduction">Introduction</a></li><li><a href="#classes">Classes</a></li><li><a href="#objectproperties">Object Properties</a></li><li><a href="#dataproperties">Data Properties</a></li><li><a href="#annotationproperties">Annotation Properties</a></li>
-        <li><a href="#swrlrules">SWRL Rules</a></li><li><a href="#namespacedeclarations">Namespace Declarations</a></li></ol>
-        </div><h2 id="introduction">Introduction</h2><p>SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops.</p>
+        <dl><dt>Authors:</dt><dd>Said Fathalla</dd><dd>Sahar Vahdati</dd><dd>S&ouml;ren Auer</dd><dd>Christoph Lange</dd></dl><dl><dt>Imported Ontologies:</dt><dd><a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a> (<a href="/owlapi/http://dbpedia.org/ontology/">visualise it with LODE</a>)</dd><dd><a href="http://www.essepuntato.it/2012/04/tvc">http://www.essepuntato.it/2012/04/tvc</a> (<a href="/owlapi/http://www.essepuntato.it/2012/04/tvc">visualise it with LODE</a>)</dd><dd><a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a> (<a href="/owlapi/http://xmlns.com/foaf/0.1/">visualise it with LODE</a>)</dd><dd><a href="https://w3id.org/scholarlydata/ontology/conference-ontology.owl">https://w3id.org/scholarlydata/ontology/conference-ontology.owl</a> (<a href="/owlapi/https://w3id.org/scholarlydata/ontology/conference-ontology.owl">visualise it with LODE</a>)</dd></dl><dl><dt>Other visualisation:</dt><dd><a href="http://eelst.cs.unibo.it/apps/LODE/source?url=http://www.essepuntato.it/static/tmp/0">Ontology source</a></dd></dl></div><hr><div id="toc"><h2>Table of Content</h2><ol>
+        	<li><a href="#introduction">Introduction</a></li>
+        	<li><a href="#classes">Classes</a></li>
+        	<li><a href="#objectproperties">Object Properties</a></li>
+        	<li><a href="#dataproperties">Data Properties</a></li>
+        	<!-- <li><a href="#annotationproperties">Annotation Properties</a></li> -->
+	        <li><a href="#swrlrules">SWRL Rules</a></li>
+	        <li><a href="#namespacedeclarations">Namespace Declarations</a></li></ol>
+        </div>
+        <h2 id="introduction">Introduction</h2><p>SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops.</p>
 <div id="classes"><h2>Classes</h2><ul class="hlist">
 	<!-- <li><a href="#http://purl.org/dc/terms/Agent" title="http://purl.org/dc/terms/Agent">Agent</a></li> -->
 <li><a href="#c1" title="https://w3id.org/seo#Author"><span>Author</span></a></li>
@@ -83,7 +53,7 @@
 <li><a href="#c24" title="https://w3id.org/seo#IndustrialConference"><span>Industrial conference</span></a></li>
 <li><a href="#c25" title="https://w3id.org/seo#IndustryTrack"><span>Industry track</span></a></li>
 <li><a href="#c26" title="https://w3id.org/seo#InvitedSpeakers"><span>Invited speaker</span></a></li>
-<li><a href="#c27" title="https://w3id.org/seo#Keynote"><span>Keynote</span></a></li>
+<li><a href="#c27" title="https://w3id.org/seo#Keynote"><span>Keynote speech</span></a></li>
 <li><a href="#c28" title="https://w3id.org/seo#KeynoteSpeaker"><span>Keynote speaker</span></a></li>
 <!-- <li><a href="#d4e3767" title="https://w3id.org/seo#Keynote">Keynote speech</a></li> -->
 <li><a href="#c29" title="https://w3id.org/seo#LateRegistration"><span>Late registration</span></a></li>
@@ -100,7 +70,7 @@
 <li><a href="#c37" title="https://w3id.org/seo#PostersTrack"><span>Posters track</span></a></li>
 <li><a href="#c38" title="https://w3id.org/seo#ProgramChair"><span>Program chair</span></a></li>
 <li><a href="#c39" title="https://w3id.org/seo#ProgramCommitteeMember"><span>Program committee member</span></a></li>
-<li><a href="#c40" title="https://w3id.org/seo#ProgramSchedual"><span>Program schedual</span></a></li>
+<li><a href="#c40" title="https://w3id.org/seo#ProgramSchedule"><span>Program schedule</span></a></li>
 <li><a href="#c41" title="https://w3id.org/seo#Publisher">Publisher</a></li>
 <li><a href="#c42" title="https://w3id.org/seo#Registration"><span>Registration</span></a></li>
 <li><a href="#c43" title="https://w3id.org/seo#RegularRegistration"><span>Regular registration</span></a></li>
@@ -135,6 +105,7 @@
 	<h3>Author<sup title="class" class="type-c">c</sup>
 		<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#Author</p>
+	<div class="comment"><p>The one who write the article.</p>
 	<dl class="description"><dt>has super-classes</dt>
 		<dd>
 			<span class="dotted" title="http://xmlns.com/foaf/0.1#Person">Person</span><sup title="class" class="type-c">c</sup>
@@ -148,12 +119,14 @@
 		<dd><a href="#d4" title="https://w3id.org/seo#participatesAs">participates As</a><sup title="object property" class="type-op">op</sup>
 		</dd>
 	</dl>
+	</div>
 </div>
 
 <div id="c2" class="entity"><a name="https://w3id.org/seo#AuthorRegistration"></a>
 	<h3>Author registration<sup title="class" class="type-c">c</sup>
 		<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#AuthorRegistration</p>
+	<div class="comment"><p>At least one of the authors must register at the full rate in order for the paper to be published in the Proceedings.</p>
 	<dl class="description"><dt>has sub-classes</dt>
 		<dd>
 			<a href="#c53" title="https://w3id.org/seo#StudentRegistration">Student Registration</a><sup title="class" class="type-c">c</sup>, 
@@ -163,13 +136,14 @@
 		<dd><a href="#d2" title="https://w3id.org/seo#registeredAs">registered As</a>
 			<sup title="object property" class="type-op">op</sup>
 		</dd>
-	</dl>
+	</dl></div>
 </div>
 
 <div id="c3" class="entity"><a name="https://w3id.org/seo#Award"></a>
 	<h3>Award<sup title="class" class="type-c">c</sup>
 		<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#Award</p>
+	<div class="comment"><p>A price for the highest quality research.</p>
 	<dl class="description"><dt>has sub-classes</dt>
 		<dd>
 			<a href="#c53" title="https://w3id.org/seo#BestPaperAward">Best paper award</a><sup title="class" class="type-c">c</sup>, 
@@ -179,22 +153,24 @@
 		<dd><a href="#d1" title="https://w3id.org/seo#takesAward">takes Award</a><sup title="object property" class="type-op">op</sup>,
 			<a href="#d5" title="https://w3id.org/seo#offersAward">offers Award</a><sup title="object property" class="type-op">op</sup>
 		</dd>
-	</dl>
+	</dl></div>
 </div>
 
 
 <div id="c4" class="entity"><a name="https://w3id.org/seo#BestApplicationsPaperAward"></a>
 	<h3>Best applications paper award<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#BestApplicationsPaperAward</p>
+	<div class="comment"><p>This award for the best application paper presented.</p>
 	<dl class="description"><dt>has super-classes</dt>
 		<dd><a href="#a5" title="https://w3id.org/seo#BestPaperAward">Best paper award</a><sup title="class" class="type-c">c</sup>
 		</dd>
-	</dl>
+	</dl></div>
 </div>
 
 <div id="c5" class="entity"><a name="https://w3id.org/seo#BestPaperAward"></a>
 	<h3>Best paper award<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
   <p><strong>IRI:</strong> https://w3id.org/seo#BestPaperAward</p>
+  <div class="comment"><p>This award recognizes the best paper presented.</p>
   <dl class="description"><dt>has super-classes</dt>
   	<dd><a href="#c3" title="https://w3id.org/seo#Award">Award</a><sup title="class" class="type-c">c</sup>
   	<dt>has sub-classes</dt>
@@ -203,21 +179,26 @@
 	<dt>is in range of</dt>
 	<dd><a href="#d7" title="https://w3id.org/seo#offersBestPaperAward">offers Best Paper Award</a><sup title="object property" class="type-op">op</sup>
 	</dd>
-	</dl>
+	</dl></div>
 </div>
 
 <div id="c6" class="entity"><a name="https://w3id.org/seo#BestPosterAward"></a>
   <h3>Best poster award<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
   <p><strong>IRI:</strong> https://w3id.org/seo#BestPosterAward</p>
+  <div class="comment"><p>This award highlight good quality posters presented.</p>
   <dl class="description"><dt>has super-classes</dt>
   	<dd><a href="#c3" title="https://w3id.org/seo#Award">Award</a><sup title="class" class="type-c">c</sup></dd></dl>
+  </div>
  </div>
 
  <div id="c7" class="entity"><a name="https://w3id.org/seo#BestStudentPaperAward"></a>
   <h3>Best student paper award<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/seo#BestStudentPaperAward</p><dl class="description"><dt>has super-classes</dt>
+  <p><strong>IRI:</strong> https://w3id.org/seo#BestStudentPaperAward</p>
+  <div class="comment"><p>This award recognizes the best paper authored primarily by a student and presented by the student.</p>
+  <dl class="description"><dt>has super-classes</dt>
   	<dd><a href="#c5" title="https://w3id.org/seo#BestPaperAward">Best paper award</a><sup title="class" class="type-c">c</sup></dd></dl>
   </div>
+ </div>
 
 <!--  <div id="d4e3184" class="entity"><a name="http://purl.org/dc/terms/BibliographicResource"></a><h3>Bibliographic resource<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/dc/terms/BibliographicResource</p><dl class="definedBy"><dt>is defined by</dt><dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd></dl><div class="comment"><p>A book, article, or other documentary resource.</p>
 </div><dl class="description"><dt>is in domain of</dt><dd><a href="#d4e2739" title="http://purl.org/dc/terms/bibliographicCitation">Bibliographic Citation</a><sup title="data property" class="type-dp">dp</sup></dd><dt>is also defined as</dt><dd>named individual</dd></dl></div> -->
@@ -226,48 +207,57 @@
 	<h3>Bronze sponsorship<sup title="class" class="type-c">c</sup>
 		<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#BronzeSponsorship</p>
+	<div class="comment"><p>Sponsorship Package.</p>
 	<dl class="description"><dt>has super-classes</dt>
 		<dd>
 			<a href="#c50" title="https://w3id.org/seo#Sponsorship">Sponsorship</a><sup title="class" class="type-c">c</sup>
 		</dd>
 	</dl>
 </div>
+</div>
 
 <div id="c9" class="entity"><a name="https://w3id.org/seo#Chair"></a>
-<h3>Chair<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-<p><strong>IRI:</strong> https://w3id.org/seo#Chair</p><dl class="description">
-	<dt>has super-classes</dt>
-	<dd>
-		<span class="dotted" title="http://xmlns.com/foaf/0.1#Person">Person</span><sup title="class" class="type-c">c</sup>
-	</dd><dt>has sub-classes</dt>
-	<dd><a href="#c11" title="https://w3id.org/seo#DemoChair">Demo chair</a><sup title="class" class="type-c">c</sup>, 
-		<a href="#c14" title="https://w3id.org/seo#DoctoralConsortiumChair">Doctoral consortium chair</a><sup title="class" class="type-c">c</sup>, 
-		<a href="#c18" title="https://w3id.org/seo#GeneralChair">General chair</a><sup title="class" class="type-c">c</sup>, 
-		<a href="#c21" title="https://w3id.org/seo#HonorChair">Honor chair</a><sup title="class" class="type-c">c</sup>, 
-		<a href="#c30" title="https://w3id.org/seo#LocalOrganisationChair">Local organisation chair</a><sup title="class" class="type-c">c</sup>, 
-		<a href="#c36" title="https://w3id.org/seo#PosterChair">Poster chair</a><sup title="class" class="type-c">c</sup>, 
-		<a href="#c38" title="https://w3id.org/seo#ProgramChair">Program chair</a><sup title="class" class="type-c">c</sup>, 
-		<a href="#c51" title="https://w3id.org/seo#SponsorshipChair">Sponsorship chair</a><sup title="class" class="type-c">c</sup>, 
-		<a href="#c58" title="https://w3id.org/seo#TutorialChair">Tutorial chair</a><sup title="class" class="type-c">c</sup>, 
-		<a href="#c59" title="https://w3id.org/seo#WorkshopChair">Workshop chair</a><sup title="class" class="type-c">c</sup>
-	</dd>
-	<dt>is in range of</dt>
-	<dd><a href="#d6" title="https://w3id.org/seo#hasChair">has Chair</a><sup title="object property" class="type-op">op</sup>,
-		<a href="#d4" title="https://w3id.org/seo#participatesAs">participates As</a><sup title="object property" class="type-op">op</sup>
-	</dd>
-</dl></div>
+	<h3>Chair<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+	<p><strong>IRI:</strong> https://w3id.org/seo#Chair</p>
+	<div class="comment"><p>The Chair person must ensure that the Management Committee functions properly, that there is full participation during meetings, that all relevant matters are discussed and that effective decisions are made and carried out.</p>
+	<dl class="description">
+		<dt>has super-classes</dt>
+		<dd><span class="dotted" title="http://xmlns.com/foaf/0.1#Person">Person</span><sup title="class" class="type-c">c</sup>
+		</dd>
+		<dt>has sub-classes</dt>
+		<dd><a href="#c11" title="https://w3id.org/seo#DemoChair">Demo chair</a><sup title="class" class="type-c">c</sup>, 
+			<a href="#c14" title="https://w3id.org/seo#DoctoralConsortiumChair">Doctoral consortium chair</a><sup title="class" class="type-c">c</sup>, 
+			<a href="#c18" title="https://w3id.org/seo#GeneralChair">General chair</a><sup title="class" class="type-c">c</sup>, 
+			<a href="#c21" title="https://w3id.org/seo#HonorChair">Honor chair</a><sup title="class" class="type-c">c</sup>, 
+			<a href="#c30" title="https://w3id.org/seo#LocalOrganisationChair">Local organisation chair</a><sup title="class" class="type-c">c</sup>, 
+			<a href="#c36" title="https://w3id.org/seo#PosterChair">Poster chair</a><sup title="class" class="type-c">c</sup>, 
+			<a href="#c38" title="https://w3id.org/seo#ProgramChair">Program chair</a><sup title="class" class="type-c">c</sup>, 
+			<a href="#c51" title="https://w3id.org/seo#SponsorshipChair">Sponsorship chair</a><sup title="class" class="type-c">c</sup>, 
+			<a href="#c58" title="https://w3id.org/seo#TutorialChair">Tutorial chair</a><sup title="class" class="type-c">c</sup>, 
+			<a href="#c59" title="https://w3id.org/seo#WorkshopChair">Workshop chair</a><sup title="class" class="type-c">c</sup>
+		</dd>
+		<dt>is in range of</dt>
+		<dd><a href="#d6" title="https://w3id.org/seo#hasChair">has Chair</a><sup title="object property" class="type-op">op</sup>,
+			<a href="#d4" title="https://w3id.org/seo#participatesAs">participates As</a><sup title="object property" class="type-op">op</sup>
+		</dd>
+	</dl></div>
+</div>
 
 <div id="c10" class="entity"><a name="https://w3id.org/seo#ChallengeTrack"></a>
-<h3>Challenge track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-<p><strong>IRI:</strong> https://w3id.org/seo#ChallengeTrack</p><dl class="description"><dt>has super-classes</dt>
+	<h3>Challenge track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+	<p><strong>IRI:</strong> https://w3id.org/seo#ChallengeTrack</p>
+	<div class="comment"><p>The idea of the challenge track is to provide participants with a set of case studies and challenge the state of the art.</p>
+	<dl class="description"><dt>has super-classes</dt>
 	<dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Track">Track</span><sup title="class" class="type-c">c</sup></dd></dl></div>
+</div>
 
 <div id="c11" class="entity"><a name="https://w3id.org/seo#DemoChair"></a>
 <h3>Demo chair<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 <p><strong>IRI:</strong> https://w3id.org/seo#DemoChair</p>
+<div class="comment"><p>A person responsible for assembling the system demonstration papers to be presented in the main conference program.</p>
 <dl class="description"><dt>has super-classes</dt>
 	<dd><a href="#c9" title="https://w3id.org/seo#Chair">Chair</a><sup title="class" class="type-c">c</sup></dd></dl>
-</div>
+</div></div>
 
 <div id="c12" class="entity"><a name="https://w3id.org/seo#DemosTrack"></a>
 	<h3>Demos track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
@@ -279,8 +269,8 @@
 
 <div id="c13" class="entity"><a name="https://w3id.org/seo#DoctoralConsortium"></a>
 	<h3>Doctoral consortium<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-	<p><strong>IRI:</strong> https://w3id.org/seo#DoctoralConsortium</p><div class="comment">
-		<p>Provide PhD students an opportunity to share and develop their research ideas in a critical but supportive environment.</p>
+	<p><strong>IRI:</strong> https://w3id.org/seo#DoctoralConsortium</p>
+	<div class="comment"><p>Provide PhD students an opportunity to share and develop their research ideas in a critical but supportive environment.</p>
 	</div>
 	<dl class="description"><dt>has super-classes</dt><dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">Academic event</span><sup title="class" class="type-c">c</sup></dd></dl>
 </div>
@@ -288,13 +278,16 @@
 <div id="c14" class="entity"><a name="https://w3id.org/seo#DoctoralConsortiumChair"></a>
 	<h3>Doctoral consortium chair<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#DoctoralConsortiumChair</p>
+	<div class="comment"><p>The event member who leads the doctoral consortium.</p>
 	<dl class="description"><dt>has super-classes</dt>
 		<dd><a href="#c9" title="https://w3id.org/seo#Chair">Chair</a><sup title="class" class="type-c">c</sup></dd></dl>
+	</div>
 </div>
 
 <div id="c15" class="entity"><a name="https://w3id.org/seo#EarlyBirdRegistration"></a>
 	<h3>Early bird registration<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#EarlyBirdRegistration</p>
+	<div class="comment"><p>Registration before a specific date.</p>
 	<dl class="description">
 		<dt>has super-classes</dt>
 		<dd><a href="#c42" title="https://w3id.org/seo#Registration">Registration</a><sup title="class" class="type-c">c</sup></dd>
@@ -304,64 +297,82 @@
 		<dd><a href="#c9" title="https://w3id.org/seo#LateRegistration">Late registration</a><sup title="class" class="type-c">c</sup></dd>
 	</dl>
 </div>
+</div>
 
 <div id="c16" class="entity"><a name="https://w3id.org/seo#EventReception"></a>
 	<h3>Event reception<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-	<p><strong>IRI:</strong> https://w3id.org/seo#EventReception</p><dl class="description">
+	<p><strong>IRI:</strong> https://w3id.org/seo#EventReception</p>
+	<div class="comment"><p>The reception event within a scientific event.</p>
+		<dl class="description">
 		<dt>has super-classes</dt>
 		<dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#SocialEvent">Social event</span><sup title="class" class="type-c">c</sup>
 		</dd></dl>
+	</div>
 </div>
 
 <div id="c17" class="entity"><a name="https://w3id.org/seo#Flyer"></a>
 	<h3>Flyer<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-	<p><strong>IRI:</strong> https://w3id.org/seo#Flyer</p><dl class="description">
+	<p><strong>IRI:</strong> https://w3id.org/seo#Flyer</p>
+	<div class="comment"><p>An announcement or advertisement that is printed on a sheet of paper and given to people.</p>
+	<dl class="description">
 		<dt>is in range of</dt>
 		<dd><a href="#d9" title="https://w3id.org/seo#hasFlyer">has Flyer</a><sup title="object property" class="type-op">op</sup></dd>
 	</dl>
 </div>
+</div>
 
 <div id="c18" class="entity"><a name="https://w3id.org/seo#GeneralChair"></a>
 	<h3>General chair<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-	<p><strong>IRI:</strong> https://w3id.org/seo#GeneralChair</p><dl class="description">
+	<p><strong>IRI:</strong> https://w3id.org/seo#GeneralChair</p>
+	<div class="comment"><p>A person responsible for overseeing and coordinating the whole conference.</p>
+	<dl class="description">
 		<dt>has super-classes</dt>
 		<dd><a href="#c9" title="https://w3id.org/seo#Chair">Chair</a><sup title="class" class="type-c">c</sup>
-	</dd></dl>
+	</dd></dl></div>
 </div>
 
 <div id="c19" class="entity"><a name="https://w3id.org/seo#GetTogetherEvent"></a>
 	<h3>Get together event<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 		<p><strong>IRI:</strong> https://w3id.org/seo#GetTogetherEvent</p>
+		<div class="comment"><p>Socially gather two or more people in one event.</p>
 		<dl class="description">
 			<dt>has super-classes</dt><dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#SocialEvent">Social event</span><sup title="class" class="type-c">c</sup>
 			</dd>
 		</dl>
+	</div>
 </div>
 
 <div id="c20" class="entity"><a name="https://w3id.org/seo#GoldSponsorship"></a>
 	<h3>Gold sponsorship<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 		<p><strong>IRI:</strong> https://w3id.org/seo#GoldSponsorship</p>
+		<div class="comment"><p>Sponsorship package.</p>
 		<dl class="description">
 			<dt>has super-classes</dt><dd>
 				<a href="#c50" title="https://w3id.org/seo#Sponsorship">Sponsorship</a><sup title="class" class="type-c">c</sup>
 			</dd>
 		</dl>
+	</div>
 </div>
 
 <div id="c21" class="entity"><a name="https://w3id.org/seo#HonorChair"></a>
 	<h3>Honor chair<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-	<p><strong>IRI:</strong> https://w3id.org/seo#HonorChair</p><dl class="description">
+	<p><strong>IRI:</strong> https://w3id.org/seo#HonorChair</p>
+	<div class="comment"><p>Chair of the conference.</p>
+	<dl class="description">
 		<dt>has super-classes</dt>
 		<dd><a href="#c9" title="https://w3id.org/seo#Chair">Chair</a><sup title="class" class="type-c">c</sup></dd></dl>
+	</div>
 </div>
 
 <div id="c22" class="entity"><a name="https://w3id.org/seo#ImportantDates"></a>
 	<h3>Important dates<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-	<p><strong>IRI:</strong> https://w3id.org/seo#ImportantDates</p><dl class="description">
+	<p><strong>IRI:</strong> https://w3id.org/seo#ImportantDates</p>
+	<div class="comment"><p>Important dates to be noticed such as, abstract deadline, submission deadline, ...etc.</p>
+	<dl class="description">
 		<dt>is in range of</dt>
 		<dd><a href="#d10" title="https://w3id.org/seo#hasImportantDates">has Important Dates</a><sup title="object property" class="type-op">op</sup>
 		</dd>
-	</dl>
+	</dl></div>
 </div>
 
 <div id="c23" class="entity"><a name="https://w3id.org/seo#In-useTrack"></a>
@@ -374,7 +385,9 @@
 <div id="c24" class="entity"><a name="https://w3id.org/seo#IndustrialConference"></a>
 	<h3>Industrial conference<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#IndustrialConference</p>
+	<div class="comment"><p>A business conference is held for people working in the same company or industry.</p>
 	<dl class="description"><dt>has super-classes</dt><dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#NonAcademicEvent">Non academic event</span><sup title="class" class="type-c">c</sup></dd></dl>
+</div>
 </div>
 
 <div id="c25" class="entity"><a name="https://w3id.org/seo#IndustryTrack"></a>
@@ -390,6 +403,7 @@
 <div id="c26" class="entity"><a name="https://w3id.org/seo#InvitedSpeakers"></a>
 	<h3>Invited speakers<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#InvitedSpeaker</p>
+	<div class="comment"><p>Invited person to give a speech in an event.</p></div>
 	<dl class="description">
 		<dt>has super-classes</dt>
 		<dd><span class="dotted" title="http://xmlns.com/foaf/0.1#Person">Person</span><sup title="class" class="type-c">c</sup></dd>
@@ -399,7 +413,7 @@
 </div>
 
 <div id="c27" class="entity"><a name="https://w3id.org/seo#keynote"></a>
-	<h3>Keynote<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+	<h3>Keynote speech<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#Keynote</p>
 	<div class="comment"><p>A talk that establishes a main underlying the theme of the event.</p></div>
 	<dl class="description">
@@ -414,6 +428,7 @@
 <div id="c28" class="entity"><a name="https://w3id.org/seo#KeynoteSpeaker"></a>
 	<h3>Keynote speaker<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#KeynoteSpeaker</p>
+	<div class="comment"><p>Someone who gives the main address at a formal gathering such as a conference.</p></div>
 	<dl class="description"><dt>has super-classes</dt>
 		<dd><a href="#c26" title="https://w3id.org/seo#InvitedSpeakers">Invited speakers</a><sup title="class" class="type-c">c</sup></dd>
 	</dl>
@@ -424,6 +439,7 @@
 <div id="c29" class="entity"><a name="https://w3id.org/seo#LateRegistration"></a>
 	<h3>Late registration<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#LateRegistration</p>
+	<div class="comment"><p>Registration after a specific deadline.</p></div>
 	<dl class="description">
 		<dt>has super-classes</dt>
 		<dd><a href="#c42" title="https://w3id.org/seo#Registration">Registration</a><sup title="class" class="type-c">c</sup></dd>
@@ -436,13 +452,16 @@
 
 <div id="c30" class="entity"><a name="https://w3id.org/seo#LocalOrganisationChair"></a>
 	<h3>Local organisation chair<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-	<p><strong>IRI:</strong> https://w3id.org/seo#LocalOrganisationChair</p><dl class="description"><dt>has super-classes</dt>
+	<p><strong>IRI:</strong> https://w3id.org/seo#LocalOrganisationChair</p>
+	<div class="comment"><p>The chair of the local organizers of the event.</p></div>
+	<dl class="description"><dt>has super-classes</dt>
 		<dd><a href="#c9" title="https://w3id.org/seo#Chair">Chair</a><sup title="class" class="type-c">c</sup></dd></dl>
 </div>
 
 <div id="c31" class="entity"><a name="https://w3id.org/seo#OnSiteRegistration"></a>
 	<h3>On site registration<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#OnSiteRegistration</p>
+	<div class="comment"><p>Process of signing up for an event on the day of, or at the site of, the event.</p></div>
 	<dl class="description">
 		<dt>has super-classes</dt>
 		<dd><a href="#c42" title="https://w3id.org/seo#Registration">Registration</a><sup title="class" class="type-c">c</sup></dd>
@@ -453,6 +472,7 @@
 	<h3>Organizer<sup title="class" class="type-c">c</sup>
 		<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#Organizer</p>
+	<div class="comment"><p>A person who arranges an event or activity.</p></div>
 	<dl class="description"><dt>has super-classes</dt>
 		<dd>
 			<span class="dotted" title="http://xmlns.com/foaf/0.1#Person">Person</span><sup title="class" class="type-c">c</sup>
@@ -467,12 +487,14 @@
 	<h3>Past events<sup title="class" class="type-c">c</sup>
 		<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#PastEvents</p>
+	<div class="comment"><p>Events happened or existed before the present time.</p></div>
 </div>
 
 
 <div id="c34" class="entity"><a name="https://w3id.org/seo#PHDSymposium"></a>
 	<h3>PHD symposium<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#PHDSymposium</p>
+	<div class="comment"><p>Event for PHD student to present and receive feedback on their ongoing work.</p></div>
 	<dl class="description"><dt>has super-classes</dt>
 		<dd><a href="#c55" title="https://w3id.org/seo#Symposium">Symposium</a><sup title="class" class="type-c">c</sup></dd>
 	</dl>
@@ -496,6 +518,7 @@
 <div id="c35" class="entity"><a name="https://w3id.org/seo#PlatinumSponsorship"></a>
 	<h3>Platinum sponsorship<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 		<p><strong>IRI:</strong> https://w3id.org/seo#PlatinumSponsorship</p>
+		<div class="comment"><p>Sponsorship package.</p></div>
 		<dl class="description">
 			<dt>has super-classes</dt><dd>
 				<a href="#c50" title="https://w3id.org/seo#Sponsorship">Sponsorship</a><sup title="class" class="type-c">c</sup>
@@ -506,6 +529,7 @@
 <div id="c36" class="entity"><a name="https://w3id.org/seo#PosterChair"></a>
 	<h3>Poster chair<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#PosterChair</p>
+	<div class="comment"><p>The poster chair is responsible for recruiting and selecting poster fair organizers for the fairs that fall under the shared interest category.</p></div>
 	<dl class="description">
 		<dt>has super-classes</dt>
 		<dd><a href="#c9" title="https://w3id.org/seo#Chair">Chair</a><sup title="class" class="type-c">c</sup></dd>
@@ -524,7 +548,9 @@
 
 <div id="c38" class="entity"><a name="https://w3id.org/seo#ProgramChair"></a>
 	<h3>Program chair<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-	<p><strong>IRI:</strong> https://w3id.org/seo#ProgramChair</p><dl class="description">
+	<p><strong>IRI:</strong> https://w3id.org/seo#ProgramChair</p>
+	<div class="comment"><p>The Program Chair is responsible for working to develop the annual program budget, manage chapter-programming delivery, monitor program quality, manage member satisfaction with programs, and manage all speaker communications.</p></div>
+	<dl class="description">
 		<dt>has super-classes</dt>
 		<dd><a href="#c9" title="https://w3id.org/seo#Chair">Chair</a><sup title="class" class="type-c">c</sup></dd></dl>
 </div>
@@ -532,15 +558,17 @@
 <div id="c39" class="entity"><a name="https://w3id.org/seo#ProgramCommitteeMember"></a>
 	<h3>Program committee member<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#ProgramCommitteeMember</p>
+	<div class="comment"><p>The program committee is responsible for objectively and thoroughly reviewing all submissions, for submitting timely, informative reviews that provide authors with feedback about their submissions, and for attending the program committee meetings.</p></div>
 	<dl class="description"><dt>has super-classes</dt>
 		<dd><span class="dotted" title="http://xmlns.com/foaf/0.1#Person">Person</span><sup title="class" class="type-c">c</sup></dd>
 	</dl>
 </div>
 
-<div id="c40" class="entity"><a name="https://w3id.org/seo#ProgramSchedual"></a>
-	<h3>Program schedual<sup title="class" class="type-c">c</sup>
+<div id="c40" class="entity"><a name="https://w3id.org/seo#ProgramSchedule"></a>
+	<h3>Program schedule<sup title="class" class="type-c">c</sup>
 		<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-	<p><strong>IRI:</strong> https://w3id.org/seo#ProgramSchedual</p>
+	<p><strong>IRI:</strong> https://w3id.org/seo#ProgramSchedule</p>
+	<div class="comment"><p>A plan for carrying out a process or procedure, giving lists of intended events and times.</p></div>
 </div>
 
 <div id="c41" class="entity"><a name="https://w3id.org/seo#Publisher"></a>
@@ -562,6 +590,7 @@
 	<h3>Registration<sup title="class" class="type-c">c</sup>
 	<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#Registration</p>
+	<div class="comment"><p>The action or process of registering or of being registered.</p></div>
 	<dl class="description">
 		<dt>has sub-classes</dt>
 		<dd><a href="#c15" title="https://w3id.org/seo#EarlyBirdRegistration">Early bird registration</a><sup title="class" class="type-c">c</sup>,
@@ -576,6 +605,7 @@
 <div id="c43" class="entity"><a name="https://w3id.org/seo#RegularRegistration"></a>
 	<h3>Regular registration<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#RegularRegistration</p>
+	<div class="comment"><p>Normal registration.</p></div>
 	<dl class="description">
 		<dt>has super-classes</dt>
 		<dd><a href="#c2" title="https://w3id.org/seo#AuthorRegistration">Author registration</a><sup title="class" class="type-c">c</sup></dd>
@@ -587,13 +617,13 @@
 <div id="c44" class="entity"><a name="https://w3id.org/seo#ResearchField"></a>
 	<h3>Research field<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#ResearchField</p>
+	<div class="comment"><p>Area of interest.</p></div>
 </div>
 
 <div id="c45" class="entity"><a name="https://w3id.org/seo#ResearchTrack"></a>
 	<h3>Research track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#ResearchTrack</p>
-	<div class="comment">
-		<p>The track for fundamental research, innovative technology, and applications concerning the research topic of the event.</p>
+	<div class="comment"><p>The track for fundamental research, innovative technology, and applications concerning the research topic of the event.</p>
 	</div>
 	<dl class="description"><dt>has super-classes</dt>
 		<dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Track">Track</span><sup title="class" class="type-c">c</sup></dd>
@@ -603,8 +633,7 @@
 <div id="c46" class="entity"><a name="https://w3id.org/seo#ResourceTrack"></a>
 	<h3>Resource track<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#ResourceTrack</p>
-	<div class="comment">
-		<p>The Resources Track aims to promote the sharing of resources including: datasets, ontologies, vocabularies, ... etc</p>
+	<div class="comment"><p>The Resources Track aims to promote the sharing of resources including: datasets, ontologies, vocabularies, ... etc</p>
 	</div>
 	<dl class="description">
 		<dt>has super-classes</dt>
@@ -615,6 +644,7 @@
 <div id="c47" class="entity"><a name="https://w3id.org/seo#Reviewer"></a>
 	<h3>Reviewer<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#Reviewer</p>
+	<div class="comment"><p>A person who reviews the submissions and give feedback about the submitted articles.</p></div>
 	<dl class="description"><dt>has super-classes</dt>
 		<dd><span class="dotted" title="http://xmlns.com/foaf/0.1#Person">Person</span><sup title="class" class="type-c">c</sup></dd>
 	</dl>
@@ -623,6 +653,7 @@
 <div id="c48" class="entity"><a name="https://w3id.org/seo#SilverSponsorship"></a>
 	<h3>Silver sponsorship<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#SilverSponsorship</p>
+	<div class="comment"><p>Sponsorship package</p></div>
 	<dl class="description">
 		<dt>has super-classes</dt><dd>
 			<a href="#c50" title="https://w3id.org/seo#Sponsorship">Sponsorship</a><sup title="class" class="type-c">c</sup>
@@ -632,9 +663,7 @@
 
 <div id="c49" class="entity"><a name="https://w3id.org/seo#Sponsor"></a>
 	<h3>Sponsor<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3><p><strong>IRI:</strong> https://w3id.org/seo#Sponsor</p>
-	<div class="comment">
-		<p>The Sponsor of the event (i.e. company, university ... etc.).</p>
-	</div>
+	<div class="comment"><p>The Sponsor of the event (i.e. company, university ... etc.).</p></div>
 	<dl class="description">
 		<dt>has super-classes</dt>
 		<dd><span class="dotted" title="http://xmlns.com/foaf/0.1#Organization">Organization</span><sup title="class" class="type-c">c</sup></dd>
@@ -646,7 +675,9 @@
 </div>
 
 <div id="c50" class="entity"><a name="https://w3id.org/seo#Sponsorship"></a>
-	<h3>Sponsorship<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3><p><strong>IRI:</strong> https://w3id.org/seo#Sponsorship</p>
+	<h3>Sponsorship<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+	<p><strong>IRI:</strong> https://w3id.org/seo#Sponsorship</p>
+	<div class="comment"><p>Refer to a person or organization with some sort of responsibility for another person or organisation.</p></div>
 	<dl class="description">
 		<dt>has sub-classes</dt>
 		<dd><a href="#c8" title="https://w3id.org/seo#BronzeSponsorship">Bronze sponsorship</a><sup title="class" class="type-c">c</sup>,
@@ -659,13 +690,16 @@
 
 <div id="c51" class="entity"><a name="https://w3id.org/seo#SponsorshipChair"></a>
 	<h3>Sponsorship chair<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-	<p><strong>IRI:</strong> https://w3id.org/seo#SponsorshipChair</p><dl class="description"><dt>has super-classes</dt>
+	<p><strong>IRI:</strong> https://w3id.org/seo#SponsorshipChair</p>
+	<div class="comment"><p>A person responsible for collecting funding from two kinds of sources: granting institutions and corporations.</p></div>
+	<dl class="description"><dt>has super-classes</dt>
 		<dd><a href="#c9" title="https://w3id.org/seo#Chair">Chair</a><sup title="class" class="type-c">c</sup></dd></dl>
 </div>
 
 <div id="c52" class="entity"><a name="https://w3id.org/seo#Student"></a>
 	<h3>Student<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#Student</p>
+	<div class="comment"><p>A person enrolled in a school or other educational institution.</p></div>
 	<dl class="description"><dt>has super-classes</dt>
 		<dd><span class="dotted" title="http://xmlns.com/foaf/0.1#Person">Person</span><sup title="class" class="type-c">c</sup></dd>
 	</dl>
@@ -673,7 +707,9 @@
 
 <div id="c53" class="entity"><a name="https://w3id.org/seo#StudentRegistration"></a>
 	<h3>Student registration<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-	<p><strong>IRI:</strong> https://w3id.org/seo#StudentRegistration</p><dl class="description"><dt>has super-classes</dt>
+	<p><strong>IRI:</strong> https://w3id.org/seo#StudentRegistration</p>
+	<div class="comment"><p>Students full-time enrolled in a college or university can register as a student for the reduced early career rate.</p></div>
+	<dl class="description"><dt>has super-classes</dt>
 	<dd><a href="#c2" title="https://w3id.org/seo#AuthorRegistration">Author registration</a><sup title="class" class="type-c">c</sup></dd>
 	<dt>is disjoint with</dt>
 	<dd><a href="#c43" title="https://w3id.org/seo#RegularRegistration">Regular registration</a><sup title="class" class="type-c">c</sup></dd></dl>
@@ -682,6 +718,7 @@
 <div id="c54" class="entity"><a name="https://w3id.org/seo#SubmissionGuidelines"></a>
 	<h3>Submission guidelines<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#SubmissionGuidelines</p>
+	<div class="comment"><p>Instructions for the submission process.</p></div>
 	<dt>is in range of</dt>
 	<dd><a href="#d18" title="https://w3id.org/seo#hasSubmissionGuidelines">has Submission Guidelines</a><sup title="object property" class="type-op">op</sup></dd></dl>
 </div>
@@ -689,6 +726,7 @@
 <div id="c55" class="entity"><a name="https://w3id.org/seo#Symposium"></a>
 	<h3>Symposium<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#Symposium</p>
+	<div class="comment"><p>A conference or meeting to discuss a particular subject.</p></div>
 	<dl class="description"><dt>has super-classes</dt>
 		<dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">Academic event</span><sup title="class" class="type-c">c</sup></dd>
 		<dt>has sub-classes</dt>
@@ -708,6 +746,7 @@
 <div id="c57" class="entity"><a name="https://w3id.org/seo#TravelInformation"></a>
 	<h3>Travel information<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#TravelInformation</p>
+	<div class="comment"><p>The information about the travel: date, place, ...etc.</p></div>
 	<dl class="description">
 		<dt>is in range of</dt> 
 		<dd><a href="#d19" title="https://w3id.org/seo#providesTravelInformation">provides Travel Information</a><sup title="object property" class="type-op">op</sup></dd>
@@ -717,7 +756,9 @@
 
 <div id="c58" class="entity"><a name="https://w3id.org/seo#TutorialChair"></a>
 	<h3>Tutorial chair<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
-	<p><strong>IRI:</strong> https://w3id.org/seo#TutorialChair</p><dl class="description"><dt>has super-classes</dt>	
+	<p><strong>IRI:</strong> https://w3id.org/seo#TutorialChair</p>
+	<div class="comment"><p>A person responsible for requesting tutorial proposals and making final selections.</p></div>
+	<dl class="description"><dt>has super-classes</dt>	
 	<dd><a href="#c9" title="https://w3id.org/seo#Chair">Chair</a><sup title="class" class="type-c">c</sup></dd></dl>
 </div>
 
@@ -729,6 +770,7 @@
 <div id="c59" class="entity"><a name="https://w3id.org/seo#WorkshopChair"></a>
 	<h3>Workshop chair<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#WorkshopChair</p>
+	<div class="comment"><p>The one responsible for collaborating with the workshop chairs for other ACL-affiliated conferences in the given year, in preparing and circulating the Call for Proposals, and in reviewing submissions.</p></div>
 	<dl class="description">
 		<dt>has super-classes</dt>
 		<dd><a href="#c9" title="https://w3id.org/seo#Chair">Chair</a><sup title="class" class="type-c">c</sup></dd>
@@ -898,7 +940,7 @@
 	<div class="description">
 		<dl><dt>has domain</dt>
 			<dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent">Organised event</span></dd>
-			<dt>has range</dt><dd><a href="#c29" title="https://w3id.org/seo#Keynote">Keynote</a><sup title="class" class="type-c">c</sup></dd>
+			<dt>has range</dt><dd><a href="#c29" title="https://w3id.org/seo#Keynote">Keynote speech</a><sup title="class" class="type-c">c</sup></dd>
 			<dt>is inverse of</dt>
 			<dd><a href="#c12" title="https://w3id.org/seo#keynoteIn">keynote In</a><sup title="object property" class="type-op">op</sup></dd>
 		</dl>
@@ -957,7 +999,17 @@
 		</div>
 </div>
 
-<div id="d25" class="entity"><a name="https://w3id.org/seo#hasSocialEvent"></a><h3>has Social Event<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3><p><strong>IRI:</strong> https://w3id.org/seo#hasSocialEvent</p><div class="description"><dl><dt>has domain</dt><dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">Academic event</span><sup title="class" class="type-c">c</sup></dd><dt>has range</dt><dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#SocialEvent">Social event</span><sup title="class" class="type-c">c</sup></dd></dl></div></div>
+<div id="d25" class="entity"><a name="https://w3id.org/seo#hasSocialEvent"></a>
+	<h3>has Social Event<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+	<p><strong>IRI:</strong> https://w3id.org/seo#hasSocialEvent</p>
+	<div class="description">
+		<dl><dt>has domain</dt>
+			<dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">Academic event</span><sup title="class" class="type-c">c</sup></dd>
+			<dt>has range</dt>
+			<dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#SocialEvent">Social event</span><sup title="class" class="type-c">c</sup></dd>
+		</dl>
+	</div>
+</div>
 
 <div id="d17" class="entity"><a name="https://w3id.org/seo#hasSponsor"></a><h3>has Sponsor<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3><p><strong>IRI:</strong> https://w3id.org/seo#hasSponsor</p><div class="comment"><p>This propoerty shows the sponsor of an event.</p>
 </div><div class="description"><dl><dt>has domain</dt><dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent">Organised event</span></dd><dt>has range</dt><dd><a href="#c49" title="https://w3id.org/seo#Sponsor">Sponsor</a><sup title="class" class="type-c">c</sup></dd><dt>is inverse of</dt><dd><a href="#d16" title="https://w3id.org/seo#isSponsorOf">is Sponsor Of</a><sup title="object property" class="type-op">op</sup></dd></dl></div></div>
@@ -1019,7 +1071,7 @@
 	<p><strong>IRI:</strong> https://w3id.org/seo#keynoteIn</p>
 	<div class="description">
 		<dl><dt>has domain</dt>
-			<dd><a href="#c29" title="https://w3id.org/seo#Keynote">Keynote</a></dd>
+			<dd><a href="#c29" title="https://w3id.org/seo#Keynote">Keynote speech</a></dd>
 			<dt>has range</dt>
 			<dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent">Organised event</span><sup title="class" class="type-c">c</sup></dd> 
 			<dt>is inverse of</dt>
@@ -1041,7 +1093,19 @@
 	</div>
 </div>
 
-<div id="d7" class="entity"><a name="https://w3id.org/seo#offersBestPaperAward"></a><h3>offers Best Paper Award<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3><p><strong>IRI:</strong> https://w3id.org/seo#offersBestPaperAward</p><div class="description"><dl><dt>has super-properties</dt><dd><a href="#d5" title="https://w3id.org/seo#offersAward">offers Award</a><sup title="object property" class="type-op">op</sup></dd><dt>has domain</dt><dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">Academic event</span><sup title="class" class="type-c">c</sup></dd><dt>has range</dt><dd><a href="#c5" title="https://w3id.org/seo#BestPaperAward">best Paper Award</a><sup title="class" class="type-c">c</sup></dd></dl></div></div>
+<div id="d7" class="entity"><a name="https://w3id.org/seo#offersBestPaperAward"></a>
+	<h3>offers Best Paper Award<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+	<p><strong>IRI:</strong> https://w3id.org/seo#offersBestPaperAward</p>
+	<div class="description">
+		<dl><dt>has super-properties</dt>
+			<dd><a href="#d5" title="https://w3id.org/seo#offersAward">offers Award</a><sup title="object property" class="type-op">op</sup></dd>
+			<dt>has domain</dt>
+			<dd><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent">Academic event</span><sup title="class" class="type-c">c</sup></dd>
+			<dt>has range</dt>
+			<dd><a href="#c5" title="https://w3id.org/seo#BestPaperAward">best Paper Award</a><sup title="class" class="type-c">c</sup></dd>
+		</dl>
+	</div>
+</div>
 
 <div id="d4" class="entity"><a name="https://w3id.org/seo#participatesAs"></a>
 	<h3>participates As<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
@@ -1195,7 +1259,7 @@
 </div>
 
 
-<div id="annotationproperties"><h2>Annotation Properties</h2><ul class="hlist"><li><a href="#d4e113" title="http://purl.org/dc/terms/abstract">Abstract</a></li><li><a href="#d4e140" title="http://purl.org/dc/terms/accessRights"></a></li>
+<!-- <div id="annotationproperties"><h2>Annotation Properties</h2><ul class="hlist"><li><a href="#d4e113" title="http://purl.org/dc/terms/abstract">Abstract</a></li><li><a href="#d4e140" title="http://purl.org/dc/terms/accessRights"></a></li>
 <li><a href="#d4e167" title="http://purl.org/dc/terms/alternative">Alternative Title</a></li><li><a href="#d4e223" title="http://purl.org/dc/terms/bibliographicCitation"></a></li>
 <li><a href="#d4e359" title="http://purl.org/dc/terms/creator">Creator</a></li>
 <li><a href="#d4e416" title="http://purl.org/dc/terms/dateAccepted">Date Accepted</a></li><li><a href="#d4e472" title="http://purl.org/dc/terms/dateSubmitted">Date Submitted</a></li><li><a href="#d4e1411" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasProceedings"><span>has proceedings</span></a></li><li><a href="#d4e1394" title="https://w3id.org/seo#participatesIn"><span>participates in</span></a></li><li><a href="#d4e87" title="http://purl.org/dc/elements/1.1/publisher"><span>publisher</span></a></li><li><a href="#d4e1003" title="http://purl.org/dc/terms/publisher">Publisher</a></li><li><a href="#d4e1314" title="http://purl.org/dc/terms/title">Title</a></li></ul>
@@ -1215,7 +1279,7 @@
 </div><div class="description"><dl><dt>has super-properties</dt><dd><span class="dotted" title="http://purl.org/dc/elements/1.1/subject">subject</span><sup title="annotation property" class="type-ap">ap</sup></dd><dt>is also defined as</dt><dd><a href="#d4e5858">named individual</a></dd></dl></div></div>
 <div id="d4e1314" class="entity"><a name="http://purl.org/dc/terms/title"></a><h3>Title<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/dc/terms/title</p><dl class="definedBy"><dt>is defined by</dt><dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd></dl><div class="comment"><p>A name given to the resource.</p>
 </div><div class="description"><dl><dt>has super-properties</dt><dd><span class="dotted" title="http://purl.org/dc/elements/1.1/title">title</span></dd><dt>has sub-properties</dt><dd><a href="#d4e167" title="http://purl.org/dc/terms/alternative">Alternative Title</a><sup title="annotation property" class="type-ap">ap</sup></dd><dt>has range</dt><dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd><dt>is also defined as</dt><dd><a href="#d4e5931">named individual</a></dd></dl></div></div>
-</div>
+</div> -->
 <div id="swrlrules"><h2>SWRL rules</h2><div id="d4e6062" class="entity"><h3>Rule #1<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><a href="#d20" title="https://w3id.org/seo#colocatedWith">colocated with</a><sup title="object property" class="type-op">op</sup>(?e1,?e2) , <span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</span>(?e1,?l1) -&gt; <span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</span>(?e2,?l1)</p></div><div id="d4e6146" class="entity"><h3>Rule #2<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Agent">agent</span>(?a) , <span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#holdsRole">holds role</span>(?a,?e) -&gt; <a href="#d28" title="https://w3id.org/seo#participatesIn">participates in</a><sup title="object property" class="type-op">op</sup>(?a,?e)</p></div><div id="d4e6228" class="entity"><h3>Rule #3<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</span>(?e1,?l1) , <span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</span>(?e2,?l2) , <span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#endDate">end date</span>(?e1,?ed1) , <span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#endDate">end date</span>(?e2,?ed2) , <span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#startDate">start date</span>(?e1,?sd1) , <span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#startDate">start date</span>(?e2,?sd2) , equal(?ed1,?ed2) , equal(?l1,?l2) , equal(?sd1,?sd2) -&gt; <a href="#d20" title="https://w3id.org/seo#colocatedWith">colocated with</a><sup title="object property" class="type-op">op</sup>(?e1,?e2)</p></div><div id="d4e6476" class="entity"><h3>Rule #4<span class="backlink">back to <a href="#toc">ToC</a></span></h3><p><a href="#d20" title="https://w3id.org/seo#colocatedWith">colocated with</a><sup title="object property" class="type-op">op</sup>(?e1,?e2) , <span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</span>(?e2,?l) -&gt; <span class="dotted" title="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation">has location</span>(?e1,?l)</p></div></div><div id="namespacedeclarations"><h2>Namespace Declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2><dl><dt><em>default namespace</em></dt><dd>&nbsp;</dd><dt>conference-ontology</dt><dd>https://w3id.org/scholarlydata/ontology/conference-ontology.owl#</dd><dt>dc</dt><dd>http://purl.org/dc/elements/1.1/</dd><dt>ns</dt><dd>http://rdfs.org/sioc/ns#</dd><dt>ontology</dt><dd>https://w3id.org/scholarlydata/ontology/</dd><dt>owl</dt><dd>http://www.w3.org/2002/07/owl#</dd><dt>rdf</dt><dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd><dt>rdfs</dt><dd>http://www.w3.org/2000/01/rdf-schema#</dd><dt>seo</dt><dd>https://w3id.org/seo#</dd><dt>skos</dt><dd>http://www.w3.org/2004/02/skos/core#</dd><dt>swrl</dt><dd>http://www.w3.org/2003/11/swrl#</dd><dt>swrla</dt><dd>http://swrl.stanford.edu/ontologies/3.3/swrla.owl#</dd><dt>swrlb</dt><dd>http://www.w3.org/2003/11/swrlb#</dd><dt>terms</dt><dd>http://purl.org/dc/terms/</dd><dt>time</dt><dd>http://www.w3.org/2006/time#</dd><dt>vann</dt><dd>http://purl.org/vocab/vann/</dd><dt>xsd</dt><dd>http://www.w3.org/2001/XMLSchema#</dd></dl>
 <p class="endnote">This HTML document was obtained by processing the OWL ontology source code through <a href="">LODE</a>, <em>Live OWL Documentation Environment</em>, developed by <a href="http://www.essepuntato.it/">Silvio Peroni</a>.</p>
 </body></html>
