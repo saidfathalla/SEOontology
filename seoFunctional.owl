@@ -1,0 +1,2187 @@
+Prefix(:=<https://w3id.org/seo#>)
+Prefix(cc:=<http://creativecommons.org/ns#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(dbo:=<http://dbpedia.org/ontology/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(seo:=<https://w3id.org/seo#>)
+Prefix(swc:=<https://w3id.org/scholarlydata/ontology/conference-ontology.owl#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(doco:=<http://purl.org/spar/doco/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(vann:=<http://purl.org/vocab/vann/>)
+Prefix(fabio:=<http://purl.org/spar/fabio/>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(cpannotationschema:=<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#>)
+
+
+Ontology(<https://w3id.org/seo#>
+Import(<http://dbpedia.org/ontology/>)
+Import(<http://www.essepuntato.it/2012/04/tvc>)
+Import(<https://w3id.org/scholarlydata/ontology/conference-ontology.owl>)
+Import(<http://xmlns.com/foaf/0.1/>)
+Annotation(dc:creator "Christoph Lange")
+Annotation(dc:creator "Said Fathalla")
+Annotation(terms:created "2018-02-01"@en)
+Annotation(terms:creator "Sahar Vahdati")
+Annotation(terms:creator "Soeren Auer")
+Annotation(terms:description "SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops."@en)
+Annotation(terms:lastModified "2019-04-10"@en)
+Annotation(terms:license <http://creativecommons.org/licenses/by/3.0/>)
+Annotation(terms:title "SEO, The Scientific Events Ontology."@en)
+Annotation(vann:preferredNamespacePrefix "seo")
+Annotation(vann:preferredNamespaceUri "http://purl.org/seo/"^^terms:URI)
+Annotation(rdfs:label "Scientific Events Ontology"@en)
+Annotation(rdfs:seeAlso "See also documentation at http://kddste.sda.tech/SEOontology/Documentation/SEO.html"@en)
+Annotation(owl:versionInfo "1.1"^^xsd:decimal)
+
+Declaration(Class(<http://org.semanticweb.owlapi/error#Error2>))
+Declaration(Class(<http://org.semanticweb.owlapi/error#Error3>))
+Declaration(Class(<http://purl.org/dc/dcmitype/Collection>))
+Declaration(Class(terms:Agent))
+Declaration(Class(terms:AgentClass))
+Declaration(Class(terms:BibliographicResource))
+Declaration(Class(terms:FileFormat))
+Declaration(Class(terms:Jurisdiction))
+Declaration(Class(terms:LicenseDocument))
+Declaration(Class(terms:Location))
+Declaration(Class(terms:MediaType))
+Declaration(Class(terms:PeriodOfTime))
+Declaration(Class(terms:PhysicalMedium))
+Declaration(Class(<http://purl.org/spar/deo/DiscourseElement>))
+Declaration(Class(doco:Abstract))
+Declaration(Class(doco:Appendix))
+Declaration(Class(doco:BackMatter))
+Declaration(Class(doco:BodyMatter))
+Declaration(Class(doco:Chapter))
+Declaration(Class(doco:FrontMatter))
+Declaration(Class(doco:Paragraph))
+Declaration(Class(doco:Section))
+Declaration(Class(fabio:ConferencePaper))
+Declaration(Class(fabio:ConferencePoster))
+Declaration(Class(fabio:ConferenceProceedings))
+Declaration(Class(fabio:Expression))
+Declaration(Class(fabio:ExpressionCollection))
+Declaration(Class(fabio:Manifestation))
+Declaration(Class(fabio:ProceedingsPaper))
+Declaration(Class(fabio:Work))
+Declaration(Class(fabio:WorkingPaper))
+Declaration(Class(<http://purl.org/vocab/frbr/core#Expression>))
+Declaration(Class(<http://purl.org/vocab/frbr/core#Work>))
+Declaration(Class(<http://salt.semanticauthoring.org/ontologies/sro#Abstract>))
+Declaration(Class(<http://schema.org/City>))
+Declaration(Class(<http://schema.org/Country>))
+Declaration(Class(<http://swrc.ontoware.org/ontology#Proceedings>))
+Declaration(Class(<http://swrc.ontoware.org/ontology#Publication>))
+Declaration(Class(<http://www.essepuntato.it/2008/12/pattern#Block>))
+Declaration(Class(<http://www.essepuntato.it/2008/12/pattern#Bucket>))
+Declaration(Class(<http://www.essepuntato.it/2008/12/pattern#Container>))
+Declaration(Class(<http://www.essepuntato.it/2008/12/pattern#Field>))
+Declaration(Class(<http://www.essepuntato.it/2008/12/pattern#HeadedContainer>))
+Declaration(Class(<http://www.essepuntato.it/2008/12/pattern#Meta>))
+Declaration(Class(<http://www.essepuntato.it/2008/12/pattern#NonTextual>))
+Declaration(Class(<http://www.essepuntato.it/2008/12/pattern#Pattern>))
+Declaration(Class(<http://www.essepuntato.it/2008/12/pattern#Popup>))
+Declaration(Class(<http://www.essepuntato.it/2008/12/pattern#Structured>))
+Declaration(Class(<http://www.essepuntato.it/2008/12/pattern#Table>))
+Declaration(Class(<http://www.essepuntato.it/2008/12/pattern#Textual>))
+Declaration(Class(rdfs:Class))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Agent>))
+Declaration(Class(swc:AcademicEvent))
+Declaration(Class(swc:EventSeries))
+Declaration(Class(swc:Proceedings))
+Declaration(Class(seo:Author))
+Declaration(Class(seo:AuthorRegistration))
+Declaration(Class(seo:Award))
+Declaration(Class(seo:BestApplicationsPaperAward))
+Declaration(Class(seo:BestPaperAward))
+Declaration(Class(seo:BestPosterAward))
+Declaration(Class(seo:BestStudentPaperAward))
+Declaration(Class(seo:BronzeSponsorship))
+Declaration(Class(seo:Chair))
+Declaration(Class(seo:ChallengeTrack))
+Declaration(Class(seo:DemoChair))
+Declaration(Class(seo:DemosTrack))
+Declaration(Class(seo:DoctoralConsortium))
+Declaration(Class(seo:DoctoralConsortiumChair))
+Declaration(Class(seo:EarlyBirdRegistration))
+Declaration(Class(seo:EventReception))
+Declaration(Class(seo:Flyer))
+Declaration(Class(seo:GeneralChair))
+Declaration(Class(seo:GetTogetherEvent))
+Declaration(Class(seo:GoldSponsorship))
+Declaration(Class(seo:HonorChair))
+Declaration(Class(seo:ImportantDates))
+Declaration(Class(seo:In-useTrack))
+Declaration(Class(seo:IndustrialConference))
+Declaration(Class(seo:IndustryTrack))
+Declaration(Class(seo:InvitedSpeakers))
+Declaration(Class(seo:Keynote))
+Declaration(Class(seo:KeynoteSpeaker))
+Declaration(Class(seo:LateRegistration))
+Declaration(Class(seo:LocalOrganisationChair))
+Declaration(Class(seo:OnSiteRegistration))
+Declaration(Class(seo:Organizer))
+Declaration(Class(seo:PHDSymposium))
+Declaration(Class(seo:PastEvents))
+Declaration(Class(seo:PlatinumSponsorship))
+Declaration(Class(seo:PosterChair))
+Declaration(Class(seo:PostersTrack))
+Declaration(Class(seo:ProgramChair))
+Declaration(Class(seo:ProgramCommitteeMember))
+Declaration(Class(seo:ProgramSchedule))
+Declaration(Class(seo:Publisher))
+Declaration(Class(seo:Registration))
+Declaration(Class(seo:RegularRegistration))
+Declaration(Class(seo:ResearchField))
+Declaration(Class(seo:ResearchTrack))
+Declaration(Class(seo:ResourceTrack))
+Declaration(Class(seo:Reviewer))
+Declaration(Class(seo:SilverSponsorship))
+Declaration(Class(seo:Sponsor))
+Declaration(Class(seo:Sponsorship))
+Declaration(Class(seo:SponsorshipChair))
+Declaration(Class(seo:Student))
+Declaration(Class(seo:StudentRegistration))
+Declaration(Class(seo:SubmissionGuidelines))
+Declaration(Class(seo:Symposium))
+Declaration(Class(seo:SymposiumSeries))
+Declaration(Class(seo:TravelInformation))
+Declaration(Class(seo:TutorialChair))
+Declaration(Class(seo:WorkshopChair))
+Declaration(ObjectProperty(terms:accessRights))
+Declaration(ObjectProperty(terms:accrualMethod))
+Declaration(ObjectProperty(terms:accrualPeriodicity))
+Declaration(ObjectProperty(terms:accrualPolicy))
+Declaration(ObjectProperty(terms:audience))
+Declaration(ObjectProperty(terms:conformsTo))
+Declaration(ObjectProperty(terms:contributor))
+Declaration(ObjectProperty(terms:coverage))
+Declaration(ObjectProperty(terms:creator))
+Declaration(ObjectProperty(terms:educationLevel))
+Declaration(ObjectProperty(terms:extent))
+Declaration(ObjectProperty(terms:format))
+Declaration(ObjectProperty(terms:instructionalMethod))
+Declaration(ObjectProperty(terms:language))
+Declaration(ObjectProperty(terms:license))
+Declaration(ObjectProperty(terms:mediator))
+Declaration(ObjectProperty(terms:medium))
+Declaration(ObjectProperty(terms:provenance))
+Declaration(ObjectProperty(terms:publisher))
+Declaration(ObjectProperty(terms:rights))
+Declaration(ObjectProperty(terms:rightsHolder))
+Declaration(ObjectProperty(terms:spatial))
+Declaration(ObjectProperty(terms:temporal))
+Declaration(ObjectProperty(terms:type))
+Declaration(ObjectProperty(<http://purl.org/semsur/belongsToProceedings>))
+Declaration(ObjectProperty(<http://purl.org/semsur/hasAppendix>))
+Declaration(ObjectProperty(<http://purl.org/vocab/frbr/core#embodiment>))
+Declaration(ObjectProperty(<http://purl.org/vocab/frbr/core#part>))
+Declaration(ObjectProperty(<http://purl.org/vocab/frbr/core#partOf>))
+Declaration(ObjectProperty(<http://purl.org/vocab/frbr/core#realization>))
+Declaration(ObjectProperty(<http://purl.org/vocab/frbr/core#realizationOf>))
+Declaration(ObjectProperty(<http://swrc.ontoware.org/ontology#cite>))
+Declaration(ObjectProperty(<http://www.essepuntato.it/2008/12/pattern#contains>))
+Declaration(ObjectProperty(<http://www.essepuntato.it/2008/12/pattern#containsAsHeader>))
+Declaration(ObjectProperty(<http://www.essepuntato.it/2008/12/pattern#isContainedBy>))
+Declaration(ObjectProperty(seo:belongsToSeries))
+Declaration(ObjectProperty(seo:colocatedWith))
+Declaration(ObjectProperty(seo:hasAffiliation))
+Declaration(ObjectProperty(seo:hasChair))
+Declaration(ObjectProperty(seo:hasEvent))
+Declaration(ObjectProperty(seo:hasFlyer))
+Declaration(ObjectProperty(seo:hasImportantDates))
+Declaration(ObjectProperty(seo:hasKeynote))
+Declaration(ObjectProperty(seo:hasProgramCommitteeMember))
+Declaration(ObjectProperty(seo:hasProgramSchedual))
+Declaration(ObjectProperty(seo:hasPublisher))
+Declaration(ObjectProperty(seo:hasRegistration))
+Declaration(ObjectProperty(seo:hasRegistrationType))
+Declaration(ObjectProperty(seo:hasSocialEvent))
+Declaration(ObjectProperty(seo:hasSponsor))
+Declaration(ObjectProperty(seo:hasSubmissionGuidelines))
+Declaration(ObjectProperty(seo:hasTrack))
+Declaration(ObjectProperty(seo:heldInCity))
+Declaration(ObjectProperty(seo:heldInCountry))
+Declaration(ObjectProperty(seo:isPublisherOf))
+Declaration(ObjectProperty(seo:isSponsorOf))
+Declaration(ObjectProperty(seo:isTrackOf))
+Declaration(ObjectProperty(seo:keynoteIn))
+Declaration(ObjectProperty(seo:offersAward))
+Declaration(ObjectProperty(seo:offersBestPaperAward))
+Declaration(ObjectProperty(seo:participatesAs))
+Declaration(ObjectProperty(seo:participatesIn))
+Declaration(ObjectProperty(seo:providesTravelInformation))
+Declaration(ObjectProperty(seo:registeredAs))
+Declaration(ObjectProperty(seo:sponsorshipType))
+Declaration(ObjectProperty(seo:takesAward))
+Declaration(DataProperty(terms:abstract))
+Declaration(DataProperty(terms:alternative))
+Declaration(DataProperty(terms:available))
+Declaration(DataProperty(terms:bibliographicCitation))
+Declaration(DataProperty(terms:created))
+Declaration(DataProperty(terms:dateAccepted))
+Declaration(DataProperty(terms:dateCopyrighted))
+Declaration(DataProperty(terms:dateSubmitted))
+Declaration(DataProperty(terms:identifier))
+Declaration(DataProperty(terms:issued))
+Declaration(DataProperty(terms:modified))
+Declaration(DataProperty(terms:tableOfContents))
+Declaration(DataProperty(terms:valid))
+Declaration(DataProperty(<http://swrc.ontoware.org/ontology#keywords>))
+Declaration(DataProperty(seo:abstractDeadline))
+Declaration(DataProperty(seo:acceptanceRate))
+Declaration(DataProperty(seo:acceptedPapers))
+Declaration(DataProperty(seo:eventWebsite))
+Declaration(DataProperty(seo:hasTwitter))
+Declaration(DataProperty(seo:notificationDate))
+Declaration(DataProperty(seo:submissionDeadline))
+Declaration(DataProperty(seo:submissionWebPage))
+Declaration(DataProperty(seo:submittedPapers))
+Declaration(NamedIndividual(<http://creativecommons.org/licenses/by/3.0/>))
+Declaration(NamedIndividual(<http://purl.org/dc/aboutdcmi#DCMI>))
+Declaration(NamedIndividual(<http://purl.org/dc/terms/>))
+Declaration(NamedIndividual(terms:Agent))
+Declaration(NamedIndividual(terms:AgentClass))
+Declaration(NamedIndividual(terms:BibliographicResource))
+Declaration(NamedIndividual(terms:Box))
+Declaration(NamedIndividual(terms:DCMIType))
+Declaration(NamedIndividual(terms:DDC))
+Declaration(NamedIndividual(terms:FileFormat))
+Declaration(NamedIndividual(terms:Frequency))
+Declaration(NamedIndividual(terms:IMT))
+Declaration(NamedIndividual(terms:ISO3166))
+Declaration(NamedIndividual(terms:ISO639-2))
+Declaration(NamedIndividual(terms:ISO639-3))
+Declaration(NamedIndividual(terms:Jurisdiction))
+Declaration(NamedIndividual(terms:LCC))
+Declaration(NamedIndividual(terms:LCSH))
+Declaration(NamedIndividual(terms:LicenseDocument))
+Declaration(NamedIndividual(terms:LinguisticSystem))
+Declaration(NamedIndividual(terms:Location))
+Declaration(NamedIndividual(terms:LocationPeriodOrJurisdiction))
+Declaration(NamedIndividual(terms:MESH))
+Declaration(NamedIndividual(terms:MediaType))
+Declaration(NamedIndividual(terms:MediaTypeOrExtent))
+Declaration(NamedIndividual(terms:MethodOfAccrual))
+Declaration(NamedIndividual(terms:MethodOfInstruction))
+Declaration(NamedIndividual(terms:NLM))
+Declaration(NamedIndividual(terms:Period))
+Declaration(NamedIndividual(terms:PeriodOfTime))
+Declaration(NamedIndividual(terms:PhysicalMedium))
+Declaration(NamedIndividual(terms:PhysicalResource))
+Declaration(NamedIndividual(terms:Point))
+Declaration(NamedIndividual(terms:Policy))
+Declaration(NamedIndividual(terms:ProvenanceStatement))
+Declaration(NamedIndividual(terms:RFC1766))
+Declaration(NamedIndividual(terms:RFC3066))
+Declaration(NamedIndividual(terms:RFC4646))
+Declaration(NamedIndividual(terms:RFC5646))
+Declaration(NamedIndividual(terms:RightsStatement))
+Declaration(NamedIndividual(terms:SizeOrDuration))
+Declaration(NamedIndividual(terms:Standard))
+Declaration(NamedIndividual(terms:TGN))
+Declaration(NamedIndividual(terms:UDC))
+Declaration(NamedIndividual(terms:URI))
+Declaration(NamedIndividual(terms:W3CDTF))
+Declaration(NamedIndividual(terms:abstract))
+Declaration(NamedIndividual(terms:accessRights))
+Declaration(NamedIndividual(terms:accrualMethod))
+Declaration(NamedIndividual(terms:accrualPeriodicity))
+Declaration(NamedIndividual(terms:accrualPolicy))
+Declaration(NamedIndividual(terms:alternative))
+Declaration(NamedIndividual(terms:audience))
+Declaration(NamedIndividual(terms:available))
+Declaration(NamedIndividual(terms:bibliographicCitation))
+Declaration(NamedIndividual(terms:conformsTo))
+Declaration(NamedIndividual(terms:contributor))
+Declaration(NamedIndividual(terms:coverage))
+Declaration(NamedIndividual(terms:created))
+Declaration(NamedIndividual(terms:creator))
+Declaration(NamedIndividual(terms:date))
+Declaration(NamedIndividual(terms:dateAccepted))
+Declaration(NamedIndividual(terms:dateCopyrighted))
+Declaration(NamedIndividual(terms:dateSubmitted))
+Declaration(NamedIndividual(terms:description))
+Declaration(NamedIndividual(terms:educationLevel))
+Declaration(NamedIndividual(terms:extent))
+Declaration(NamedIndividual(terms:format))
+Declaration(NamedIndividual(terms:hasFormat))
+Declaration(NamedIndividual(terms:hasPart))
+Declaration(NamedIndividual(terms:hasVersion))
+Declaration(NamedIndividual(terms:identifier))
+Declaration(NamedIndividual(terms:instructionalMethod))
+Declaration(NamedIndividual(terms:isFormatOf))
+Declaration(NamedIndividual(terms:isPartOf))
+Declaration(NamedIndividual(terms:isReferencedBy))
+Declaration(NamedIndividual(terms:isReplacedBy))
+Declaration(NamedIndividual(terms:isRequiredBy))
+Declaration(NamedIndividual(terms:isVersionOf))
+Declaration(NamedIndividual(terms:issued))
+Declaration(NamedIndividual(terms:language))
+Declaration(NamedIndividual(terms:license))
+Declaration(NamedIndividual(terms:mediator))
+Declaration(NamedIndividual(terms:medium))
+Declaration(NamedIndividual(terms:modified))
+Declaration(NamedIndividual(terms:provenance))
+Declaration(NamedIndividual(terms:publisher))
+Declaration(NamedIndividual(terms:references))
+Declaration(NamedIndividual(terms:relation))
+Declaration(NamedIndividual(terms:replaces))
+Declaration(NamedIndividual(terms:requires))
+Declaration(NamedIndividual(terms:rights))
+Declaration(NamedIndividual(terms:rightsHolder))
+Declaration(NamedIndividual(terms:source))
+Declaration(NamedIndividual(terms:spatial))
+Declaration(NamedIndividual(terms:subject))
+Declaration(NamedIndividual(terms:tableOfContents))
+Declaration(NamedIndividual(terms:temporal))
+Declaration(NamedIndividual(terms:title))
+Declaration(NamedIndividual(terms:type))
+Declaration(NamedIndividual(terms:valid))
+Declaration(NamedIndividual(seo:ArtificialIntelligence))
+Declaration(NamedIndividual(seo:ComputerSystemsOrganization))
+Declaration(NamedIndividual(seo:HumanCenteredComputing))
+Declaration(NamedIndividual(seo:InformationSystems))
+Declaration(NamedIndividual(seo:SecurityAndPrivacy))
+Declaration(NamedIndividual(seo:SoftwareEngineering))
+Declaration(NamedIndividual(seo:TheoryOfComputations))
+Declaration(NamedIndividual(seo:WorldWideWeb))
+Declaration(NamedIndividual(<https://w3id.org/seo#/>))
+Declaration(AnnotationProperty(dc:contributor))
+Declaration(AnnotationProperty(dc:coverage))
+Declaration(AnnotationProperty(dc:date))
+Declaration(AnnotationProperty(dc:format))
+Declaration(AnnotationProperty(dc:identifier))
+Declaration(AnnotationProperty(dc:language))
+Declaration(AnnotationProperty(dc:publisher))
+Declaration(AnnotationProperty(dc:relation))
+Declaration(AnnotationProperty(dc:rights))
+Declaration(AnnotationProperty(dc:source))
+Declaration(AnnotationProperty(dc:subject))
+Declaration(AnnotationProperty(dc:type))
+Declaration(AnnotationProperty(terms:abstract))
+Declaration(AnnotationProperty(terms:accessRights))
+Declaration(AnnotationProperty(terms:alternative))
+Declaration(AnnotationProperty(terms:available))
+Declaration(AnnotationProperty(terms:bibliographicCitation))
+Declaration(AnnotationProperty(terms:conformsTo))
+Declaration(AnnotationProperty(terms:contributor))
+Declaration(AnnotationProperty(terms:coverage))
+Declaration(AnnotationProperty(terms:creator))
+Declaration(AnnotationProperty(terms:date))
+Declaration(AnnotationProperty(terms:dateAccepted))
+Declaration(AnnotationProperty(terms:dateCopyrighted))
+Declaration(AnnotationProperty(terms:dateSubmitted))
+Declaration(AnnotationProperty(terms:description))
+Declaration(AnnotationProperty(terms:extent))
+Declaration(AnnotationProperty(terms:format))
+Declaration(AnnotationProperty(terms:hasFormat))
+Declaration(AnnotationProperty(terms:hasPart))
+Declaration(AnnotationProperty(terms:hasVersion))
+Declaration(AnnotationProperty(terms:identifier))
+Declaration(AnnotationProperty(terms:isFormatOf))
+Declaration(AnnotationProperty(terms:isPartOf))
+Declaration(AnnotationProperty(terms:isReferencedBy))
+Declaration(AnnotationProperty(terms:isReplacedBy))
+Declaration(AnnotationProperty(terms:isRequiredBy))
+Declaration(AnnotationProperty(terms:isVersionOf))
+Declaration(AnnotationProperty(terms:issued))
+Declaration(AnnotationProperty(terms:language))
+Declaration(AnnotationProperty(terms:medium))
+Declaration(AnnotationProperty(terms:modified))
+Declaration(AnnotationProperty(terms:publisher))
+Declaration(AnnotationProperty(terms:references))
+Declaration(AnnotationProperty(terms:relation))
+Declaration(AnnotationProperty(terms:replaces))
+Declaration(AnnotationProperty(terms:requires))
+Declaration(AnnotationProperty(terms:rights))
+Declaration(AnnotationProperty(terms:source))
+Declaration(AnnotationProperty(terms:spatial))
+Declaration(AnnotationProperty(terms:subject))
+Declaration(AnnotationProperty(terms:tableOfContents))
+Declaration(AnnotationProperty(terms:temporal))
+Declaration(AnnotationProperty(terms:title))
+Declaration(AnnotationProperty(terms:type))
+Declaration(AnnotationProperty(terms:valid))
+Declaration(AnnotationProperty(vann:preferredNamespacePrefix))
+Declaration(AnnotationProperty(vann:preferredNamespaceUri))
+Declaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))
+Declaration(AnnotationProperty(skos:note))
+Declaration(AnnotationProperty(<http://www.w3.org/2006/time#hasDuration>))
+Declaration(AnnotationProperty(<http://www.w3.org/2006/time#hasTemporalDuration>))
+Declaration(AnnotationProperty(swc:hasProceedings))
+Declaration(Datatype(terms:Box))
+Declaration(Datatype(terms:ISO3166))
+Declaration(Datatype(terms:ISO639-2))
+Declaration(Datatype(terms:ISO639-3))
+Declaration(Datatype(terms:Period))
+Declaration(Datatype(terms:Point))
+Declaration(Datatype(terms:RFC1766))
+Declaration(Datatype(terms:RFC3066))
+Declaration(Datatype(terms:RFC4646))
+Declaration(Datatype(terms:RFC5646))
+Declaration(Datatype(terms:URI))
+Declaration(Datatype(terms:W3CDTF))
+Declaration(Datatype(xsd:date))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: terms:abstract (Abstract)
+
+AnnotationAssertion(terms:hasVersion terms:abstract <http://dublincore.org/usage/terms/history/#abstract-003>)
+AnnotationAssertion(terms:issued terms:abstract "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:abstract "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:abstract "A summary of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:abstract <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:abstract "Abstract"@en)
+SubAnnotationPropertyOf(terms:abstract dc:description)
+SubAnnotationPropertyOf(terms:abstract terms:description)
+
+# Annotation Property: terms:accessRights (Access Rights)
+
+AnnotationAssertion(terms:description terms:accessRights "Access Rights may include information regarding access or restrictions based on privacy, security, or other policies."@en)
+AnnotationAssertion(terms:hasVersion terms:accessRights <http://dublincore.org/usage/terms/history/#accessRights-002>)
+AnnotationAssertion(terms:issued terms:accessRights "2003-02-15"^^xsd:date)
+AnnotationAssertion(terms:modified terms:accessRights "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:accessRights "Information about who can access the resource or an indication of its security status."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:accessRights <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:accessRights "Access Rights"@en)
+SubAnnotationPropertyOf(terms:accessRights dc:rights)
+AnnotationPropertyRange(terms:accessRights terms:RightsStatement)
+
+# Annotation Property: terms:alternative (Alternative Title)
+
+AnnotationAssertion(terms:description terms:alternative "The distinction between titles and alternative titles is application-specific."@en)
+AnnotationAssertion(terms:hasVersion terms:alternative <http://dublincore.org/usage/terms/history/#alternative-003>)
+AnnotationAssertion(terms:issued terms:alternative "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:alternative "2010-10-11"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:alternative "An alternative name for the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:alternative <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:alternative "Alternative Title"@en)
+SubAnnotationPropertyOf(terms:alternative dc:title)
+SubAnnotationPropertyOf(terms:alternative terms:title)
+AnnotationPropertyRange(terms:alternative rdfs:Literal)
+
+# Annotation Property: terms:available (Date Available)
+
+AnnotationAssertion(terms:hasVersion terms:available <http://dublincore.org/usage/terms/history/#available-003>)
+AnnotationAssertion(terms:issued terms:available "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:available "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:available "Date (often a range) that the resource became or will become available."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:available <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:available "Date Available"@en)
+SubAnnotationPropertyOf(terms:available dc:date)
+SubAnnotationPropertyOf(terms:available terms:date)
+AnnotationPropertyRange(terms:available rdfs:Literal)
+
+# Annotation Property: terms:bibliographicCitation (Bibliographic Citation)
+
+AnnotationAssertion(terms:description terms:bibliographicCitation "Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible."@en)
+AnnotationAssertion(terms:hasVersion terms:bibliographicCitation <http://dublincore.org/usage/terms/history/#bibliographicCitation-002>)
+AnnotationAssertion(terms:issued terms:bibliographicCitation "2003-02-15"^^xsd:date)
+AnnotationAssertion(terms:modified terms:bibliographicCitation "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:bibliographicCitation "A bibliographic reference for the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:bibliographicCitation <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:bibliographicCitation "Bibliographic Citation"@en)
+SubAnnotationPropertyOf(terms:bibliographicCitation dc:identifier)
+AnnotationPropertyRange(terms:bibliographicCitation rdfs:Literal)
+AnnotationPropertyDomain(terms:bibliographicCitation terms:BibliographicResource)
+
+# Annotation Property: terms:conformsTo (Conforms To)
+
+AnnotationAssertion(terms:hasVersion terms:conformsTo <http://dublincore.org/usage/terms/history/#conformsTo-003>)
+AnnotationAssertion(terms:issued terms:conformsTo "2001-05-21"^^xsd:date)
+AnnotationAssertion(terms:modified terms:conformsTo "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:conformsTo "An established standard to which the described resource conforms."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:conformsTo <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:conformsTo "Conforms To"@en)
+SubAnnotationPropertyOf(terms:conformsTo dc:relation)
+SubAnnotationPropertyOf(terms:conformsTo terms:relation)
+AnnotationPropertyRange(terms:conformsTo terms:Standard)
+
+# Annotation Property: terms:contributor (Contributor)
+
+AnnotationAssertion(terms:description terms:contributor "Examples of a Contributor include a person, an organization, or a service."@en)
+AnnotationAssertion(terms:hasVersion terms:contributor <http://dublincore.org/usage/terms/history/#contributorT-001>)
+AnnotationAssertion(terms:issued terms:contributor "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:contributor "2010-10-11"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:contributor "An entity responsible for making contributions to the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:contributor <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:contributor "Contributor"@en)
+SubAnnotationPropertyOf(terms:contributor dc:contributor)
+AnnotationPropertyRange(terms:contributor terms:Agent)
+
+# Annotation Property: terms:coverage (Coverage)
+
+AnnotationAssertion(terms:description terms:coverage "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges."@en)
+AnnotationAssertion(terms:hasVersion terms:coverage <http://dublincore.org/usage/terms/history/#coverageT-001>)
+AnnotationAssertion(terms:issued terms:coverage "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:coverage "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:coverage "The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:coverage <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:coverage "Coverage"@en)
+SubAnnotationPropertyOf(terms:coverage dc:coverage)
+AnnotationPropertyRange(terms:coverage terms:LocationPeriodOrJurisdiction)
+
+# Annotation Property: terms:created (Date Created)
+
+AnnotationAssertion(terms:hasVersion terms:created <http://dublincore.org/usage/terms/history/#created-003>)
+AnnotationAssertion(terms:issued terms:created "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:created "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:created "Date of creation of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:created <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:created "Date Created"@en)
+SubAnnotationPropertyOf(terms:created dc:date)
+SubAnnotationPropertyOf(terms:created terms:date)
+AnnotationPropertyRange(terms:created rdfs:Literal)
+
+# Annotation Property: terms:creator (Creator)
+
+AnnotationAssertion(terms:description terms:creator "Examples of a Creator include a person, an organization, or a service."@en)
+AnnotationAssertion(terms:hasVersion terms:creator <http://dublincore.org/usage/terms/history/#creatorT-002>)
+AnnotationAssertion(terms:issued terms:creator "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:creator "2010-10-11"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:creator "An entity primarily responsible for making the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:creator <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:creator "Creator"@en)
+SubAnnotationPropertyOf(terms:creator dc:creator)
+AnnotationPropertyRange(terms:creator terms:Agent)
+
+# Annotation Property: terms:date (Date)
+
+AnnotationAssertion(terms:description terms:date "Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF]."@en)
+AnnotationAssertion(terms:hasVersion terms:date <http://dublincore.org/usage/terms/history/#dateT-001>)
+AnnotationAssertion(terms:issued terms:date "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:date "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:date "A point or period of time associated with an event in the lifecycle of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:date <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:date "Date"@en)
+SubAnnotationPropertyOf(terms:date dc:date)
+AnnotationPropertyRange(terms:date rdfs:Literal)
+
+# Annotation Property: terms:dateAccepted (Date Accepted)
+
+AnnotationAssertion(terms:description terms:dateAccepted "Examples of resources to which a Date Accepted may be relevant are a thesis (accepted by a university department) or an article (accepted by a journal)."@en)
+AnnotationAssertion(terms:hasVersion terms:dateAccepted <http://dublincore.org/usage/terms/history/#dateAccepted-002>)
+AnnotationAssertion(terms:issued terms:dateAccepted "2002-07-13"^^xsd:date)
+AnnotationAssertion(terms:modified terms:dateAccepted "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:dateAccepted "Date of acceptance of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:dateAccepted <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:dateAccepted "Date Accepted"@en)
+SubAnnotationPropertyOf(terms:dateAccepted dc:date)
+SubAnnotationPropertyOf(terms:dateAccepted terms:date)
+AnnotationPropertyRange(terms:dateAccepted rdfs:Literal)
+
+# Annotation Property: terms:dateCopyrighted (Date Copyrighted)
+
+AnnotationAssertion(terms:hasVersion terms:dateCopyrighted <http://dublincore.org/usage/terms/history/#dateCopyrighted-002>)
+AnnotationAssertion(terms:issued terms:dateCopyrighted "2002-07-13"^^xsd:date)
+AnnotationAssertion(terms:modified terms:dateCopyrighted "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:dateCopyrighted "Date of copyright."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:dateCopyrighted <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:dateCopyrighted "Date Copyrighted"@en)
+SubAnnotationPropertyOf(terms:dateCopyrighted dc:date)
+SubAnnotationPropertyOf(terms:dateCopyrighted terms:date)
+AnnotationPropertyRange(terms:dateCopyrighted rdfs:Literal)
+
+# Annotation Property: terms:dateSubmitted (Date Submitted)
+
+AnnotationAssertion(terms:description terms:dateSubmitted "Examples of resources to which a Date Submitted may be relevant are a thesis (submitted to a university department) or an article (submitted to a journal)."@en)
+AnnotationAssertion(terms:hasVersion terms:dateSubmitted <http://dublincore.org/usage/terms/history/#dateSubmitted-002>)
+AnnotationAssertion(terms:issued terms:dateSubmitted "2002-07-13"^^xsd:date)
+AnnotationAssertion(terms:modified terms:dateSubmitted "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:dateSubmitted "Date of submission of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:dateSubmitted <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:dateSubmitted "Date Submitted"@en)
+SubAnnotationPropertyOf(terms:dateSubmitted dc:date)
+SubAnnotationPropertyOf(terms:dateSubmitted terms:date)
+AnnotationPropertyRange(terms:dateSubmitted rdfs:Literal)
+
+# Annotation Property: terms:description (Description)
+
+AnnotationAssertion(terms:description terms:description "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en)
+AnnotationAssertion(terms:hasVersion terms:description <http://dublincore.org/usage/terms/history/#descriptionT-001>)
+AnnotationAssertion(terms:issued terms:description "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:description "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:description "An account of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:description <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:description "Description"@en)
+SubAnnotationPropertyOf(terms:description dc:description)
+
+# Annotation Property: terms:extent (Extent)
+
+AnnotationAssertion(terms:hasVersion terms:extent <http://dublincore.org/usage/terms/history/#extent-003>)
+AnnotationAssertion(terms:issued terms:extent "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:extent "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:extent "The size or duration of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:extent <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:extent "Extent"@en)
+SubAnnotationPropertyOf(terms:extent dc:format)
+AnnotationPropertyRange(terms:extent terms:SizeOrDuration)
+
+# Annotation Property: terms:format (Format)
+
+AnnotationAssertion(terms:description terms:format "Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME]."@en)
+AnnotationAssertion(terms:hasVersion terms:format <http://dublincore.org/usage/terms/history/#formatT-001>)
+AnnotationAssertion(terms:issued terms:format "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:format "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:format "The file format, physical medium, or dimensions of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:format <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:format "Format"@en)
+SubAnnotationPropertyOf(terms:format dc:format)
+AnnotationPropertyRange(terms:format terms:MediaTypeOrExtent)
+
+# Annotation Property: terms:hasFormat (Has Format)
+
+AnnotationAssertion(terms:hasVersion terms:hasFormat <http://dublincore.org/usage/terms/history/#hasFormat-003>)
+AnnotationAssertion(terms:issued terms:hasFormat "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:hasFormat "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:hasFormat "A related resource that is substantially the same as the pre-existing described resource, but in another format."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:hasFormat <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:hasFormat "Has Format"@en)
+AnnotationAssertion(skos:note terms:hasFormat "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:hasFormat dc:relation)
+SubAnnotationPropertyOf(terms:hasFormat terms:relation)
+
+# Annotation Property: terms:hasPart (Has Part)
+
+AnnotationAssertion(terms:hasVersion terms:hasPart <http://dublincore.org/usage/terms/history/#hasPart-003>)
+AnnotationAssertion(terms:issued terms:hasPart "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:hasPart "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:hasPart "A related resource that is included either physically or logically in the described resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:hasPart <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:hasPart "Has Part"@en)
+AnnotationAssertion(skos:note terms:hasPart "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:hasPart dc:relation)
+SubAnnotationPropertyOf(terms:hasPart terms:relation)
+
+# Annotation Property: terms:hasVersion (Has Version)
+
+AnnotationAssertion(terms:hasVersion terms:hasVersion <http://dublincore.org/usage/terms/history/#hasVersion-003>)
+AnnotationAssertion(terms:issued terms:hasVersion "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:hasVersion "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:hasVersion "A related resource that is a version, edition, or adaptation of the described resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:hasVersion <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:hasVersion "Has Version"@en)
+AnnotationAssertion(skos:note terms:hasVersion "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:hasVersion dc:relation)
+SubAnnotationPropertyOf(terms:hasVersion terms:relation)
+
+# Annotation Property: terms:identifier (Identifier)
+
+AnnotationAssertion(terms:description terms:identifier "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. "@en)
+AnnotationAssertion(terms:hasVersion terms:identifier <http://dublincore.org/usage/terms/history/#identifierT-001>)
+AnnotationAssertion(terms:issued terms:identifier "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:identifier "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:identifier "An unambiguous reference to the resource within a given context."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:identifier <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:identifier "Identifier"@en)
+SubAnnotationPropertyOf(terms:identifier dc:identifier)
+AnnotationPropertyRange(terms:identifier rdfs:Literal)
+
+# Annotation Property: terms:isFormatOf (Is Format Of)
+
+AnnotationAssertion(terms:hasVersion terms:isFormatOf <http://dublincore.org/usage/terms/history/#isFormatOf-003>)
+AnnotationAssertion(terms:issued terms:isFormatOf "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:isFormatOf "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:isFormatOf "A related resource that is substantially the same as the described resource, but in another format."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:isFormatOf <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:isFormatOf "Is Format Of"@en)
+AnnotationAssertion(skos:note terms:isFormatOf "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:isFormatOf dc:relation)
+SubAnnotationPropertyOf(terms:isFormatOf terms:relation)
+
+# Annotation Property: terms:isPartOf (Is Part Of)
+
+AnnotationAssertion(terms:hasVersion terms:isPartOf <http://dublincore.org/usage/terms/history/#isPartOf-003>)
+AnnotationAssertion(terms:issued terms:isPartOf "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:isPartOf "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:isPartOf "A related resource in which the described resource is physically or logically included."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:isPartOf <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:isPartOf "Is Part Of"@en)
+AnnotationAssertion(skos:note terms:isPartOf "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:isPartOf dc:relation)
+SubAnnotationPropertyOf(terms:isPartOf terms:relation)
+
+# Annotation Property: terms:isReferencedBy (Is Referenced By)
+
+AnnotationAssertion(terms:hasVersion terms:isReferencedBy <http://dublincore.org/usage/terms/history/#isReferencedBy-003>)
+AnnotationAssertion(terms:issued terms:isReferencedBy "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:isReferencedBy "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:isReferencedBy "A related resource that references, cites, or otherwise points to the described resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:isReferencedBy <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:isReferencedBy "Is Referenced By"@en)
+AnnotationAssertion(skos:note terms:isReferencedBy "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:isReferencedBy dc:relation)
+SubAnnotationPropertyOf(terms:isReferencedBy terms:relation)
+
+# Annotation Property: terms:isReplacedBy (Is Replaced By)
+
+AnnotationAssertion(terms:hasVersion terms:isReplacedBy <http://dublincore.org/usage/terms/history/#isReplacedBy-003>)
+AnnotationAssertion(terms:issued terms:isReplacedBy "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:isReplacedBy "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:isReplacedBy "A related resource that supplants, displaces, or supersedes the described resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:isReplacedBy <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:isReplacedBy "Is Replaced By"@en)
+AnnotationAssertion(skos:note terms:isReplacedBy "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:isReplacedBy dc:relation)
+SubAnnotationPropertyOf(terms:isReplacedBy terms:relation)
+
+# Annotation Property: terms:isRequiredBy (Is Required By)
+
+AnnotationAssertion(terms:hasVersion terms:isRequiredBy <http://dublincore.org/usage/terms/history/#isRequiredBy-003>)
+AnnotationAssertion(terms:issued terms:isRequiredBy "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:isRequiredBy "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:isRequiredBy "A related resource that requires the described resource to support its function, delivery, or coherence."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:isRequiredBy <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:isRequiredBy "Is Required By"@en)
+AnnotationAssertion(skos:note terms:isRequiredBy "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:isRequiredBy dc:relation)
+SubAnnotationPropertyOf(terms:isRequiredBy terms:relation)
+
+# Annotation Property: terms:isVersionOf (Is Version Of)
+
+AnnotationAssertion(terms:description terms:isVersionOf "Changes in version imply substantive changes in content rather than differences in format."@en)
+AnnotationAssertion(terms:hasVersion terms:isVersionOf <http://dublincore.org/usage/terms/history/#isVersionOf-003>)
+AnnotationAssertion(terms:issued terms:isVersionOf "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:isVersionOf "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:isVersionOf "A related resource of which the described resource is a version, edition, or adaptation."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:isVersionOf <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:isVersionOf "Is Version Of"@en)
+AnnotationAssertion(skos:note terms:isVersionOf "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:isVersionOf dc:relation)
+SubAnnotationPropertyOf(terms:isVersionOf terms:relation)
+
+# Annotation Property: terms:issued (Date Issued)
+
+AnnotationAssertion(terms:hasVersion terms:issued <http://dublincore.org/usage/terms/history/#issued-003>)
+AnnotationAssertion(terms:issued terms:issued "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:issued "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:issued "Date of formal issuance (e.g., publication) of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:issued <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:issued "Date Issued"@en)
+SubAnnotationPropertyOf(terms:issued dc:date)
+SubAnnotationPropertyOf(terms:issued terms:date)
+AnnotationPropertyRange(terms:issued rdfs:Literal)
+
+# Annotation Property: terms:language (Language)
+
+AnnotationAssertion(terms:description terms:language "Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646]."@en)
+AnnotationAssertion(terms:hasVersion terms:language <http://dublincore.org/usage/terms/history/#languageT-001>)
+AnnotationAssertion(terms:issued terms:language "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:language "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:language "A language of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:language <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:language "Language"@en)
+SubAnnotationPropertyOf(terms:language dc:language)
+AnnotationPropertyRange(terms:language terms:LinguisticSystem)
+
+# Annotation Property: terms:license (License)
+
+AnnotationAssertion(terms:hasVersion terms:license <http://dublincore.org/usage/terms/history/#license-002>)
+AnnotationAssertion(terms:issued terms:license "2004-06-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:license "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:license "A legal document giving official permission to do something with the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:license <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:license "License"@en)
+SubAnnotationPropertyOf(terms:license dc:rights)
+AnnotationPropertyRange(terms:license terms:LicenseDocument)
+
+# Annotation Property: terms:medium (Medium)
+
+AnnotationAssertion(terms:hasVersion terms:medium <http://dublincore.org/usage/terms/history/#medium-003>)
+AnnotationAssertion(terms:issued terms:medium "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:medium "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:medium "The material or physical carrier of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:medium <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:medium "Medium"@en)
+SubAnnotationPropertyOf(terms:medium dc:format)
+AnnotationPropertyRange(terms:medium terms:PhysicalMedium)
+
+# Annotation Property: terms:modified (Date Modified)
+
+AnnotationAssertion(terms:hasVersion terms:modified <http://dublincore.org/usage/terms/history/#modified-003>)
+AnnotationAssertion(terms:issued terms:modified "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:modified "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:modified "Date on which the resource was changed."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:modified <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:modified "Date Modified"@en)
+SubAnnotationPropertyOf(terms:modified dc:date)
+SubAnnotationPropertyOf(terms:modified terms:date)
+AnnotationPropertyRange(terms:modified rdfs:Literal)
+
+# Annotation Property: terms:publisher (Publisher)
+
+AnnotationAssertion(terms:description terms:publisher "Examples of a Publisher include a person, an organization, or a service."@en)
+AnnotationAssertion(terms:hasVersion terms:publisher <http://dublincore.org/usage/terms/history/#publisherT-001>)
+AnnotationAssertion(terms:issued terms:publisher "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:publisher "2010-10-11"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:publisher "An entity responsible for making the resource available."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:publisher <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:publisher "Publisher"@en)
+SubAnnotationPropertyOf(terms:publisher dc:publisher)
+AnnotationPropertyRange(terms:publisher terms:Agent)
+
+# Annotation Property: terms:references (References)
+
+AnnotationAssertion(terms:hasVersion terms:references <http://dublincore.org/usage/terms/history/#references-003>)
+AnnotationAssertion(terms:issued terms:references "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:references "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:references "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:references <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:references "References"@en)
+AnnotationAssertion(skos:note terms:references "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:references dc:relation)
+SubAnnotationPropertyOf(terms:references terms:relation)
+
+# Annotation Property: terms:relation (Relation)
+
+AnnotationAssertion(terms:description terms:relation "Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. "@en)
+AnnotationAssertion(terms:hasVersion terms:relation <http://dublincore.org/usage/terms/history/#relationT-001>)
+AnnotationAssertion(terms:issued terms:relation "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:relation "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:relation "A related resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:relation <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:relation "Relation"@en)
+AnnotationAssertion(skos:note terms:relation "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:relation dc:relation)
+
+# Annotation Property: terms:replaces (Replaces)
+
+AnnotationAssertion(terms:hasVersion terms:replaces <http://dublincore.org/usage/terms/history/#replaces-003>)
+AnnotationAssertion(terms:issued terms:replaces "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:replaces "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:replaces "A related resource that is supplanted, displaced, or superseded by the described resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:replaces <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:replaces "Replaces"@en)
+AnnotationAssertion(skos:note terms:replaces "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:replaces dc:relation)
+SubAnnotationPropertyOf(terms:replaces terms:relation)
+
+# Annotation Property: terms:requires (Requires)
+
+AnnotationAssertion(terms:hasVersion terms:requires <http://dublincore.org/usage/terms/history/#requires-003>)
+AnnotationAssertion(terms:issued terms:requires "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:requires "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:requires "A related resource that is required by the described resource to support its function, delivery, or coherence."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:requires <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:requires "Requires"@en)
+AnnotationAssertion(skos:note terms:requires "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:requires dc:relation)
+SubAnnotationPropertyOf(terms:requires terms:relation)
+
+# Annotation Property: terms:rights (Rights)
+
+AnnotationAssertion(terms:description terms:rights "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en)
+AnnotationAssertion(terms:hasVersion terms:rights <http://dublincore.org/usage/terms/history/#rightsT-001>)
+AnnotationAssertion(terms:issued terms:rights "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:rights "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:rights "Information about rights held in and over the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:rights <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:rights "Rights"@en)
+SubAnnotationPropertyOf(terms:rights dc:rights)
+AnnotationPropertyRange(terms:rights terms:RightsStatement)
+
+# Annotation Property: terms:source (Source)
+
+AnnotationAssertion(terms:description terms:source "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en)
+AnnotationAssertion(terms:hasVersion terms:source <http://dublincore.org/usage/terms/history/#sourceT-001>)
+AnnotationAssertion(terms:issued terms:source "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:source "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:source "A related resource from which the described resource is derived."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:source <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:source "Source"@en)
+AnnotationAssertion(skos:note terms:source "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:source dc:source)
+SubAnnotationPropertyOf(terms:source terms:relation)
+
+# Annotation Property: terms:spatial (Spatial Coverage)
+
+AnnotationAssertion(terms:hasVersion terms:spatial <http://dublincore.org/usage/terms/history/#spatial-003>)
+AnnotationAssertion(terms:issued terms:spatial "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:spatial "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:spatial "Spatial characteristics of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:spatial <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:spatial "Spatial Coverage"@en)
+SubAnnotationPropertyOf(terms:spatial dc:coverage)
+AnnotationPropertyRange(terms:spatial terms:Location)
+
+# Annotation Property: terms:subject (Subject)
+
+AnnotationAssertion(terms:description terms:subject "Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary."@en)
+AnnotationAssertion(terms:hasVersion terms:subject <http://dublincore.org/usage/terms/history/#subjectT-002>)
+AnnotationAssertion(terms:issued terms:subject "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:subject "2012-06-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:subject "The topic of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:subject <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:subject "Subject"@en)
+AnnotationAssertion(skos:note terms:subject "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en)
+SubAnnotationPropertyOf(terms:subject dc:subject)
+
+# Annotation Property: terms:tableOfContents (Table Of Contents)
+
+AnnotationAssertion(terms:hasVersion terms:tableOfContents <http://dublincore.org/usage/terms/history/#tableOfContents-003>)
+AnnotationAssertion(terms:issued terms:tableOfContents "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:tableOfContents "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:tableOfContents "A list of subunits of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:tableOfContents <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:tableOfContents "Table Of Contents"@en)
+SubAnnotationPropertyOf(terms:tableOfContents dc:description)
+SubAnnotationPropertyOf(terms:tableOfContents terms:description)
+
+# Annotation Property: terms:temporal (Temporal Coverage)
+
+AnnotationAssertion(terms:hasVersion terms:temporal <http://dublincore.org/usage/terms/history/#temporal-003>)
+AnnotationAssertion(terms:issued terms:temporal "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:temporal "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:temporal "Temporal characteristics of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:temporal <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:temporal "Temporal Coverage"@en)
+SubAnnotationPropertyOf(terms:temporal dc:coverage)
+AnnotationPropertyRange(terms:temporal terms:PeriodOfTime)
+
+# Annotation Property: terms:title (Title)
+
+AnnotationAssertion(terms:hasVersion terms:title <http://dublincore.org/usage/terms/history/#titleT-002>)
+AnnotationAssertion(terms:issued terms:title "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:title "2010-10-11"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:title "A name given to the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:title <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:title "Title"@en)
+SubAnnotationPropertyOf(terms:title dc:title)
+AnnotationPropertyRange(terms:title rdfs:Literal)
+
+# Annotation Property: terms:type (Type)
+
+AnnotationAssertion(terms:description terms:type "Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en)
+AnnotationAssertion(terms:hasVersion terms:type <http://dublincore.org/usage/terms/history/#typeT-001>)
+AnnotationAssertion(terms:issued terms:type "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:type "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:type "The nature or genre of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:type <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:type "Type"@en)
+SubAnnotationPropertyOf(terms:type dc:type)
+AnnotationPropertyRange(terms:type rdfs:Class)
+
+# Annotation Property: terms:valid (Date Valid)
+
+AnnotationAssertion(terms:hasVersion terms:valid <http://dublincore.org/usage/terms/history/#valid-003>)
+AnnotationAssertion(terms:issued terms:valid "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:valid "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:valid "Date (often a range) of validity of a resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:valid <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:valid "Date Valid"@en)
+SubAnnotationPropertyOf(terms:valid dc:date)
+SubAnnotationPropertyOf(terms:valid terms:date)
+AnnotationPropertyRange(terms:valid rdfs:Literal)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: terms:accessRights (Access Rights)
+
+SubObjectPropertyOf(terms:accessRights terms:rights)
+
+# Object Property: terms:accrualMethod (Accrual Method)
+
+AnnotationAssertion(terms:hasVersion terms:accrualMethod <http://dublincore.org/usage/terms/history/#accrualMethod-003>)
+AnnotationAssertion(terms:issued terms:accrualMethod "2005-06-13"^^xsd:date)
+AnnotationAssertion(terms:modified terms:accrualMethod "2010-10-11"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:accrualMethod "The method by which items are added to a collection."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:accrualMethod <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:accrualMethod "Accrual Method"@en)
+ObjectPropertyDomain(terms:accrualMethod <http://purl.org/dc/dcmitype/Collection>)
+
+# Object Property: terms:accrualPeriodicity (Accrual Periodicity)
+
+AnnotationAssertion(terms:hasVersion terms:accrualPeriodicity <http://dublincore.org/usage/terms/history/#accrualPeriodicity-003>)
+AnnotationAssertion(terms:issued terms:accrualPeriodicity "2005-06-13"^^xsd:date)
+AnnotationAssertion(terms:modified terms:accrualPeriodicity "2010-10-11"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:accrualPeriodicity "The frequency with which items are added to a collection."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:accrualPeriodicity <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:accrualPeriodicity "Accrual Periodicity"@en)
+ObjectPropertyDomain(terms:accrualPeriodicity <http://purl.org/dc/dcmitype/Collection>)
+
+# Object Property: terms:accrualPolicy (Accrual Policy)
+
+AnnotationAssertion(terms:hasVersion terms:accrualPolicy <http://dublincore.org/usage/terms/history/#accrualPolicy-003>)
+AnnotationAssertion(terms:issued terms:accrualPolicy "2005-06-13"^^xsd:date)
+AnnotationAssertion(terms:modified terms:accrualPolicy "2010-10-11"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:accrualPolicy "The policy governing the addition of items to a collection."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:accrualPolicy <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:accrualPolicy "Accrual Policy"@en)
+ObjectPropertyDomain(terms:accrualPolicy <http://purl.org/dc/dcmitype/Collection>)
+
+# Object Property: terms:audience (Audience)
+
+AnnotationAssertion(terms:hasVersion terms:audience <http://dublincore.org/usage/terms/history/#audience-003>)
+AnnotationAssertion(terms:issued terms:audience "2001-05-21"^^xsd:date)
+AnnotationAssertion(terms:modified terms:audience "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:audience "A class of entity for whom the resource is intended or useful."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:audience <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:audience "Audience"@en)
+ObjectPropertyDomain(terms:audience swc:AcademicEvent)
+ObjectPropertyRange(terms:audience terms:AgentClass)
+
+# Object Property: terms:creator (Creator)
+
+SubObjectPropertyOf(terms:creator terms:contributor)
+
+# Object Property: terms:educationLevel (Audience Education Level)
+
+AnnotationAssertion(terms:hasVersion terms:educationLevel <http://dublincore.org/usage/terms/history/#educationLevel-002>)
+AnnotationAssertion(terms:issued terms:educationLevel "2002-07-13"^^xsd:date)
+AnnotationAssertion(terms:modified terms:educationLevel "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:educationLevel "A class of entity, defined in terms of progression through an educational or training context, for which the described resource is intended."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:educationLevel <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:educationLevel "Audience Education Level"@en)
+SubObjectPropertyOf(terms:educationLevel terms:audience)
+ObjectPropertyRange(terms:educationLevel terms:AgentClass)
+
+# Object Property: terms:extent (Extent)
+
+SubObjectPropertyOf(terms:extent terms:format)
+
+# Object Property: terms:instructionalMethod (Instructional Method)
+
+AnnotationAssertion(terms:description terms:instructionalMethod "Instructional Method will typically include ways of presenting instructional materials or conducting instructional activities, patterns of learner-to-learner and learner-to-instructor interactions, and mechanisms by which group and individual levels of learning are measured.  Instructional methods include all aspects of the instruction and learning processes from planning and implementation through evaluation and feedback."@en)
+AnnotationAssertion(terms:hasVersion terms:instructionalMethod <http://dublincore.org/usage/terms/history/#instructionalMethod-002>)
+AnnotationAssertion(terms:issued terms:instructionalMethod "2005-06-13"^^xsd:date)
+AnnotationAssertion(terms:modified terms:instructionalMethod "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:instructionalMethod "A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:instructionalMethod <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:instructionalMethod "Instructional Method"@en)
+
+# Object Property: terms:license (License)
+
+SubObjectPropertyOf(terms:license terms:rights)
+
+# Object Property: terms:mediator (Mediator)
+
+AnnotationAssertion(terms:description terms:mediator "In an educational context, a mediator might be a parent, teacher, teaching assistant, or care-giver."@en)
+AnnotationAssertion(terms:hasVersion terms:mediator <http://dublincore.org/usage/terms/history/#mediator-003>)
+AnnotationAssertion(terms:issued terms:mediator "2001-05-21"^^xsd:date)
+AnnotationAssertion(terms:modified terms:mediator "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:mediator "An entity that mediates access to the resource and for whom the resource is intended or useful."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:mediator <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:mediator "Mediator"@en)
+SubObjectPropertyOf(terms:mediator terms:audience)
+ObjectPropertyRange(terms:mediator terms:AgentClass)
+
+# Object Property: terms:medium (Medium)
+
+SubObjectPropertyOf(terms:medium terms:format)
+
+# Object Property: terms:provenance (Provenance)
+
+AnnotationAssertion(terms:description terms:provenance "The statement may include a description of any changes successive custodians made to the resource."@en)
+AnnotationAssertion(terms:hasVersion terms:provenance <http://dublincore.org/usage/terms/history/#provenance-002>)
+AnnotationAssertion(terms:issued terms:provenance "2004-09-20"^^xsd:date)
+AnnotationAssertion(terms:modified terms:provenance "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:provenance "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:provenance <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:provenance "Provenance"@en)
+
+# Object Property: terms:rightsHolder (Rights Holder)
+
+AnnotationAssertion(terms:hasVersion terms:rightsHolder <http://dublincore.org/usage/terms/history/#rightsHolder-002>)
+AnnotationAssertion(terms:issued terms:rightsHolder "2004-06-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:rightsHolder "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:rightsHolder "A person or organization owning or managing rights over the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:rightsHolder <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:rightsHolder "Rights Holder"@en)
+ObjectPropertyRange(terms:rightsHolder terms:Agent)
+
+# Object Property: terms:spatial (Spatial Coverage)
+
+SubObjectPropertyOf(terms:spatial terms:coverage)
+
+# Object Property: terms:temporal (Temporal Coverage)
+
+SubObjectPropertyOf(terms:temporal terms:coverage)
+
+# Object Property: <http://purl.org/semsur/belongsToProceedings> (<http://purl.org/semsur/belongsToProceedings>)
+
+ObjectPropertyDomain(<http://purl.org/semsur/belongsToProceedings> <http://swrc.ontoware.org/ontology#Publication>)
+ObjectPropertyRange(<http://purl.org/semsur/belongsToProceedings> <http://swrc.ontoware.org/ontology#Proceedings>)
+
+# Object Property: <http://purl.org/semsur/hasAppendix> (<http://purl.org/semsur/hasAppendix>)
+
+ObjectPropertyDomain(<http://purl.org/semsur/hasAppendix> <http://swrc.ontoware.org/ontology#Publication>)
+ObjectPropertyDomain(<http://purl.org/semsur/hasAppendix> ObjectAllValuesFrom(<http://swrc.ontoware.org/ontology#cite> <http://swrc.ontoware.org/ontology#Publication>))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> <http://org.semanticweb.owlapi/error#Error2>)
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> <http://purl.org/spar/deo/DiscourseElement>)
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> doco:Appendix)
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> doco:Section)
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> <http://www.essepuntato.it/2008/12/pattern#Bucket>)
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> <http://www.essepuntato.it/2008/12/pattern#Container>)
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> <http://www.essepuntato.it/2008/12/pattern#HeadedContainer>)
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> <http://www.essepuntato.it/2008/12/pattern#NonTextual>)
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> <http://www.essepuntato.it/2008/12/pattern#Pattern>)
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> <http://www.essepuntato.it/2008/12/pattern#Structured>)
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectIntersectionOf(<http://purl.org/spar/deo/DiscourseElement> <http://www.essepuntato.it/2008/12/pattern#HeadedContainer>))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectIntersectionOf(doco:Section <http://www.essepuntato.it/2008/12/pattern#HeadedContainer>))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectIntersectionOf(<http://www.essepuntato.it/2008/12/pattern#Bucket> ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#isContainedBy> ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Container> <http://www.essepuntato.it/2008/12/pattern#Popup>))))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectIntersectionOf(<http://www.essepuntato.it/2008/12/pattern#Container> ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#containsAsHeader> <http://www.essepuntato.it/2008/12/pattern#Block>)))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectIntersectionOf(ObjectIntersectionOf(doco:Section <http://www.essepuntato.it/2008/12/pattern#HeadedContainer>) ObjectSomeValuesFrom(terms:isPartOf doco:BackMatter)))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectUnionOf(doco:Chapter doco:Section))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectUnionOf(doco:Paragraph doco:Section))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Block> <http://www.essepuntato.it/2008/12/pattern#Container>))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Block> <http://www.essepuntato.it/2008/12/pattern#Container> <http://www.essepuntato.it/2008/12/pattern#Field> <http://www.essepuntato.it/2008/12/pattern#Meta>))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Container> <http://www.essepuntato.it/2008/12/pattern#Popup>))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#HeadedContainer> <http://www.essepuntato.it/2008/12/pattern#Table>))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectComplementOf(<http://www.essepuntato.it/2008/12/pattern#Textual>))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectSomeValuesFrom(terms:isPartOf doco:BackMatter))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectSomeValuesFrom(terms:isPartOf ObjectUnionOf(doco:BackMatter doco:FrontMatter)))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectSomeValuesFrom(<http://www.essepuntato.it/2008/12/pattern#contains> <http://org.semanticweb.owlapi/error#Error3>))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectSomeValuesFrom(<http://www.essepuntato.it/2008/12/pattern#contains> ObjectUnionOf(doco:Paragraph doco:Section)))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectSomeValuesFrom(<http://www.essepuntato.it/2008/12/pattern#contains> ObjectComplementOf(doco:Chapter)))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#contains> ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Block> <http://www.essepuntato.it/2008/12/pattern#Container> <http://www.essepuntato.it/2008/12/pattern#Field> <http://www.essepuntato.it/2008/12/pattern#Meta>)))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#containsAsHeader> <http://www.essepuntato.it/2008/12/pattern#Block>))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#isContainedBy> ObjectIntersectionOf(<http://www.essepuntato.it/2008/12/pattern#Bucket> ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#isContainedBy> ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Container> <http://www.essepuntato.it/2008/12/pattern#Popup>)))))
+ObjectPropertyRange(<http://purl.org/semsur/hasAppendix> ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#isContainedBy> ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Container> <http://www.essepuntato.it/2008/12/pattern#Popup>)))
+
+# Object Property: <http://www.w3.org/2006/time#hasDuration> (has duration)
+
+ObjectPropertyDomain(<http://www.w3.org/2006/time#hasDuration> swc:OrganisedEvent)
+
+# Object Property: swc:hasAddress (has address)
+
+ObjectPropertyRange(swc:hasAddress swc:Agent)
+
+# Object Property: swc:holdsRoleIn (holds role)
+
+ObjectPropertyDomain(swc:holdsRoleIn <http://xmlns.com/foaf/0.1/Person>)
+
+# Object Property: seo:belongsToSeries (belongsToSeries)
+
+AnnotationAssertion(rdfs:comment seo:belongsToSeries "This property shows the series which an event belongs to."@en)
+AnnotationAssertion(rdfs:label seo:belongsToSeries "belongsToSeries"@en)
+InverseObjectProperties(seo:belongsToSeries seo:hasEvent)
+ObjectPropertyDomain(seo:belongsToSeries swc:OrganisedEvent)
+ObjectPropertyRange(seo:belongsToSeries swc:EventSeries)
+
+# Object Property: seo:colocatedWith (seo:colocatedWith)
+
+AnnotationAssertion(rdfs:comment seo:colocatedWith "This property links an event to another one which is co-located with."^^xsd:string)
+SymmetricObjectProperty(seo:colocatedWith)
+ObjectPropertyDomain(seo:colocatedWith swc:OrganisedEvent)
+ObjectPropertyRange(seo:colocatedWith swc:OrganisedEvent)
+
+# Object Property: seo:hasAffiliation (seo:hasAffiliation)
+
+ObjectPropertyDomain(seo:hasAffiliation <http://xmlns.com/foaf/0.1/Person>)
+ObjectPropertyRange(seo:hasAffiliation <http://xmlns.com/foaf/0.1/Organization>)
+
+# Object Property: seo:hasChair (seo:hasChair)
+
+ObjectPropertyDomain(seo:hasChair swc:Track)
+ObjectPropertyRange(seo:hasChair seo:Chair)
+
+# Object Property: seo:hasEvent (seo:hasEvent)
+
+AnnotationAssertion(rdfs:comment seo:hasEvent "an event series has an event edition")
+ObjectPropertyDomain(seo:hasEvent swc:EventSeries)
+ObjectPropertyRange(seo:hasEvent swc:OrganisedEvent)
+
+# Object Property: seo:hasFlyer (seo:hasFlyer)
+
+ObjectPropertyDomain(seo:hasFlyer swc:OrganisedEvent)
+ObjectPropertyRange(seo:hasFlyer seo:Flyer)
+
+# Object Property: seo:hasImportantDates (seo:hasImportantDates)
+
+ObjectPropertyDomain(seo:hasImportantDates swc:AcademicEvent)
+ObjectPropertyRange(seo:hasImportantDates seo:ImportantDates)
+
+# Object Property: seo:hasKeynote (seo:hasKeynote)
+
+InverseObjectProperties(seo:hasKeynote seo:keynoteIn)
+ObjectPropertyDomain(seo:hasKeynote swc:OrganisedEvent)
+ObjectPropertyRange(seo:hasKeynote seo:Keynote)
+
+# Object Property: seo:hasProgramCommitteeMember (seo:hasProgramCommitteeMember)
+
+ObjectPropertyDomain(seo:hasProgramCommitteeMember swc:AcademicEvent)
+ObjectPropertyRange(seo:hasProgramCommitteeMember swc:Person)
+
+# Object Property: seo:hasProgramSchedual (seo:hasProgramSchedual)
+
+ObjectPropertyDomain(seo:hasProgramSchedual swc:OrganisedEvent)
+
+# Object Property: seo:hasPublisher (seo:hasPublisher)
+
+AnnotationAssertion(rdfs:comment seo:hasPublisher "This propoerty shows the publisher of a proceedings."^^xsd:string)
+InverseObjectProperties(seo:hasPublisher seo:isPublisherOf)
+ObjectPropertyDomain(seo:hasPublisher ObjectUnionOf(swc:AcademicEvent swc:Proceedings))
+ObjectPropertyRange(seo:hasPublisher seo:Publisher)
+
+# Object Property: seo:hasRegistration (seo:hasRegistration)
+
+ObjectPropertyDomain(seo:hasRegistration swc:OrganisedEvent)
+ObjectPropertyRange(seo:hasRegistration seo:Registration)
+
+# Object Property: seo:hasRegistrationType (seo:hasRegistrationType)
+
+ObjectPropertyDomain(seo:hasRegistrationType seo:Author)
+ObjectPropertyRange(seo:hasRegistrationType ObjectUnionOf(seo:EarlyBirdRegistration seo:LateRegistration))
+
+# Object Property: seo:hasSocialEvent (seo:hasSocialEvent)
+
+ObjectPropertyDomain(seo:hasSocialEvent swc:AcademicEvent)
+ObjectPropertyRange(seo:hasSocialEvent swc:SocialEvent)
+
+# Object Property: seo:hasSponsor (seo:hasSponsor)
+
+AnnotationAssertion(rdfs:comment seo:hasSponsor "This propoerty shows the sponsor of an event."^^xsd:string)
+InverseObjectProperties(seo:hasSponsor seo:isSponsorOf)
+ObjectPropertyDomain(seo:hasSponsor swc:OrganisedEvent)
+ObjectPropertyRange(seo:hasSponsor seo:Sponsor)
+
+# Object Property: seo:hasSubmissionGuidelines (seo:hasSubmissionGuidelines)
+
+ObjectPropertyDomain(seo:hasSubmissionGuidelines swc:AcademicEvent)
+ObjectPropertyRange(seo:hasSubmissionGuidelines seo:SubmissionGuidelines)
+
+# Object Property: seo:hasTrack (seo:hasTrack)
+
+AnnotationAssertion(rdfs:comment seo:hasTrack "This propoerty shows the available tracks of an event."^^xsd:string)
+InverseObjectProperties(seo:hasTrack seo:isTrackOf)
+ObjectPropertyDomain(seo:hasTrack swc:AcademicEvent)
+ObjectPropertyRange(seo:hasTrack swc:Track)
+
+# Object Property: seo:heldInCity (seo:heldInCity)
+
+SubObjectPropertyOf(seo:heldInCity swc:hasLocation)
+ObjectPropertyDomain(seo:heldInCity swc:OrganisedEvent)
+ObjectPropertyRange(seo:heldInCity dbo:City)
+
+# Object Property: seo:heldInCountry (seo:heldInCountry)
+
+SubObjectPropertyOf(seo:heldInCountry swc:hasLocation)
+ObjectPropertyDomain(seo:heldInCountry swc:OrganisedEvent)
+ObjectPropertyRange(seo:heldInCountry dbo:Country)
+
+# Object Property: seo:isPublisherOf (seo:isPublisherOf)
+
+ObjectPropertyDomain(seo:isPublisherOf seo:Publisher)
+ObjectPropertyRange(seo:isPublisherOf ObjectUnionOf(swc:AcademicEvent swc:Proceedings))
+
+# Object Property: seo:isSponsorOf (seo:isSponsorOf)
+
+ObjectPropertyDomain(seo:isSponsorOf seo:Sponsor)
+ObjectPropertyRange(seo:isSponsorOf swc:OrganisedEvent)
+
+# Object Property: seo:isTrackOf (seo:isTrackOf)
+
+ObjectPropertyDomain(seo:isTrackOf swc:Track)
+ObjectPropertyRange(seo:isTrackOf swc:AcademicEvent)
+
+# Object Property: seo:keynoteIn (seo:keynoteIn)
+
+ObjectPropertyDomain(seo:keynoteIn seo:Keynote)
+ObjectPropertyRange(seo:keynoteIn swc:OrganisedEvent)
+
+# Object Property: seo:offersAward (seo:offersAward)
+
+ObjectPropertyDomain(seo:offersAward swc:OrganisedEvent)
+ObjectPropertyRange(seo:offersAward seo:Award)
+
+# Object Property: seo:offersBestPaperAward (seo:offersBestPaperAward)
+
+SubObjectPropertyOf(seo:offersBestPaperAward seo:offersAward)
+ObjectPropertyDomain(seo:offersBestPaperAward swc:AcademicEvent)
+ObjectPropertyRange(seo:offersBestPaperAward seo:BestPaperAward)
+
+# Object Property: seo:participatesAs (seo:participatesAs)
+
+ObjectPropertyDomain(seo:participatesAs <http://xmlns.com/foaf/0.1/Person>)
+ObjectPropertyRange(seo:participatesAs ObjectUnionOf(seo:Author seo:Chair seo:Organizer))
+
+# Object Property: seo:participatesIn (seo:participatesIn)
+
+ObjectPropertyDomain(seo:participatesIn <http://xmlns.com/foaf/0.1/Agent>)
+ObjectPropertyRange(seo:participatesIn swc:OrganisedEvent)
+
+# Object Property: seo:providesTravelInformation (seo:providesTravelInformation)
+
+ObjectPropertyDomain(seo:providesTravelInformation swc:OrganisedEvent)
+ObjectPropertyRange(seo:providesTravelInformation seo:TravelInformation)
+
+# Object Property: seo:registeredAs (seo:registeredAs)
+
+ObjectPropertyDomain(seo:registeredAs seo:Author)
+ObjectPropertyRange(seo:registeredAs seo:AuthorRegistration)
+
+# Object Property: seo:sponsorshipType (seo:sponsorshipType)
+
+ObjectPropertyDomain(seo:sponsorshipType seo:Sponsor)
+ObjectPropertyRange(seo:sponsorshipType seo:Sponsorship)
+
+# Object Property: seo:takesAward (seo:takesAward)
+
+ObjectPropertyDomain(seo:takesAward seo:Author)
+ObjectPropertyRange(seo:takesAward seo:Award)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: terms:bibliographicCitation (Bibliographic Citation)
+
+SubDataPropertyOf(terms:bibliographicCitation terms:identifier)
+
+# Data Property: <http://swrc.ontoware.org/ontology#keywords> (<http://swrc.ontoware.org/ontology#keywords>)
+
+DataPropertyDomain(<http://swrc.ontoware.org/ontology#keywords> <http://swrc.ontoware.org/ontology#Publication>)
+DataPropertyDomain(<http://swrc.ontoware.org/ontology#keywords> ObjectAllValuesFrom(<http://swrc.ontoware.org/ontology#cite> <http://swrc.ontoware.org/ontology#Publication>))
+DataPropertyRange(<http://swrc.ontoware.org/ontology#keywords> xsd:string)
+
+# Data Property: seo:abstractDeadline (seo:abstractDeadline)
+
+AnnotationAssertion(rdfs:comment seo:abstractDeadline "The deadline of abstract submission."^^xsd:string)
+DataPropertyDomain(seo:abstractDeadline swc:AcademicEvent)
+DataPropertyRange(seo:abstractDeadline xsd:date)
+
+# Data Property: seo:acceptanceRate (seo:acceptanceRate)
+
+AnnotationAssertion(rdfs:comment seo:acceptanceRate "The acceptance rate of the event in a particular year."@en)
+DataPropertyDomain(seo:acceptanceRate swc:AcademicEvent)
+DataPropertyRange(seo:acceptanceRate xsd:decimal)
+
+# Data Property: seo:acceptedPapers (seo:acceptedPapers)
+
+AnnotationAssertion(rdfs:comment seo:acceptedPapers "The number of accepted papers in the event."@en)
+DataPropertyDomain(seo:acceptedPapers swc:AcademicEvent)
+DataPropertyRange(seo:acceptedPapers xsd:unsignedInt)
+
+# Data Property: seo:eventWebsite (seo:eventWebsite)
+
+AnnotationAssertion(rdfs:comment seo:eventWebsite "The webpage of the event."@en)
+DataPropertyDomain(seo:eventWebsite swc:AcademicEvent)
+DataPropertyRange(seo:eventWebsite xsd:anyURI)
+
+# Data Property: seo:hasTwitter (seo:hasTwitter)
+
+AnnotationAssertion(rdfs:comment seo:hasTwitter "The twitter account of the event."^^xsd:string)
+DataPropertyDomain(seo:hasTwitter swc:EventSeries)
+DataPropertyRange(seo:hasTwitter xsd:anyURI)
+
+# Data Property: seo:notificationDate (Paper Acceptance Notification)
+
+AnnotationAssertion(rdfs:comment seo:notificationDate "The date of the paper acceptance notification.")
+AnnotationAssertion(rdfs:label seo:notificationDate "Paper Acceptance Notification")
+DataPropertyDomain(seo:notificationDate swc:AcademicEvent)
+DataPropertyRange(seo:notificationDate xsd:date)
+
+# Data Property: seo:submissionDeadline (seo:submissionDeadline)
+
+AnnotationAssertion(rdfs:comment seo:submissionDeadline "The deadline of paper submission."^^xsd:string)
+DataPropertyDomain(seo:submissionDeadline swc:AcademicEvent)
+DataPropertyRange(seo:submissionDeadline xsd:date)
+
+# Data Property: seo:submissionWebPage (seo:submissionWebPage)
+
+AnnotationAssertion(rdfs:comment seo:submissionWebPage "The webpage of the submission to event."^^xsd:string)
+DataPropertyDomain(seo:submissionWebPage swc:OrganisedEvent)
+DataPropertyRange(seo:submissionWebPage xsd:anyURI)
+
+# Data Property: seo:submittedPapers (seo:submittedPapers)
+
+AnnotationAssertion(rdfs:comment seo:submittedPapers "The number of submitted papers to the event."@en)
+DataPropertyDomain(seo:submittedPapers swc:AcademicEvent)
+DataPropertyRange(seo:submittedPapers xsd:unsignedInt)
+
+
+############################
+#   Datatypes
+############################
+
+# Datatype: terms:Box (DCMI Box)
+
+AnnotationAssertion(terms:hasVersion terms:Box <http://dublincore.org/usage/terms/history/#Box-003>)
+AnnotationAssertion(terms:issued terms:Box "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:Box "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:Box "The set of regions in space defined by their geographic coordinates according to the DCMI Box Encoding Scheme."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:Box <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:Box "DCMI Box"@en)
+AnnotationAssertion(rdfs:seeAlso terms:Box <http://dublincore.org/documents/dcmi-box/>)
+
+# Datatype: terms:ISO3166 (ISO 3166)
+
+AnnotationAssertion(terms:hasVersion terms:ISO3166 <http://dublincore.org/usage/terms/history/#ISO3166-004>)
+AnnotationAssertion(terms:issued terms:ISO3166 "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:ISO3166 "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:ISO3166 "The set of codes listed in ISO 3166-1 for the representation of names of countries."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:ISO3166 <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:ISO3166 "ISO 3166"@en)
+AnnotationAssertion(rdfs:seeAlso terms:ISO3166 <http://www.iso.org/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html>)
+
+# Datatype: terms:ISO639-2 (ISO 639-2)
+
+AnnotationAssertion(terms:hasVersion terms:ISO639-2 <http://dublincore.org/usage/terms/history/#ISO639-2-003>)
+AnnotationAssertion(terms:issued terms:ISO639-2 "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:ISO639-2 "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:ISO639-2 "The three-letter alphabetic codes listed in ISO639-2 for the representation of names of languages."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:ISO639-2 <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:ISO639-2 "ISO 639-2"@en)
+AnnotationAssertion(rdfs:seeAlso terms:ISO639-2 <http://lcweb.loc.gov/standards/iso639-2/langhome.html>)
+
+# Datatype: terms:ISO639-3 (ISO 639-3)
+
+AnnotationAssertion(terms:hasVersion terms:ISO639-3 <http://dublincore.org/usage/terms/history/#ISO639-3-001>)
+AnnotationAssertion(terms:issued terms:ISO639-3 "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:ISO639-3 "The set of three-letter codes listed in ISO 639-3 for the representation of names of languages."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:ISO639-3 <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:ISO639-3 "ISO 639-3"@en)
+AnnotationAssertion(rdfs:seeAlso terms:ISO639-3 <http://www.sil.org/iso639-3/>)
+
+# Datatype: terms:Period (DCMI Period)
+
+AnnotationAssertion(terms:hasVersion terms:Period <http://dublincore.org/usage/terms/history/#Period-003>)
+AnnotationAssertion(terms:issued terms:Period "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:Period "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:Period "The set of time intervals defined by their limits according to the DCMI Period Encoding Scheme."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:Period <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:Period "DCMI Period"@en)
+AnnotationAssertion(rdfs:seeAlso terms:Period <http://dublincore.org/documents/dcmi-period/>)
+
+# Datatype: terms:Point (DCMI Point)
+
+AnnotationAssertion(terms:hasVersion terms:Point <http://dublincore.org/usage/terms/history/#Point-003>)
+AnnotationAssertion(terms:issued terms:Point "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:Point "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:Point "The set of points in space defined by their geographic coordinates according to the DCMI Point Encoding Scheme."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:Point <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:Point "DCMI Point"@en)
+AnnotationAssertion(rdfs:seeAlso terms:Point <http://dublincore.org/documents/dcmi-point/>)
+
+# Datatype: terms:RFC1766 (RFC 1766)
+
+AnnotationAssertion(terms:hasVersion terms:RFC1766 <http://dublincore.org/usage/terms/history/#RFC1766-003>)
+AnnotationAssertion(terms:issued terms:RFC1766 "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:RFC1766 "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:RFC1766 "The set of tags, constructed according to RFC 1766, for the identification of languages."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:RFC1766 <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:RFC1766 "RFC 1766"@en)
+AnnotationAssertion(rdfs:seeAlso terms:RFC1766 <http://www.ietf.org/rfc/rfc1766.txt>)
+
+# Datatype: terms:RFC3066 (RFC 3066)
+
+AnnotationAssertion(terms:description terms:RFC3066 "RFC 3066 has been obsoleted by RFC 4646."@en)
+AnnotationAssertion(terms:hasVersion terms:RFC3066 <http://dublincore.org/usage/terms/history/#RFC3066-002>)
+AnnotationAssertion(terms:issued terms:RFC3066 "2002-07-13"^^xsd:date)
+AnnotationAssertion(terms:modified terms:RFC3066 "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:RFC3066 "The set of tags constructed according to RFC 3066 for the identification of languages."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:RFC3066 <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:RFC3066 "RFC 3066"@en)
+AnnotationAssertion(rdfs:seeAlso terms:RFC3066 <http://www.ietf.org/rfc/rfc3066.txt>)
+
+# Datatype: terms:RFC4646 (RFC 4646)
+
+AnnotationAssertion(terms:description terms:RFC4646 "RFC 4646 obsoletes RFC 3066."@en)
+AnnotationAssertion(terms:hasVersion terms:RFC4646 <http://dublincore.org/usage/terms/history/#RFC4646-001>)
+AnnotationAssertion(terms:issued terms:RFC4646 "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:RFC4646 "The set of tags constructed according to RFC 4646 for the identification of languages."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:RFC4646 <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:RFC4646 "RFC 4646"@en)
+AnnotationAssertion(rdfs:seeAlso terms:RFC4646 <http://www.ietf.org/rfc/rfc4646.txt>)
+
+# Datatype: terms:RFC5646 (RFC 5646)
+
+AnnotationAssertion(terms:description terms:RFC5646 "RFC 5646 obsoletes RFC 4646."@en)
+AnnotationAssertion(terms:hasVersion terms:RFC5646 <http://dublincore.org/usage/terms/history/#RFC5646-001>)
+AnnotationAssertion(terms:issued terms:RFC5646 "2010-10-11"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:RFC5646 "The set of tags constructed according to RFC 5646 for the identification of languages."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:RFC5646 <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:RFC5646 "RFC 5646"@en)
+AnnotationAssertion(rdfs:seeAlso terms:RFC5646 <http://www.ietf.org/rfc/rfc5646.txt>)
+
+# Datatype: terms:URI (URI)
+
+AnnotationAssertion(terms:hasVersion terms:URI <http://dublincore.org/usage/terms/history/#URI-003>)
+AnnotationAssertion(terms:issued terms:URI "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:URI "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:URI "The set of identifiers constructed according to the generic syntax for Uniform Resource Identifiers as specified by the Internet Engineering Task Force."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:URI <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:URI "URI"@en)
+AnnotationAssertion(rdfs:seeAlso terms:URI <http://www.ietf.org/rfc/rfc3986.txt>)
+
+# Datatype: terms:W3CDTF (W3C-DTF)
+
+AnnotationAssertion(terms:hasVersion terms:W3CDTF <http://dublincore.org/usage/terms/history/#W3CDTF-003>)
+AnnotationAssertion(terms:issued terms:W3CDTF "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:W3CDTF "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:W3CDTF "The set of dates and times constructed according to the W3C Date and Time Formats Specification."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:W3CDTF <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:W3CDTF "W3C-DTF"@en)
+AnnotationAssertion(rdfs:seeAlso terms:W3CDTF <http://www.w3.org/TR/NOTE-datetime>)
+
+
+############################
+#   Classes
+############################
+
+# Class: dbo:City (市)
+
+EquivalentClasses(dbo:City <http://schema.org/City>)
+
+# Class: dbo:Country (Государство)
+
+EquivalentClasses(dbo:Country <http://schema.org/Country>)
+
+# Class: terms:Agent (Agent)
+
+AnnotationAssertion(terms:description terms:Agent "Examples of Agent include person, organization, and software agent."@en)
+AnnotationAssertion(terms:hasVersion terms:Agent <http://dublincore.org/usage/terms/history/#Agent-001>)
+AnnotationAssertion(terms:issued terms:Agent "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:Agent "A resource that acts or has the power to act."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:Agent <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:Agent "Agent"@en)
+
+# Class: terms:AgentClass (Agent Class)
+
+AnnotationAssertion(terms:description terms:AgentClass "Examples of Agent Class include groups seen as classes, such as students, women, charities, lecturers."@en)
+AnnotationAssertion(terms:hasVersion terms:AgentClass <http://dublincore.org/usage/terms/history/#AgentClass-003>)
+AnnotationAssertion(terms:issued terms:AgentClass "2008-01-14"^^xsd:date)
+AnnotationAssertion(terms:modified terms:AgentClass "2012-06-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:AgentClass "A group of agents."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:AgentClass <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:AgentClass "Agent Class"@en)
+SubClassOf(terms:AgentClass rdfs:Class)
+
+# Class: terms:BibliographicResource (Bibliographic Resource)
+
+AnnotationAssertion(terms:hasVersion terms:BibliographicResource <http://dublincore.org/usage/terms/history/#BibliographicResource-001>)
+AnnotationAssertion(terms:issued terms:BibliographicResource "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:BibliographicResource "A book, article, or other documentary resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:BibliographicResource <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:BibliographicResource "Bibliographic Resource"@en)
+
+# Class: terms:FileFormat (File Format)
+
+AnnotationAssertion(terms:description terms:FileFormat "Examples include the formats defined by the list of Internet Media Types."@en)
+AnnotationAssertion(terms:hasVersion terms:FileFormat <http://dublincore.org/usage/terms/history/#FileFormat-001>)
+AnnotationAssertion(terms:issued terms:FileFormat "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:FileFormat "A digital resource format."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:FileFormat <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:FileFormat "File Format"@en)
+SubClassOf(terms:FileFormat terms:MediaType)
+
+# Class: terms:Jurisdiction (Jurisdiction)
+
+AnnotationAssertion(terms:hasVersion terms:Jurisdiction <http://dublincore.org/usage/terms/history/#Jurisdiction-001>)
+AnnotationAssertion(terms:issued terms:Jurisdiction "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:Jurisdiction "The extent or range of judicial, law enforcement, or other authority."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:Jurisdiction <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:Jurisdiction "Jurisdiction"@en)
+
+# Class: terms:LicenseDocument (License Document)
+
+AnnotationAssertion(terms:hasVersion terms:LicenseDocument <http://dublincore.org/usage/terms/history/#LicenseDocument-001>)
+AnnotationAssertion(terms:issued terms:LicenseDocument "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:LicenseDocument "A legal document giving official permission to do something with a Resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:LicenseDocument <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:LicenseDocument "License Document"@en)
+
+# Class: terms:Location (Location)
+
+AnnotationAssertion(terms:hasVersion terms:Location <http://dublincore.org/usage/terms/history/#Location-001>)
+AnnotationAssertion(terms:issued terms:Location "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:Location "A spatial region or named place."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:Location <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:Location "Location"@en)
+
+# Class: terms:MediaType (Media Type)
+
+AnnotationAssertion(terms:hasVersion terms:MediaType <http://dublincore.org/usage/terms/history/#MediaType-001>)
+AnnotationAssertion(terms:issued terms:MediaType "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:MediaType "A file format or physical medium."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:MediaType <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:MediaType "Media Type"@en)
+
+# Class: terms:PeriodOfTime (Period of Time)
+
+AnnotationAssertion(terms:hasVersion terms:PeriodOfTime <http://dublincore.org/usage/terms/history/#PeriodOfTime-001>)
+AnnotationAssertion(terms:issued terms:PeriodOfTime "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:PeriodOfTime "An interval of time that is named or defined by its start and end dates."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:PeriodOfTime <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:PeriodOfTime "Period of Time"@en)
+
+# Class: terms:PhysicalMedium (Physical Medium)
+
+AnnotationAssertion(terms:description terms:PhysicalMedium "Examples include paper, canvas, or DVD."@en)
+AnnotationAssertion(terms:hasVersion terms:PhysicalMedium <http://dublincore.org/usage/terms/history/#PhysicalMedium-001>)
+AnnotationAssertion(terms:issued terms:PhysicalMedium "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:PhysicalMedium "A physical material or carrier."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:PhysicalMedium <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:PhysicalMedium "Physical Medium"@en)
+SubClassOf(terms:PhysicalMedium terms:MediaType)
+
+# Class: doco:Abstract (doco:Abstract)
+
+SubClassOf(doco:Abstract <http://salt.semanticauthoring.org/ontologies/sro#Abstract>)
+SubClassOf(doco:Abstract ObjectUnionOf(doco:Chapter doco:Section))
+SubClassOf(doco:Abstract ObjectSomeValuesFrom(terms:isPartOf ObjectUnionOf(doco:BodyMatter doco:FrontMatter)))
+
+# Class: doco:Appendix (doco:Appendix)
+
+SubClassOf(doco:Appendix <http://org.semanticweb.owlapi/error#Error2>)
+SubClassOf(doco:Appendix <http://purl.org/spar/deo/DiscourseElement>)
+SubClassOf(doco:Appendix doco:Section)
+SubClassOf(doco:Appendix <http://www.essepuntato.it/2008/12/pattern#Bucket>)
+SubClassOf(doco:Appendix <http://www.essepuntato.it/2008/12/pattern#Container>)
+SubClassOf(doco:Appendix <http://www.essepuntato.it/2008/12/pattern#HeadedContainer>)
+SubClassOf(doco:Appendix <http://www.essepuntato.it/2008/12/pattern#NonTextual>)
+SubClassOf(doco:Appendix <http://www.essepuntato.it/2008/12/pattern#Pattern>)
+SubClassOf(doco:Appendix <http://www.essepuntato.it/2008/12/pattern#Structured>)
+SubClassOf(doco:Appendix ObjectIntersectionOf(<http://purl.org/spar/deo/DiscourseElement> <http://www.essepuntato.it/2008/12/pattern#HeadedContainer>))
+SubClassOf(doco:Appendix ObjectIntersectionOf(doco:Section <http://www.essepuntato.it/2008/12/pattern#HeadedContainer>))
+SubClassOf(doco:Appendix ObjectIntersectionOf(<http://www.essepuntato.it/2008/12/pattern#Bucket> ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#isContainedBy> ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Container> <http://www.essepuntato.it/2008/12/pattern#Popup>))))
+SubClassOf(doco:Appendix ObjectIntersectionOf(<http://www.essepuntato.it/2008/12/pattern#Container> ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#containsAsHeader> <http://www.essepuntato.it/2008/12/pattern#Block>)))
+SubClassOf(doco:Appendix ObjectUnionOf(doco:Chapter doco:Section))
+SubClassOf(doco:Appendix ObjectUnionOf(doco:Paragraph doco:Section))
+SubClassOf(doco:Appendix ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Block> <http://www.essepuntato.it/2008/12/pattern#Container>))
+SubClassOf(doco:Appendix ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Block> <http://www.essepuntato.it/2008/12/pattern#Container> <http://www.essepuntato.it/2008/12/pattern#Field> <http://www.essepuntato.it/2008/12/pattern#Meta>))
+SubClassOf(doco:Appendix ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Container> <http://www.essepuntato.it/2008/12/pattern#Popup>))
+SubClassOf(doco:Appendix ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#HeadedContainer> <http://www.essepuntato.it/2008/12/pattern#Table>))
+SubClassOf(doco:Appendix ObjectComplementOf(<http://www.essepuntato.it/2008/12/pattern#Textual>))
+SubClassOf(doco:Appendix ObjectSomeValuesFrom(terms:isPartOf doco:BackMatter))
+SubClassOf(doco:Appendix ObjectSomeValuesFrom(terms:isPartOf ObjectUnionOf(doco:BackMatter doco:FrontMatter)))
+SubClassOf(doco:Appendix ObjectSomeValuesFrom(<http://www.essepuntato.it/2008/12/pattern#contains> <http://org.semanticweb.owlapi/error#Error3>))
+SubClassOf(doco:Appendix ObjectSomeValuesFrom(<http://www.essepuntato.it/2008/12/pattern#contains> ObjectUnionOf(doco:Paragraph doco:Section)))
+SubClassOf(doco:Appendix ObjectSomeValuesFrom(<http://www.essepuntato.it/2008/12/pattern#contains> ObjectComplementOf(doco:Chapter)))
+SubClassOf(doco:Appendix ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#contains> ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Block> <http://www.essepuntato.it/2008/12/pattern#Container> <http://www.essepuntato.it/2008/12/pattern#Field> <http://www.essepuntato.it/2008/12/pattern#Meta>)))
+SubClassOf(doco:Appendix ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#containsAsHeader> <http://www.essepuntato.it/2008/12/pattern#Block>))
+SubClassOf(doco:Appendix ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#isContainedBy> ObjectIntersectionOf(<http://www.essepuntato.it/2008/12/pattern#Bucket> ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#isContainedBy> ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Container> <http://www.essepuntato.it/2008/12/pattern#Popup>)))))
+SubClassOf(doco:Appendix ObjectAllValuesFrom(<http://www.essepuntato.it/2008/12/pattern#isContainedBy> ObjectUnionOf(<http://www.essepuntato.it/2008/12/pattern#Container> <http://www.essepuntato.it/2008/12/pattern#Popup>)))
+
+# Class: fabio:ConferencePaper (fabio:ConferencePaper)
+
+SubClassOf(fabio:ConferencePaper fabio:Expression)
+SubClassOf(fabio:ConferencePaper ObjectIntersectionOf(ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#part> <http://purl.org/vocab/frbr/core#Expression>) ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#partOf> <http://purl.org/vocab/frbr/core#Expression>)))
+SubClassOf(fabio:ConferencePaper ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#embodiment> fabio:Manifestation))
+SubClassOf(fabio:ConferencePaper ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#realizationOf> fabio:Work))
+
+# Class: fabio:ConferencePoster (fabio:ConferencePoster)
+
+SubClassOf(fabio:ConferencePoster ObjectIntersectionOf(ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#part> <http://purl.org/vocab/frbr/core#Expression>) ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#partOf> <http://purl.org/vocab/frbr/core#Expression>)))
+SubClassOf(fabio:ConferencePoster ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#embodiment> fabio:Manifestation))
+SubClassOf(fabio:ConferencePoster ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#realizationOf> fabio:Work))
+
+# Class: fabio:ConferenceProceedings (fabio:ConferenceProceedings)
+
+SubClassOf(fabio:ConferenceProceedings fabio:Expression)
+SubClassOf(fabio:ConferenceProceedings fabio:ExpressionCollection)
+SubClassOf(fabio:ConferenceProceedings ObjectIntersectionOf(ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#part> <http://purl.org/vocab/frbr/core#Expression>) ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#partOf> <http://purl.org/vocab/frbr/core#Expression>)))
+SubClassOf(fabio:ConferenceProceedings ObjectSomeValuesFrom(<http://purl.org/vocab/frbr/core#part> fabio:Expression))
+SubClassOf(fabio:ConferenceProceedings ObjectSomeValuesFrom(<http://purl.org/vocab/frbr/core#part> fabio:ProceedingsPaper))
+SubClassOf(fabio:ConferenceProceedings ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#embodiment> fabio:Manifestation))
+SubClassOf(fabio:ConferenceProceedings ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#realizationOf> fabio:Work))
+
+# Class: fabio:WorkingPaper (fabio:WorkingPaper)
+
+SubClassOf(fabio:WorkingPaper ObjectIntersectionOf(ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#part> <http://purl.org/vocab/frbr/core#Work>) ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#partOf> <http://purl.org/vocab/frbr/core#Work>)))
+SubClassOf(fabio:WorkingPaper ObjectAllValuesFrom(<http://purl.org/vocab/frbr/core#realization> fabio:Expression))
+
+# Class: <http://swrc.ontoware.org/ontology#Proceedings> (<http://swrc.ontoware.org/ontology#Proceedings>)
+
+SubClassOf(<http://swrc.ontoware.org/ontology#Proceedings> ObjectAllValuesFrom(<http://swrc.ontoware.org/ontology#cite> <http://swrc.ontoware.org/ontology#Publication>))
+
+# Class: <http://swrc.ontoware.org/ontology#Publication> (<http://swrc.ontoware.org/ontology#Publication>)
+
+AnnotationAssertion(dc:description <http://swrc.ontoware.org/ontology#Publication> "an article issued for public sale")
+
+# Class: seo:Author (Author)
+
+AnnotationAssertion(rdfs:comment seo:Author "The one who write the article."@en)
+AnnotationAssertion(rdfs:label seo:Author "Author"@en)
+SubClassOf(seo:Author <http://xmlns.com/foaf/0.1/Person>)
+
+# Class: seo:AuthorRegistration (Author registration)
+
+AnnotationAssertion(rdfs:comment seo:AuthorRegistration "At least one of the authors must register at the full rate in order for the paper to be published in the Proceedings."@en)
+AnnotationAssertion(rdfs:label seo:AuthorRegistration "Author registration"@en)
+
+# Class: seo:Award (Award)
+
+AnnotationAssertion(rdfs:comment seo:Award "A price for the highest quality research."@en)
+AnnotationAssertion(rdfs:label seo:Award "Award"@en)
+
+# Class: seo:BestApplicationsPaperAward (Best applications paper award)
+
+AnnotationAssertion(rdfs:comment seo:BestApplicationsPaperAward "This award for the best application paper presented. "@en)
+AnnotationAssertion(rdfs:label seo:BestApplicationsPaperAward "Best applications paper award"@en)
+SubClassOf(seo:BestApplicationsPaperAward seo:BestPaperAward)
+
+# Class: seo:BestPaperAward (Best paper award)
+
+AnnotationAssertion(rdfs:comment seo:BestPaperAward "This award recognizes the best paper presented."@en)
+AnnotationAssertion(rdfs:label seo:BestPaperAward "Best paper award"@en)
+SubClassOf(seo:BestPaperAward seo:Award)
+
+# Class: seo:BestPosterAward (Best poster award)
+
+AnnotationAssertion(rdfs:comment seo:BestPosterAward "This award highlight good quality posters presented."@en)
+AnnotationAssertion(rdfs:label seo:BestPosterAward "Best poster award"@en)
+SubClassOf(seo:BestPosterAward seo:Award)
+
+# Class: seo:BestStudentPaperAward (Best student paper award)
+
+AnnotationAssertion(rdfs:comment seo:BestStudentPaperAward "This award recognizes the best paper authored primarily by a student and presented by the student."@en)
+AnnotationAssertion(rdfs:label seo:BestStudentPaperAward "Best student paper award"@en)
+SubClassOf(seo:BestStudentPaperAward seo:BestPaperAward)
+
+# Class: seo:BronzeSponsorship (Bronze sponsorship)
+
+AnnotationAssertion(rdfs:comment seo:BronzeSponsorship "A Sponsorship Package."@en)
+AnnotationAssertion(rdfs:label seo:BronzeSponsorship "Bronze sponsorship"@en)
+SubClassOf(seo:BronzeSponsorship seo:Sponsorship)
+
+# Class: seo:Chair (Chair)
+
+AnnotationAssertion(rdfs:comment seo:Chair "The Chair person must ensure that the Management Committee functions properly, that there is full participation during meetings, that all relevant matters are discussed and that effective decisions are made and carried out."@en)
+AnnotationAssertion(rdfs:label seo:Chair "Chair"@en)
+SubClassOf(seo:Chair <http://xmlns.com/foaf/0.1/Person>)
+
+# Class: seo:ChallengeTrack (Challenge track)
+
+AnnotationAssertion(rdfs:comment seo:ChallengeTrack "The idea of the challenge track is to provide participants with a set of case studies and challenge the state of the art."@en)
+AnnotationAssertion(rdfs:label seo:ChallengeTrack "Challenge track"@en)
+SubClassOf(seo:ChallengeTrack swc:Track)
+
+# Class: seo:DemoChair (Demo chair)
+
+AnnotationAssertion(rdfs:comment seo:DemoChair "A person responsible for assembling the system demonstration papers to be presented in the main conference program. "@en)
+AnnotationAssertion(rdfs:label seo:DemoChair "Demo chair"@en)
+SubClassOf(seo:DemoChair seo:Chair)
+
+# Class: seo:DemosTrack (Demos track)
+
+AnnotationAssertion(rdfs:comment seo:DemosTrack "Offer an opportunity for presenting late-breaking research results, on-going research projects, and speculative or innovative work in progress."@en)
+AnnotationAssertion(rdfs:label seo:DemosTrack "Demos track"@en)
+SubClassOf(seo:DemosTrack swc:Track)
+
+# Class: seo:DoctoralConsortium (Doctoral consortium)
+
+AnnotationAssertion(rdfs:comment seo:DoctoralConsortium "Provide PhD students an opportunity to share and develop their research ideas in a critical but supportive environment."@en)
+AnnotationAssertion(rdfs:label seo:DoctoralConsortium "Doctoral consortium"@en)
+SubClassOf(seo:DoctoralConsortium swc:AcademicEvent)
+
+# Class: seo:DoctoralConsortiumChair (Doctoral consortium chair)
+
+AnnotationAssertion(rdfs:comment seo:DoctoralConsortiumChair "The event member who leads the doctoral consortium."@en)
+AnnotationAssertion(rdfs:label seo:DoctoralConsortiumChair "Doctoral consortium chair"@en)
+SubClassOf(seo:DoctoralConsortiumChair seo:Chair)
+
+# Class: seo:EarlyBirdRegistration (Early bird registration)
+
+AnnotationAssertion(rdfs:comment seo:EarlyBirdRegistration "Registration before a specific date."@en)
+AnnotationAssertion(rdfs:label seo:EarlyBirdRegistration "Early bird registration"@en)
+SubClassOf(seo:EarlyBirdRegistration seo:Registration)
+DisjointClasses(seo:EarlyBirdRegistration seo:LateRegistration)
+
+# Class: seo:EventReception (Event reception)
+
+AnnotationAssertion(rdfs:comment seo:EventReception "The reception event within a scientific event ."@en)
+AnnotationAssertion(rdfs:label seo:EventReception "Event reception"@en)
+SubClassOf(seo:EventReception swc:SocialEvent)
+
+# Class: seo:Flyer (Flyer)
+
+AnnotationAssertion(rdfs:comment seo:Flyer "An announcement or advertisement that is printed on a sheet of paper and given to people."@en)
+AnnotationAssertion(rdfs:label seo:Flyer "Flyer"@en)
+
+# Class: seo:GeneralChair (General chair)
+
+AnnotationAssertion(rdfs:comment seo:GeneralChair "A person responsible for overseeing and coordinating the whole conference. ."@en)
+AnnotationAssertion(rdfs:label seo:GeneralChair "General chair"@en)
+SubClassOf(seo:GeneralChair seo:Chair)
+
+# Class: seo:GetTogetherEvent (Get together event)
+
+AnnotationAssertion(rdfs:comment seo:GetTogetherEvent "Socially gather two or more people in one event ."@en)
+AnnotationAssertion(rdfs:label seo:GetTogetherEvent "Get together event"@en)
+SubClassOf(seo:GetTogetherEvent swc:SocialEvent)
+
+# Class: seo:GoldSponsorship (Gold sponsorship)
+
+AnnotationAssertion(rdfs:comment seo:GoldSponsorship "Sponsorship Package."@en)
+AnnotationAssertion(rdfs:label seo:GoldSponsorship "Gold sponsorship"@en)
+SubClassOf(seo:GoldSponsorship seo:Sponsorship)
+
+# Class: seo:HonorChair (Honor chair)
+
+AnnotationAssertion(rdfs:comment seo:HonorChair "Chair of the conference ."@en)
+AnnotationAssertion(rdfs:label seo:HonorChair "Honor chair"@en)
+SubClassOf(seo:HonorChair seo:Chair)
+
+# Class: seo:ImportantDates (Important dates)
+
+AnnotationAssertion(rdfs:comment seo:ImportantDates "Important dates to be noticed such as, abstract deadline, submission deadline, ...etc ."@en)
+AnnotationAssertion(rdfs:label seo:ImportantDates "Important dates"@en)
+
+# Class: seo:In-useTrack (In-use track)
+
+AnnotationAssertion(rdfs:comment seo:In-useTrack "In-Use track provides researchers to discuss novel research taken to the market."@en)
+AnnotationAssertion(rdfs:label seo:In-useTrack "In-use track"@en)
+SubClassOf(seo:In-useTrack swc:Track)
+
+# Class: seo:IndustrialConference (Industrial conference)
+
+AnnotationAssertion(rdfs:comment seo:IndustrialConference "A business conference is held for people working in the same company or industry."@en)
+AnnotationAssertion(rdfs:label seo:IndustrialConference "Industrial conference"@en)
+SubClassOf(seo:IndustrialConference swc:NonAcademicEvent)
+
+# Class: seo:IndustryTrack (Industry track)
+
+AnnotationAssertion(rdfs:comment seo:IndustryTrack "The industry track seeks to present research contributions in industrial settings."@en)
+AnnotationAssertion(rdfs:label seo:IndustryTrack "Industry track"@en)
+SubClassOf(seo:IndustryTrack swc:Track)
+
+# Class: seo:InvitedSpeakers (Invited speakers)
+
+AnnotationAssertion(rdfs:comment seo:InvitedSpeakers "Invited person to give a speech in an event."@en)
+AnnotationAssertion(rdfs:label seo:InvitedSpeakers "Invited speakers"@en)
+SubClassOf(seo:InvitedSpeakers <http://xmlns.com/foaf/0.1/Person>)
+
+# Class: seo:Keynote (Keynote speech)
+
+AnnotationAssertion(rdfs:comment seo:Keynote "A talk that establishes a main underlying the theme of the event.")
+AnnotationAssertion(rdfs:label seo:Keynote "Keynote speech")
+
+# Class: seo:KeynoteSpeaker (Keynote speaker)
+
+AnnotationAssertion(rdfs:comment seo:KeynoteSpeaker "Someone who gives the main address at a formal gathering such as a conference ."@en)
+AnnotationAssertion(rdfs:label seo:KeynoteSpeaker "Keynote speaker"@en)
+SubClassOf(seo:KeynoteSpeaker seo:InvitedSpeakers)
+
+# Class: seo:LateRegistration (Late registration)
+
+AnnotationAssertion(rdfs:comment seo:LateRegistration "Registration after a specific deadline ."@en)
+AnnotationAssertion(rdfs:label seo:LateRegistration "Late registration"@en)
+SubClassOf(seo:LateRegistration seo:Registration)
+
+# Class: seo:LocalOrganisationChair (Local organisation chair)
+
+AnnotationAssertion(rdfs:comment seo:LocalOrganisationChair "The chair of the local organizers of the event. "@en)
+AnnotationAssertion(rdfs:label seo:LocalOrganisationChair "Local organisation chair"@en)
+SubClassOf(seo:LocalOrganisationChair seo:Chair)
+
+# Class: seo:OnSiteRegistration (On site registration)
+
+AnnotationAssertion(rdfs:comment seo:OnSiteRegistration "Process of signing up for an event on the day of, or at the site of, the event."@en)
+AnnotationAssertion(rdfs:label seo:OnSiteRegistration "On site registration"@en)
+SubClassOf(seo:OnSiteRegistration seo:Registration)
+
+# Class: seo:Organizer (Organizer)
+
+AnnotationAssertion(rdfs:comment seo:Organizer "A person who arranges an event or activity. ."@en)
+AnnotationAssertion(rdfs:label seo:Organizer "Organizer"@en)
+SubClassOf(seo:Organizer <http://xmlns.com/foaf/0.1/Person>)
+
+# Class: seo:PHDSymposium (PHD symposium)
+
+AnnotationAssertion(rdfs:comment seo:PHDSymposium "Event for PHD student to present and receive feedback on their ongoing work."@en)
+AnnotationAssertion(rdfs:label seo:PHDSymposium "PHD symposium"@en)
+SubClassOf(seo:PHDSymposium seo:Symposium)
+
+# Class: seo:PastEvents (Past events)
+
+AnnotationAssertion(rdfs:comment seo:PastEvents "Events happened or existed before the present time. "@en)
+AnnotationAssertion(rdfs:label seo:PastEvents "Past events"@en)
+
+# Class: seo:PlatinumSponsorship (Platinum sponsorship)
+
+AnnotationAssertion(rdfs:comment seo:PlatinumSponsorship "Sponsorship Package."@en)
+AnnotationAssertion(rdfs:label seo:PlatinumSponsorship "Platinum sponsorship"@en)
+SubClassOf(seo:PlatinumSponsorship seo:Sponsorship)
+
+# Class: seo:PosterChair (Poster chair)
+
+AnnotationAssertion(rdfs:comment seo:PosterChair "The poster chair is responsible for recruiting and selecting poster fair organizers for the fairs that fall under the shared interest category."@en)
+AnnotationAssertion(rdfs:label seo:PosterChair "Poster chair"@en)
+SubClassOf(seo:PosterChair seo:Chair)
+
+# Class: seo:PostersTrack (Posters track)
+
+AnnotationAssertion(rdfs:comment seo:PostersTrack "Present research contributions as posters."@en)
+AnnotationAssertion(rdfs:label seo:PostersTrack "Posters track"@en)
+SubClassOf(seo:PostersTrack swc:Track)
+
+# Class: seo:ProgramChair (Program chair)
+
+AnnotationAssertion(rdfs:comment seo:ProgramChair "The Program Chair is responsible for working to develop the annual program budget, manage chapter-programming delivery, monitor program quality, manage member satisfaction with programs, and manage all speaker communications. "@en)
+AnnotationAssertion(rdfs:label seo:ProgramChair "Program chair"@en)
+SubClassOf(seo:ProgramChair seo:Chair)
+
+# Class: seo:ProgramCommitteeMember (Program committee member)
+
+AnnotationAssertion(rdfs:comment seo:ProgramCommitteeMember "The program committee is responsible for objectively and thoroughly reviewing all submissions, for submitting timely, informative reviews that provide authors with feedback about their submissions, and for attending the program committee meetings."@en)
+AnnotationAssertion(rdfs:label seo:ProgramCommitteeMember "Program committee member"@en)
+SubClassOf(seo:ProgramCommitteeMember <http://xmlns.com/foaf/0.1/Person>)
+
+# Class: seo:ProgramSchedule (Program schedule)
+
+AnnotationAssertion(rdfs:comment seo:ProgramSchedule "A plan for carrying out a process or procedure, giving lists of intended events and times."@en)
+AnnotationAssertion(rdfs:label seo:ProgramSchedule "Program schedule"@en)
+
+# Class: seo:Publisher (Publisher)
+
+AnnotationAssertion(rdfs:comment seo:Publisher "The publisher of the event proceedings."@en)
+AnnotationAssertion(rdfs:label seo:Publisher "Publisher"@en)
+SubClassOf(seo:Publisher <http://xmlns.com/foaf/0.1/Organization>)
+
+# Class: seo:Registration (Registration)
+
+AnnotationAssertion(rdfs:comment seo:Registration "The action or process of registering or of being registered."@en)
+AnnotationAssertion(rdfs:label seo:Registration "Registration"@en)
+
+# Class: seo:RegularRegistration (Regular registration)
+
+AnnotationAssertion(rdfs:comment seo:RegularRegistration "Normal registration"@en)
+AnnotationAssertion(rdfs:label seo:RegularRegistration "Regular registration"@en)
+SubClassOf(seo:RegularRegistration seo:AuthorRegistration)
+DisjointClasses(seo:RegularRegistration seo:StudentRegistration)
+
+# Class: seo:ResearchField (Research field)
+
+AnnotationAssertion(rdfs:comment seo:ResearchField "Area of interest."@en)
+AnnotationAssertion(rdfs:label seo:ResearchField "Research field"@en)
+
+# Class: seo:ResearchTrack (Research track)
+
+AnnotationAssertion(rdfs:comment seo:ResearchTrack "The track for fundamental research, innovative technology, and applications concerning the research topic of the event."@en)
+AnnotationAssertion(rdfs:label seo:ResearchTrack "Research track"@en)
+SubClassOf(seo:ResearchTrack swc:Track)
+
+# Class: seo:ResourceTrack (Resource track)
+
+AnnotationAssertion(rdfs:comment seo:ResourceTrack "The Resources Track aims to promote the sharing of resources including: datasets, ontologies, vocabularies, ... etc"@en)
+AnnotationAssertion(rdfs:label seo:ResourceTrack "Resource track"@en)
+SubClassOf(seo:ResourceTrack swc:Track)
+
+# Class: seo:Reviewer (Reviewer)
+
+AnnotationAssertion(rdfs:comment seo:Reviewer "A person who reviews the submissions and give feedback about the submitted articles."@en)
+AnnotationAssertion(rdfs:label seo:Reviewer "Reviewer"@en)
+SubClassOf(seo:Reviewer <http://xmlns.com/foaf/0.1/Person>)
+
+# Class: seo:SilverSponsorship (Silver sponsorship)
+
+AnnotationAssertion(rdfs:comment seo:SilverSponsorship "Sponsorship Package."@en)
+AnnotationAssertion(rdfs:label seo:SilverSponsorship "Silver sponsorship"@en)
+SubClassOf(seo:SilverSponsorship seo:Sponsorship)
+
+# Class: seo:Sponsor (Sponsor)
+
+AnnotationAssertion(rdfs:comment seo:Sponsor "The Sponsor of the event (i.e. company, university ... etc.)."@en)
+AnnotationAssertion(rdfs:label seo:Sponsor "Sponsor"@en)
+SubClassOf(seo:Sponsor <http://xmlns.com/foaf/0.1/Organization>)
+
+# Class: seo:Sponsorship (Sponsorship)
+
+AnnotationAssertion(rdfs:comment seo:Sponsorship "Refer to a person or organization with some sort of responsibility for another person or organisation."@en)
+AnnotationAssertion(rdfs:label seo:Sponsorship "Sponsorship"@en)
+
+# Class: seo:SponsorshipChair (Sponsorship chair)
+
+AnnotationAssertion(rdfs:comment seo:SponsorshipChair "A person responsible for collecting funding from two kinds of sources: granting institutions and corporations. "@en)
+AnnotationAssertion(rdfs:label seo:SponsorshipChair "Sponsorship chair"@en)
+SubClassOf(seo:SponsorshipChair seo:Chair)
+
+# Class: seo:Student (Student)
+
+AnnotationAssertion(rdfs:comment seo:Student "A person enrolled in a school or other educational institution."@en)
+AnnotationAssertion(rdfs:label seo:Student "Student"@en)
+SubClassOf(seo:Student <http://xmlns.com/foaf/0.1/Person>)
+
+# Class: seo:StudentRegistration (Student registration)
+
+AnnotationAssertion(rdfs:comment seo:StudentRegistration "Students full-time enrolled in a college or university can register as a student for the reduced early career rate."@en)
+AnnotationAssertion(rdfs:label seo:StudentRegistration "Student registration"@en)
+SubClassOf(seo:StudentRegistration seo:AuthorRegistration)
+
+# Class: seo:SubmissionGuidelines (Submission guidelines)
+
+AnnotationAssertion(rdfs:comment seo:SubmissionGuidelines "Instructions for the submission process ."@en)
+AnnotationAssertion(rdfs:label seo:SubmissionGuidelines "Submission guidelines"@en)
+
+# Class: seo:Symposium (Symposium)
+
+AnnotationAssertion(rdfs:comment seo:Symposium "A conference or meeting to discuss a particular subject."@en)
+AnnotationAssertion(rdfs:label seo:Symposium "Symposium"@en)
+SubClassOf(seo:Symposium swc:AcademicEvent)
+
+# Class: seo:SymposiumSeries (Symposiums series)
+
+AnnotationAssertion(rdfs:comment seo:SymposiumSeries "A series of symposiums."@en)
+AnnotationAssertion(rdfs:label seo:SymposiumSeries "Symposiums series"@en)
+SubClassOf(seo:SymposiumSeries swc:EventSeries)
+
+# Class: seo:TravelInformation (Travel information)
+
+AnnotationAssertion(rdfs:comment seo:TravelInformation "The information about the travel: date, place, ...etc ."@en)
+AnnotationAssertion(rdfs:label seo:TravelInformation "Travel information"@en)
+
+# Class: seo:TutorialChair (Tutorial chair)
+
+AnnotationAssertion(rdfs:comment seo:TutorialChair "A person responsible for requesting tutorial proposals and making final selections."@en)
+AnnotationAssertion(rdfs:label seo:TutorialChair "Tutorial chair"@en)
+SubClassOf(seo:TutorialChair seo:Chair)
+
+# Class: seo:WorkshopChair (Workshop chair)
+
+AnnotationAssertion(rdfs:comment seo:WorkshopChair "The one responsible for collaborating with the workshop chairs for other ACL-affiliated conferences in the given year, in preparing and circulating the Call for Proposals, and in reviewing submissions."@en)
+AnnotationAssertion(rdfs:label seo:WorkshopChair "Workshop chair"@en)
+SubClassOf(seo:WorkshopChair seo:Chair)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: terms: (terms:)
+
+AnnotationAssertion(terms:modified <http://purl.org/dc/terms/> "2012-06-14"^^xsd:date)
+AnnotationAssertion(terms:publisher <http://purl.org/dc/terms/> <http://purl.org/dc/aboutdcmi#DCMI>)
+AnnotationAssertion(terms:title <http://purl.org/dc/terms/> "DCMI Metadata Terms - other"@en)
+
+# Individual: terms:Agent (Agent)
+
+ClassAssertion(terms:AgentClass terms:Agent)
+
+# Individual: terms:DCMIType (DCMI Type Vocabulary)
+
+AnnotationAssertion(terms:hasVersion terms:DCMIType <http://dublincore.org/usage/terms/history/#DCMIType-005>)
+AnnotationAssertion(terms:issued terms:DCMIType "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:DCMIType "2012-06-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:DCMIType "The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:DCMIType <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:DCMIType "DCMI Type Vocabulary"@en)
+AnnotationAssertion(rdfs:seeAlso terms:DCMIType <http://purl.org/dc/dcmitype/>)
+
+# Individual: terms:DDC (DDC)
+
+AnnotationAssertion(terms:hasVersion terms:DDC <http://dublincore.org/usage/terms/history/#DDC-003>)
+AnnotationAssertion(terms:issued terms:DDC "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:DDC "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:DDC "The set of conceptual resources specified by the Dewey Decimal Classification."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:DDC <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:DDC "DDC"@en)
+AnnotationAssertion(rdfs:seeAlso terms:DDC <http://www.oclc.org/dewey/>)
+
+# Individual: terms:IMT (IMT)
+
+AnnotationAssertion(terms:hasVersion terms:IMT <http://dublincore.org/usage/terms/history/#IMT-004>)
+AnnotationAssertion(terms:issued terms:IMT "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:IMT "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:IMT "The set of media types specified by the Internet Assigned Numbers Authority."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:IMT <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:IMT "IMT"@en)
+AnnotationAssertion(rdfs:seeAlso terms:IMT <http://www.iana.org/assignments/media-types/>)
+
+# Individual: terms:LCC (LCC)
+
+AnnotationAssertion(terms:hasVersion terms:LCC <http://dublincore.org/usage/terms/history/#LCC-003>)
+AnnotationAssertion(terms:issued terms:LCC "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:LCC "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:LCC "The set of conceptual resources specified by the Library of Congress Classification."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:LCC <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:LCC "LCC"@en)
+AnnotationAssertion(rdfs:seeAlso terms:LCC <http://lcweb.loc.gov/catdir/cpso/lcco/lcco.html>)
+
+# Individual: terms:LCSH (LCSH)
+
+AnnotationAssertion(terms:hasVersion terms:LCSH <http://dublincore.org/usage/terms/history/#LCSH-003>)
+AnnotationAssertion(terms:issued terms:LCSH "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:LCSH "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:LCSH "The set of labeled concepts specified by the Library of Congress Subject Headings."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:LCSH <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:LCSH "LCSH"@en)
+
+# Individual: terms:MESH (MeSH)
+
+AnnotationAssertion(terms:hasVersion terms:MESH <http://dublincore.org/usage/terms/history/#MESH-003>)
+AnnotationAssertion(terms:issued terms:MESH "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:MESH "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:MESH "The set of labeled concepts specified by the Medical Subject Headings."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:MESH <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:MESH "MeSH"@en)
+AnnotationAssertion(rdfs:seeAlso terms:MESH <http://www.nlm.nih.gov/mesh/meshhome.html>)
+
+# Individual: terms:NLM (NLM)
+
+AnnotationAssertion(terms:hasVersion terms:NLM <http://dublincore.org/usage/terms/history/#NLM-002>)
+AnnotationAssertion(terms:issued terms:NLM "2005-06-13"^^xsd:date)
+AnnotationAssertion(terms:modified terms:NLM "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:NLM "The set of conceptual resources specified by the National Library of Medicine Classification."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:NLM <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:NLM "NLM"@en)
+AnnotationAssertion(rdfs:seeAlso terms:NLM <http://wwwcf.nlm.nih.gov/class/>)
+
+# Individual: terms:TGN (TGN)
+
+AnnotationAssertion(terms:hasVersion terms:TGN <http://dublincore.org/usage/terms/history/#TGN-003>)
+AnnotationAssertion(terms:issued terms:TGN "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:TGN "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:TGN "The set of places specified by the Getty Thesaurus of Geographic Names."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:TGN <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:TGN "TGN"@en)
+AnnotationAssertion(rdfs:seeAlso terms:TGN <http://www.getty.edu/research/tools/vocabulary/tgn/index.html>)
+
+# Individual: terms:UDC (UDC)
+
+AnnotationAssertion(terms:hasVersion terms:UDC <http://dublincore.org/usage/terms/history/#UDC-003>)
+AnnotationAssertion(terms:issued terms:UDC "2000-07-11"^^xsd:date)
+AnnotationAssertion(terms:modified terms:UDC "2008-01-14"^^xsd:date)
+AnnotationAssertion(rdfs:comment terms:UDC "The set of conceptual resources specified by the Universal Decimal Classification."@en)
+AnnotationAssertion(rdfs:isDefinedBy terms:UDC <http://purl.org/dc/terms/>)
+AnnotationAssertion(rdfs:label terms:UDC "UDC"@en)
+AnnotationAssertion(rdfs:seeAlso terms:UDC <http://www.udcc.org/>)
+
+# Individual: seo:ArtificialIntelligence (seo:ArtificialIntelligence)
+
+ClassAssertion(seo:ResearchField seo:ArtificialIntelligence)
+
+# Individual: seo:ComputerSystemsOrganization (seo:ComputerSystemsOrganization)
+
+ClassAssertion(seo:ResearchField seo:ComputerSystemsOrganization)
+
+# Individual: seo:HumanCenteredComputing (seo:HumanCenteredComputing)
+
+ClassAssertion(seo:ResearchField seo:HumanCenteredComputing)
+
+# Individual: seo:InformationSystems (seo:InformationSystems)
+
+ClassAssertion(seo:ResearchField seo:InformationSystems)
+
+# Individual: seo:SecurityAndPrivacy (seo:SecurityAndPrivacy)
+
+ClassAssertion(seo:ResearchField seo:SecurityAndPrivacy)
+
+# Individual: seo:SoftwareEngineering (seo:SoftwareEngineering)
+
+ClassAssertion(seo:ResearchField seo:SoftwareEngineering)
+
+# Individual: seo:TheoryOfComputations (seo:TheoryOfComputations)
+
+ClassAssertion(seo:ResearchField seo:TheoryOfComputations)
+
+# Individual: seo:WorldWideWeb (seo:WorldWideWeb)
+
+ClassAssertion(seo:ResearchField seo:WorldWideWeb)
+
+
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "S3"^^xsd:string) Body(ClassAtom(swc:Agent Variable(<urn:swrl#a>)) ObjectPropertyAtom(swc:holdsRoleIn Variable(<urn:swrl#a>) Variable(<urn:swrl#e>)))Head(ObjectPropertyAtom(seo:participatesIn Variable(<urn:swrl#a>) Variable(<urn:swrl#e>))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "S4"^^xsd:string) Body(BuiltInAtom(<http://www.w3.org/2003/11/swrlb#equal> Variable(<http://rdfs.org/sioc/ns#l1>) Variable(<http://rdfs.org/sioc/ns#l2>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#equal> Variable(<http://rdfs.org/sioc/ns#ed1>) Variable(<http://rdfs.org/sioc/ns#ed2>)) ObjectPropertyAtom(swc:hasLocation Variable(<http://rdfs.org/sioc/ns#e1>) Variable(<http://rdfs.org/sioc/ns#l1>)) ObjectPropertyAtom(swc:hasLocation Variable(<http://rdfs.org/sioc/ns#e2>) Variable(<http://rdfs.org/sioc/ns#l2>)) DataPropertyAtom(swc:startDate Variable(<http://rdfs.org/sioc/ns#e1>) Variable(<http://rdfs.org/sioc/ns#sd1>)) DataPropertyAtom(swc:endDate Variable(<http://rdfs.org/sioc/ns#e1>) Variable(<http://rdfs.org/sioc/ns#ed1>)) DataPropertyAtom(swc:startDate Variable(<http://rdfs.org/sioc/ns#e2>) Variable(<http://rdfs.org/sioc/ns#sd2>)) DataPropertyAtom(swc:endDate Variable(<http://rdfs.org/sioc/ns#e2>) Variable(<http://rdfs.org/sioc/ns#ed2>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#equal> Variable(<http://rdfs.org/sioc/ns#sd1>) Variable(<http://rdfs.org/sioc/ns#sd2>)))Head(ObjectPropertyAtom(seo:colocatedWith Variable(<http://rdfs.org/sioc/ns#e1>) Variable(<http://rdfs.org/sioc/ns#e2>))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "S5"^^xsd:string) Body(ObjectPropertyAtom(seo:colocatedWith Variable(<http://rdfs.org/sioc/ns#e1>) Variable(<http://rdfs.org/sioc/ns#e2>)) ObjectPropertyAtom(swc:hasLocation Variable(<http://rdfs.org/sioc/ns#e1>) Variable(<http://rdfs.org/sioc/ns#l1>)))Head(ObjectPropertyAtom(swc:hasLocation Variable(<http://rdfs.org/sioc/ns#e2>) Variable(<http://rdfs.org/sioc/ns#l1>))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "S6"^^xsd:string) Body(ObjectPropertyAtom(seo:colocatedWith Variable(<http://rdfs.org/sioc/ns#e1>) Variable(<http://rdfs.org/sioc/ns#e2>)) ObjectPropertyAtom(swc:hasLocation Variable(<http://rdfs.org/sioc/ns#e2>) Variable(<http://rdfs.org/sioc/ns#l>)))Head(ObjectPropertyAtom(swc:hasLocation Variable(<http://rdfs.org/sioc/ns#e1>) Variable(<http://rdfs.org/sioc/ns#l>))))
+)

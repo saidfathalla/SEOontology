@@ -6,18 +6,12 @@
 @prefix this: <> .
 
 this:Dataset a void:Dataset ; 
- rdfs:seeAlso <http://purl.org/seo> ; 
- rdfs:label "OR-SEO, The Scientific Events Ontology ForRepresenting Scientific Events Metadata" ; 
- void:sparqlEndpoint <http://localhost:8890/sparql> ; 
- void:triples 1369 ; 
- void:classes 17 ; 
- void:entities 224 ; 
- void:distinctSubjects 232 ; 
- void:properties 39 ; 
- void:distinctObjects 573 . 
+ rdfs:seeAlso <https://w3id.org/seo#> ; 
+ rdfs:label "OR-SEO, The Scientific Events Ontology For Representing Scientific Events Metadata" ; 
+ void:sparqlEndpoint <http://kddste.sda.tech/SEOontology/sparql> ; 
+ void:triples 2087 ; 
+ void:classes 59 ; 
+ void:properties 40 ; 
+ void:distinctObjects 7762 . 
 
-this:seeAlsoLinks a void:Linkset ;
- void:inDataset this:Dataset ; 
- void:triples 21 ; 
- void:linkPredicate rdfs:seeAlso . 
 

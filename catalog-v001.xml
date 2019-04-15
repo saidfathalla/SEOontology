@@ -10,7 +10,7 @@
     <uri id="Imports Wizard Entry" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="https://w3id.org/scholarlydata/ontology/conference-ontology.owl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="https://w3id.org/scholarlydata/ontology/conference-ontology.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1554926089563" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="conference-ontology.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1554926089563" name="https://w3id.org/seo#" uri="SEO.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1555319060720" name="http://www.w3.org/2002/07/owl" uri="seo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1555319060720" name="https://w3id.org/scholarlydata/ontology/conference-ontology.owl" uri="conference-ontology.owl"/>
     </group>
 </catalog>
