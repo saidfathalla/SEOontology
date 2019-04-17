@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html prefix="dc: http://purl.org/dc/terms/ schema: http://schema.org/ prov: http://www.w3.org/ns/prov# foaf: http://xmlns.com/foaf/0.1/ owl: http://www.w3.org/2002/07/owl#">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <title>SEO, The Scientific Events Ontology.</title>
 <link href="./index_files/owl.css" rel="stylesheet" type="text/css"><link href="./index_files/Primer.css" rel="stylesheet" type="text/css"><link href="./index_files/rec.css" rel="stylesheet" type="text/css"><link href="./index_files/extra.css" rel="stylesheet" type="text/css"><link rel="shortcut icon" href="http://eelst.cs.unibo.it/apps/LODE/favicon.ico"><script src="./index_files/jquery.js.download"></script><script src="./index_files/jquery.scrollTo.js.download"></script><script src="./index_files/marked.min.js.download"></script><script>
                 $(document).ready(
@@ -47,7 +48,7 @@ function loadHash() {
         <h2 id="introduction">Introduction</h2><p>SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops.</p>
 <div id="classes"><h2>Classes</h2><ul class="hlist">
 	<!-- <li><a href="#http://purl.org/dc/terms/Agent" title="http://purl.org/dc/terms/Agent">Agent</a></li> -->
-<li><a href="#c1" title="https://w3id.org/seo#Author"><span>Author</span></a></li>
+<li><a href="#Author" title="https://w3id.org/seo#Author"><span>Author</span></a></li>
 <li><a href="#c2" title="https://w3id.org/seo#AuthorRegistration"><span>Author registration</span></a></li>
 <li><a href="#c3" title="https://w3id.org/seo#Award"><span>Award</span></a></li>
 <li><a href="#c4" title="https://w3id.org/seo#BestApplicationsPaperAward"><span>Best applications paper award</span></a></li>
@@ -122,7 +123,7 @@ function loadHash() {
 	<dl class="description"><dt>is in range of</dt><dd><a href="#d4e1875" title="http://purl.org/dc/terms/contributor">Contributor</a><sup title="object property" class="type-op">op</sup>, <a href="#d4e1929" title="http://purl.org/dc/terms/creator">Creator</a><sup title="object property" class="type-op">op</sup>, <a href="#d4e2205" title="http://purl.org/dc/terms/publisher">Publisher</a><sup title="object property" class="type-op">op</sup>, <a href="#d4e2259" title="http://purl.org/dc/terms/rightsHolder">Rights Holder</a><sup title="object property" class="type-op">op</sup></dd><dt>is also defined as</dt><dd><a href="#d4e4033">named individual</a></dd></dl>
 </div> -->
 
-<div id="c1" class="entity"><a name="https://w3id.org/seo#Author"></a>
+<div id="Author" class="entity"><a name="https://w3id.org/seo#Author"></a>
 	<h3>Author<sup title="class" class="type-c">c</sup>
 		<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
 	<p><strong>IRI:</strong> https://w3id.org/seo#Author</p>
@@ -1013,7 +1014,7 @@ function loadHash() {
 	<p><strong>IRI:</strong> https://w3id.org/seo#hasRegistrationType</p>
 	<div class="description">
 		<dl><dt>has domain</dt>
-			<dd><a href="#c1" title="https://w3id.org/seo#Author">Author</a><sup title="class" class="type-c">c</sup></dd>
+			<dd><a href="#Author" title="https://w3id.org/seo#Author">Author</a><sup title="class" class="type-c">c</sup></dd>
 			<dt>has range</dt>
 			<dd><a href="#c15" title="https://w3id.org/seo#EarlyBirdRegistration">Early bird registration</a><sup title="class" class="type-c">c</sup> <span class="logic">or</span> <a href="#c29" title="https://w3id.org/seo#LateRegistration">Late registration</span><sup title="class" class="type-c">c</sup>
 			</dd></dl>
@@ -1135,7 +1136,7 @@ function loadHash() {
 		<dl><dt>has domain</dt>
 			<dd><span class="dotted" title="http://xmlns.com/foaf/0.1#Person">Person</span></dd>
 			<dt>has range</dt>
-			<dd><a href="#c1" title="https://w3id.org/seo#Author">Author</a><sup title="class" class="type-c">c</sup> 
+			<dd><a href="#Author" title="https://w3id.org/seo#Author">Author</a><sup title="class" class="type-c">c</sup> 
 				<span class="logic">or</span> 
 				<a href="#c9" title="https://w3id.org/seo#Chair">Chair</span><sup title="class" class="type-c">c</sup></a>
 				<span class="logic">or</span> 
@@ -1152,7 +1153,7 @@ function loadHash() {
 <div id="d2" class="entity"><a name="https://w3id.org/seo#registeredAs"></a>
 <h3>registered As<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
 <p><strong>IRI:</strong> https://w3id.org/seo#registeredAs</p>
-<div class="description"><dl><dt>has domain</dt><dd><a href="#c1" title="https://w3id.org/seo#Author">Author</a><sup title="class" class="type-c">c</sup></dd><dt>has range</dt><dd><a href="#c2" title="https://w3id.org/seo#AuthorRegistration">Author registration</a><sup title="class" class="type-c">c</sup></dd></dl></div></div>
+<div class="description"><dl><dt>has domain</dt><dd><a href="#Author" title="https://w3id.org/seo#Author">Author</a><sup title="class" class="type-c">c</sup></dd><dt>has range</dt><dd><a href="#c2" title="https://w3id.org/seo#AuthorRegistration">Author registration</a><sup title="class" class="type-c">c</sup></dd></dl></div></div>
 
 <div id="d29" class="entity"><a name="https://w3id.org/seo#sponsorshipType"></a><h3>sponsorship Type<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3><p><strong>IRI:</strong> https://w3id.org/seo#sponsorshipType</p><div class="description"><dl><dt>has domain</dt><dd><a href="#c49" title="https://w3id.org/seo#Sponsor">Sponsor</a><sup title="class" class="type-c">c</sup></dd><dt>has range</dt><dd><a href="#c50" title="https://w3id.org/seo#Sponsorship">Sponsorship</a><sup title="class" class="type-c">c</sup></dd></dl></div></div>
 
@@ -1161,7 +1162,7 @@ function loadHash() {
 	<p><strong>IRI:</strong> https://w3id.org/seo#takesAward</p>
 	<div class="description">
 		<dl><dt>has domain</dt>
-			<dd><a href="#c1" title="https://w3id.org/seo#Author">Author</a><sup title="class" class="type-c">c</sup></dd>
+			<dd><a href="#Author" title="https://w3id.org/seo#Author">Author</a><sup title="class" class="type-c">c</sup></dd>
 			<dt>has range</dt>
 			<dd><a href="#c3" title="https://w3id.org/seo#Award">Award</a><sup title="class" class="type-c">c</sup></a>
 				
