@@ -1,15 +1,4 @@
 <?xml version="1.0"?>
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY terms "http://purl.org/dc/terms/" >
-    <!ENTITY vann "http://purl.org/vocab/vann/" >
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
 <rdf:RDF xmlns="https://w3id.org/seo#"
      xml:base="https://w3id.org/seo"
      xmlns:cc="http://creativecommons.org/ns#"
@@ -37,7 +26,7 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/seo#">
-        <owl:imports rdf:resource="http://www.essepuntato.it/2012/04/tvc"/>
+        <owl:imports rdf:resource="http://dbpedia.org/ontology/"/>
         <owl:imports rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl"/>
         <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</owl:versionInfo>
@@ -577,7 +566,9 @@
 
     <!-- http://www.w3.org/2006/time#hasDuration -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasDuration"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasDuration">
+        <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -1173,14 +1164,6 @@
     <!-- http://www.essepuntato.it/2008/12/pattern#isContainedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
-    
-
-
-    <!-- http://www.w3.org/2006/time#hasDuration -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#hasDuration">
-        <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent"/>
-    </rdf:Description>
     
 
 

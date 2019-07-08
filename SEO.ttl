@@ -1,4 +1,4 @@
-@base <https://w3id.org/seo> .
+@prefix : <https://w3id.org/seo##> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
@@ -15,10 +15,11 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix cpannotationschema: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
+@base <https://w3id.org/seo#> .
 
 <https://w3id.org/seo#> rdf:type owl:Ontology ;
                          owl:imports dbo: ,
-                                     <http://www.essepuntato.it/2012/04/tvc> ,
+                                    
                                      <https://w3id.org/scholarlydata/ontology/conference-ontology.owl> ,
                                      <http://xmlns.com/foaf/0.1/> ;
                          owl:versionInfo 1.1 ;
