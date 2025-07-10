@@ -1,59 +1,47 @@
 <?xml version="1.0"?>
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY terms "http://purl.org/dc/terms/" >
-    <!ENTITY vann "http://purl.org/vocab/vann/" >
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
 <rdf:RDF xmlns="https://w3id.org/seo#"
      xml:base="https://w3id.org/seo"
      xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:fabio="http://purl.org/spar/fabio/"
-     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:dbo="http://dbpedia.org/ontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:doco="http://purl.org/spar/doco/"
-     xmlns:time="http://www.w3.org/2006/time#"
      xmlns:seo="https://w3id.org/seo#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:wot="http://xmlns.com/wot/0.1/"
      xmlns:swc="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doco="http://purl.org/spar/doco/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:fabio="http://purl.org/spar/fabio/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/seo#">
         <owl:imports rdf:resource="http://www.essepuntato.it/2012/04/tvc"/>
-        <owl:imports rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl"/>
         <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</owl:versionInfo>
-        <terms:creator>Soeren Auer</terms:creator>
-        <terms:title xml:lang="en">SEO, The Scientific Events Ontology.</terms:title>
+        <owl:imports rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl"/>
+        <dc:contributor>Christoph Lange</dc:contributor>
         <dc:creator>Said Fathalla</dc:creator>
-        <vann:preferredNamespacePrefix>seo</vann:preferredNamespacePrefix>
-        <rdfs:label xml:lang="en">Scientific Events Ontology</rdfs:label>
-        <terms:lastModified xml:lang="en">2019-04-10</terms:lastModified>
-        <terms:creator>Sahar Vahdati</terms:creator>
-        <rdfs:seeAlso xml:lang="en">See also documentation at http://kddste.sda.tech/SEOontology/Documentation/SEO.html</rdfs:seeAlso>
-        <vann:preferredNamespaceUri rdf:datatype="http://purl.org/dc/terms/URI">http://purl.org/seo/</vann:preferredNamespaceUri>
-        <terms:description xml:lang="en">SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops.</terms:description>
         <terms:created xml:lang="en">2018-02-01</terms:created>
-        <dc:creator>Christoph Lange</dc:creator>
-        <terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <terms:creator>Sahar Vahdati</terms:creator>
+        <terms:creator>Soeren Auer</terms:creator>
+        <terms:description xml:lang="en">SEO is a reference ontology for modelling data about scientific events such as conferences, symposioums and workshops.</terms:description>
+        <terms:lastModified xml:lang="en">2019-04-10</terms:lastModified>
+        <terms:title xml:lang="en">SEO, The Scientific Events Ontology.</terms:title>
+        <vann:preferredNamespacePrefix>seo</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://purl.org/dc/terms/URI">http://purl.org/seo/</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="en">Scientific Events Ontology</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">See also documentation at http://kddste.sda.tech/SEOontology/Documentation/SEO.html</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -78,6 +66,12 @@
     <!-- http://purl.org/dc/elements/1.1/coverage -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/coverage"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
@@ -184,7 +178,6 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:domain rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
     </owl:AnnotationProperty>
     
 
@@ -219,11 +212,10 @@
 
     <!-- http://purl.org/dc/terms/created -->
 
-    <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </rdf:Description>
+    </owl:AnnotationProperty>
     
 
 
@@ -410,12 +402,17 @@
     
 
 
+    <!-- http://purl.org/dc/terms/lastModified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/lastModified"/>
+    
+
+
     <!-- http://purl.org/dc/terms/license -->
 
-    <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
-    </rdf:Description>
+    </owl:AnnotationProperty>
     
 
 
@@ -563,6 +560,18 @@
     
 
 
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
     <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
 
     <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
@@ -577,7 +586,9 @@
 
     <!-- http://www.w3.org/2006/time#hasDuration -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasDuration"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasDuration">
+        <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -590,6 +601,14 @@
     <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasProceedings -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasProceedings"/>
+    
+
+
+    <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#holdsRoleIn -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#holdsRoleIn">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -799,6 +818,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/license">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/rights"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
     </owl:ObjectProperty>
     
 
@@ -887,9 +907,7 @@
                 <owl:allValuesFrom rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
             </owl:Restriction>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://org.semanticweb.owlapi/error#Error2"/>
         <rdfs:range rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
-        <rdfs:range rdf:resource="http://purl.org/spar/doco/Appendix"/>
         <rdfs:range rdf:resource="http://purl.org/spar/doco/Section"/>
         <rdfs:range rdf:resource="http://www.essepuntato.it/2008/12/pattern#Bucket"/>
         <rdfs:range rdf:resource="http://www.essepuntato.it/2008/12/pattern#Container"/>
@@ -1035,12 +1053,6 @@
         <rdfs:range>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
-                <owl:someValuesFrom rdf:resource="http://org.semanticweb.owlapi/error#Error3"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -1176,27 +1188,17 @@
     
 
 
-    <!-- http://www.w3.org/2006/time#hasDuration -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#hasDuration">
-        <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent"/>
-    </rdf:Description>
-    
-
-
     <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasAddress -->
 
-    <rdf:Description rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasAddress">
+    <owl:ObjectProperty rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasAddress">
         <rdfs:range rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Agent"/>
-    </rdf:Description>
+    </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#holdsRoleIn -->
+    <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation -->
 
-    <rdf:Description rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#holdsRoleIn">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#hasLocation"/>
     
 
 
@@ -1218,7 +1220,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property links an event to another one which is co-located with.</rdfs:comment>
+        <rdfs:comment>This property links an event to another one which is co-located with.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1283,7 +1285,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/seo#hasProgramCommitteeMember">
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"/>
-        <rdfs:range rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Person"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     </owl:ObjectProperty>
     
 
@@ -1309,7 +1311,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/seo#Publisher"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This propoerty shows the publisher of a proceedings.</rdfs:comment>
+        <rdfs:comment>This propoerty shows the publisher of a proceedings.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1354,7 +1356,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/seo#isSponsorOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/seo#Sponsor"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This propoerty shows the sponsor of an event.</rdfs:comment>
+        <rdfs:comment>This propoerty shows the sponsor of an event.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1374,7 +1376,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/seo#isTrackOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Track"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This propoerty shows the available tracks of an event.</rdfs:comment>
+        <rdfs:comment>This propoerty shows the available tracks of an event.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1556,13 +1558,16 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <rdfs:domain rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://purl.org/dc/terms/created -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -1629,12 +1634,24 @@
     
 
 
+    <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#endDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#endDate"/>
+    
+
+
+    <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#startDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#startDate"/>
+    
+
+
     <!-- https://w3id.org/seo#abstractDeadline -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/seo#abstractDeadline">
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The deadline of abstract submission.</rdfs:comment>
+        <rdfs:comment>The deadline of abstract submission.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1674,7 +1691,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/seo#hasTwitter">
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The twitter account of the event.</rdfs:comment>
+        <rdfs:comment>The twitter account of the event.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1695,7 +1712,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/seo#submissionDeadline">
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The deadline of paper submission.</rdfs:comment>
+        <rdfs:comment>The deadline of paper submission.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1705,7 +1722,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/seo#submissionWebPage">
         <rdfs:domain rdf:resource="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The webpage of the submission to event.</rdfs:comment>
+        <rdfs:comment>The webpage of the submission to event.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1733,29 +1750,13 @@
 
     <!-- http://dbpedia.org/ontology/City -->
 
-    <rdf:Description rdf:about="http://dbpedia.org/ontology/City">
-        <owl:equivalentClass rdf:resource="http://schema.org/City"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://dbpedia.org/ontology/City"/>
     
 
 
     <!-- http://dbpedia.org/ontology/Country -->
 
-    <rdf:Description rdf:about="http://dbpedia.org/ontology/Country">
-        <owl:equivalentClass rdf:resource="http://schema.org/Country"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://org.semanticweb.owlapi/error#Error2 -->
-
-    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error2"/>
-    
-
-
-    <!-- http://org.semanticweb.owlapi/error#Error3 -->
-
-    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error3"/>
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Country"/>
     
 
 
@@ -1840,7 +1841,6 @@
     <!-- http://purl.org/spar/doco/Abstract -->
 
     <owl:Class rdf:about="http://purl.org/spar/doco/Abstract">
-        <rdfs:subClassOf rdf:resource="http://salt.semanticauthoring.org/ontologies/sro#Abstract"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1860,227 +1860,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/spar/doco/Appendix -->
-
-    <owl:Class rdf:about="http://purl.org/spar/doco/Appendix">
-        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error2"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/spar/doco/Section"/>
-        <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Bucket"/>
-        <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Container"/>
-        <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#HeadedContainer"/>
-        <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#NonTextual"/>
-        <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Pattern"/>
-        <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Structured"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/spar/deo/DiscourseElement"/>
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#HeadedContainer"/>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#HeadedContainer"/>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Bucket"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
-                        <owl:allValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
-                                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Popup"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#containsAsHeader"/>
-                        <owl:allValuesFrom rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/spar/doco/Chapter"/>
-                    <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/spar/doco/Paragraph"/>
-                    <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Block"/>
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Block"/>
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Field"/>
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Meta"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Popup"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#HeadedContainer"/>
-                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Table"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Textual"/>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/BackMatter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/spar/doco/BackMatter"/>
-                            <rdf:Description rdf:about="http://purl.org/spar/doco/FrontMatter"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
-                <owl:someValuesFrom rdf:resource="http://org.semanticweb.owlapi/error#Error3"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/spar/doco/Paragraph"/>
-                            <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://purl.org/spar/doco/Chapter"/>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Block"/>
-                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
-                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Field"/>
-                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Meta"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#containsAsHeader"/>
-                <owl:allValuesFrom rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Bucket"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
-                                <owl:allValuesFrom>
-                                    <owl:Class>
-                                        <owl:unionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
-                                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Popup"/>
-                                        </owl:unionOf>
-                                    </owl:Class>
-                                </owl:allValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
-                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Popup"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2306,24 +2085,6 @@
     
 
 
-    <!-- http://salt.semanticauthoring.org/ontologies/sro#Abstract -->
-
-    <owl:Class rdf:about="http://salt.semanticauthoring.org/ontologies/sro#Abstract"/>
-    
-
-
-    <!-- http://schema.org/City -->
-
-    <rdf:Description rdf:about="http://schema.org/City"/>
-    
-
-
-    <!-- http://schema.org/Country -->
-
-    <rdf:Description rdf:about="http://schema.org/Country"/>
-    
-
-
     <!-- http://swrc.ontoware.org/ontology#Proceedings -->
 
     <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Proceedings">
@@ -2435,15 +2196,45 @@
     
 
 
+    <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Agent -->
+
+    <owl:Class rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Agent"/>
+    
+
+
     <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries -->
 
     <owl:Class rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#EventSeries"/>
     
 
 
+    <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#NonAcademicEvent -->
+
+    <owl:Class rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#NonAcademicEvent"/>
+    
+
+
+    <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent -->
+
+    <owl:Class rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent"/>
+    
+
+
     <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Proceedings -->
 
     <owl:Class rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Proceedings"/>
+    
+
+
+    <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#SocialEvent -->
+
+    <owl:Class rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#SocialEvent"/>
+    
+
+
+    <!-- https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Track -->
+
+    <owl:Class rdf:about="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Track"/>
     
 
 
@@ -3053,8 +2844,8 @@
     <!-- http://purl.org/dc/terms/ -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/">
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
         <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
         <terms:title xml:lang="en">DCMI Metadata Terms - other</terms:title>
     </owl:NamedIndividual>
     
@@ -3064,6 +2855,14 @@
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Agent">
         <rdf:type rdf:resource="http://purl.org/dc/terms/AgentClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/seo# -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/seo#">
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
     </owl:NamedIndividual>
     
 
@@ -3147,12 +2946,12 @@
      -->
 
     <rdf:Description rdf:about="http://purl.org/dc/terms/Agent">
-        <rdfs:label xml:lang="en">Agent</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:comment xml:lang="en">A resource that acts or has the power to act.</rdfs:comment>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <terms:description xml:lang="en">Examples of Agent include person, organization, and software agent.</terms:description>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Agent-001"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
+        <rdfs:comment xml:lang="en">A resource that acts or has the power to act.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
     </rdf:Description>
     
 
@@ -3200,8 +2999,8 @@
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -3246,8 +3045,8 @@
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S4</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S4</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -3390,8 +3189,8 @@
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S5</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S5</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -3437,8 +3236,8 @@
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S6</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S6</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -3486,5 +3285,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 

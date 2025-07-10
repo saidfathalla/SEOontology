@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/seo##> .
+@prefix : <https://w3id.org/seo#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
